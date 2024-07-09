@@ -226,6 +226,7 @@ sqlSnapshots:
     files:
     - snapshots/snapshot_parent_main.sql
     - .prophecy/ide/snapshots/snapshot_parent_main.json
+    - snapshots/schema.yml
     sqlDependencies:
       models: []
       datasets: []
@@ -261,15 +262,14 @@ sqlMacros:
     files:
     - macros/functions/language_specific_concat.sql
     createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmacros/qa_concat_macro_column:
-    name: qa_concat_macro_column
+  .prophecy/metadata/sqlmacros/qa_concat_macro_column1:
+    name: qa_concat_macro_column1
     macroType: expression
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    - macros/functions/functions.yml
-    createdAt: '2023-04-18 06:17:28'
+    createdAt: '2024-07-09 15:07:20'
   .prophecy/metadata/sqlmacros/qa_model_all_above_given_id:
     name: qa_model_all_above_given_id
     macroType: query
@@ -302,7 +302,6 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/gems/qa_test_relationship.sql
-    - macros/gems/gems.yml
     createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmacros/language_specific_concat:
     name: language_specific_concat
@@ -406,7 +405,6 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/gems/qa_test_relationship.sql
-    - macros/gems/gems.yml
     createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmacros/qa_boolean_macro:
     name: qa_boolean_macro

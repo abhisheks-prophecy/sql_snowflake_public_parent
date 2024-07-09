@@ -1,9 +1,9 @@
-{% macro qa_concat_macro_column(param1_column) %}
+{% macro qa_concat_macro_column1(param1_column) %}
 concat({{param1_column}}, 'hellomain_password')
 {% endmacro %}
 
  {% macro qa_macro_call_another_macro_column(param_column) %}
-concat({{ SQL_SnoflakeMainProject.qa_concat_macro_column(param_column) }}, {{param_column}})
+concat({{ SQL_SnoflakeMainProject.qa_concat_macro_column1(param_column) }}, {{param_column}})
 {% endmacro %}
 
  {% macro qa_boolean_macro(input_column) %}

@@ -1,7 +1,6 @@
 {
   "macro_NK8hw6Ic" : {
     "name" : "qa_model_all_above_given_id",
-    "macroId" : "macro_NK8hw6Ic",
     "macroType" : "query",
     "definition" : "\n\nSELECT * from {{model}} where {{col}} > {{ id_min }}",
     "parameters" : {
@@ -14,7 +13,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "col",
         "kind" : {
@@ -23,7 +23,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "id_min",
         "kind" : {
@@ -32,7 +33,8 @@
         },
         "optional" : true,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -173,12 +175,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_aJx7l4ex" : {
     "name" : "qa_epl_data_macro",
-    "macroId" : "macro_aJx7l4ex",
     "macroType" : "query",
     "definition" : "\n{% set status = ['HomeTeam','AwayTeam'] %}\n\nwith summary as (\n{% for club in football_clubs %}\n    {% for st in status %}\n    select \n        {{ st }} as team,\n        {% if st == 'HomeTeam' %}\n                case \n                    when FTR = 'H' then 3\n                    when FTR = 'D' then 1\n                    else 0 end points\n        {% else %}\n                case \n                    when FTR = 'A' then 3\n                    when FTR = 'D' then 1\n                    else 0 end points\n        {% endif %}\n    from {{ table_name }}\n    where season = 'season-1819'\n        and {{ st }} = '{{ club }}'\n        {% if not loop.last %} UNION ALL {% endif %}\n    {% endfor %}\n    {% if not loop.last %} UNION ALL {% endif %}\n{% endfor %}\n)\n\n\nselect \n    team, \n    sum(points) as total_points\nfrom summary\ngroup by team\norder by total_points desc",
     "parameters" : {
@@ -191,7 +193,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "football_clubs",
         "kind" : {
@@ -200,7 +203,8 @@
         },
         "optional" : true,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -325,12 +329,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_GMlaP0t4" : {
     "name" : "qa_complex_macro",
-    "macroId" : "macro_GMlaP0t4",
     "macroType" : "query",
     "definition" : "\n\nwith all_values as (\n    select distinct {{column_name_int}} as col_int from {{model}}\n),\npayments_validation_errors as (\n    select\n        col_int\n    from all_values\n    where col_int not in (\n        {% for accepted_value in accepted_values %}\n            {% if accepted_value >= 5 %}\n            5\n            {% else %}\n            {{ accepted_value }}\n            {% endif %}\n            {% if not loop.last %},{% endif %}\n        {% endfor %}\n    )\n)\nselect * from payments_validation_errors",
     "parameters" : {
@@ -343,7 +347,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "column_name_int",
         "kind" : {
@@ -352,7 +357,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "accepted_values",
         "kind" : {
@@ -361,7 +367,8 @@
         },
         "optional" : true,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -462,12 +469,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_jDnJGUaP" : {
     "name" : "qa_get_unique_count",
-    "macroId" : "macro_jDnJGUaP",
     "macroType" : "query",
     "definition" : "\n\nselect count(*)\nfrom (\n    select\n        {{ column_name }}\n    from {{ model }}\n    where {{ column_name }} is not null\n    group by {{ column_name }}\n    having count(*) >= 1\n) validation_errors",
     "parameters" : {
@@ -480,7 +487,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "column_name",
         "kind" : {
@@ -489,7 +497,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -610,12 +619,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_Ly9fiAxV" : {
     "name" : "qa_all_null",
-    "macroId" : "macro_Ly9fiAxV",
     "macroType" : "query",
     "definition" : "\n\nselect * from {{ model }} where {{ column_name }} is not null",
     "parameters" : {
@@ -628,7 +637,8 @@
         },
         "optional" : true,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "column_name",
         "kind" : {
@@ -637,7 +647,8 @@
         },
         "optional" : true,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -722,12 +733,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_THucU0n6" : {
     "name" : "qa_test_relationship",
-    "macroId" : "macro_THucU0n6",
     "macroType" : "query",
     "definition" : "\nselect count(*)\nfrom (\n    select {{ model1_col }} as id from {{ model }}\n) as child\nleft join (\n    select {{ model2_col }} as id from {{ model2 }}\n) as parent on parent.id = child.id\nwhere child.id is not null\n  and parent.id is null",
     "parameters" : {
@@ -740,7 +751,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "model2",
         "kind" : {
@@ -749,7 +761,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "model1_col",
         "kind" : {
@@ -758,7 +771,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "model2_col",
         "kind" : {
@@ -767,7 +781,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -928,12 +943,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_LmWfPbl3" : {
     "name" : "qa_all_not_null",
-    "macroId" : "macro_LmWfPbl3",
     "macroType" : "query",
     "definition" : "\n\nselect * from {{ model }} where {{ column_name }} is not null",
     "parameters" : {
@@ -946,7 +961,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "column_name",
         "kind" : {
@@ -955,7 +971,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -1028,7 +1045,8 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   }
 }
