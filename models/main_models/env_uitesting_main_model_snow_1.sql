@@ -690,6 +690,7 @@ Join_2 AS (
 
 Limit_1 AS (
 
+  {#Restricts the output to the first 29 records from the combined user accounts and usage logs.#}
   SELECT * 
   
   FROM Join_2 AS in0
@@ -698,56 +699,21 @@ Limit_1 AS (
 
 ),
 
-Reformat_1 AS (
+raw_orders AS (
 
-  {#this is filter nopde
-  this is filter only buddy#}
-  SELECT 
-    C_NUM AS C_NUM,
-    C_NUM10 AS C_NUM10,
-    C_DEC AS C_DEC,
-    C_NUMERIC AS C_NUMERIC,
-    C_INT AS C_INT,
-    C_INTEGER AS C_INTEGER,
-    C_DOUBLE AS C_DOUBLE,
-    C_FLOAT AS C_FLOAT,
-    C_COUBLE_PRECISION AS C_COUBLE_PRECISION,
-    C_REAL AS C_REAL,
-    C_VARCHAR AS C_VARCHAR,
-    C_VARCHAR50 AS C_VARCHAR50,
-    C_CHAR AS C_CHAR,
-    C_CHAR10 AS C_CHAR10,
-    C_STRING AS C_STRING,
-    C_STRING20 AS C_STRING20,
-    C_TEXT AS C_TEXT,
-    C_TEXT30 AS C_TEXT30,
-    C_BINARY AS C_BINARY,
-    C_BINARY100 AS C_BINARY100,
-    C_VARBINARY AS C_VARBINARY,
-    C_BOOL AS C_BOOL,
-    C_TIMESTAMP AS C_TIMESTAMP,
-    C_DATE AS C_DATE,
-    C_DATETIME AS C_DATETIME,
-    C_TIME AS C_TIME,
-    C_ARRAY AS C_ARRAY,
-    C_OBJECT AS C_OBJECT,
-    C_GEOGRAPHY AS C_GEOGRAPHY,
-    concat({{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, C_CHAR10) AS c_macro2,
-    {% if v_model_int_main > 10 and                         var('v_project_int_parent')  %}
-      {{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }} AS c_if,
-    {% else %}
-      {{ SQL_SnoflakeMainProject.qa_concat_macro('c_string20') }} AS c_if,
-    {% endif %}
-    {{ var('v_project_expression_parent') }} AS c_expression_project_variable,
-    {{v_model_expression}} AS c_expression_model_variable,
-    {% for c_i in range(1, 4) %}
-      concat(C_STRING, {{c_i}}) AS col_{{c_i}},
-    {% endfor %}
-    
-    {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }} AS c_base_macro,
-    concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_dbutils_macro
+  SELECT * 
   
-  FROM ALL_TYPE_TABLE_SMALLER AS in0
+  FROM {{ ref('raw_orders')}}
+
+),
+
+Limit_2 AS (
+
+  SELECT * 
+  
+  FROM raw_orders AS in0
+  
+  LIMIT 10
 
 ),
 
@@ -838,11 +804,78 @@ SQLStatement_1 AS (
 
 ),
 
-raw_orders AS (
+Limit_1_1_1 AS (
 
+  {#Restricts the output to the first 29 records from the combined user accounts and usage logs.#}
   SELECT * 
   
-  FROM {{ ref('raw_orders')}}
+  FROM SQLStatement_1 AS in0
+  
+  LIMIT 10
+
+),
+
+Reformat_1 AS (
+
+  {#this is filter nopde
+  this is filter only buddy#}
+  SELECT 
+    C_NUM AS C_NUM,
+    C_NUM10 AS C_NUM10,
+    C_DEC AS C_DEC,
+    C_NUMERIC AS C_NUMERIC,
+    C_INT AS C_INT,
+    C_INTEGER AS C_INTEGER,
+    C_DOUBLE AS C_DOUBLE,
+    C_FLOAT AS C_FLOAT,
+    C_COUBLE_PRECISION AS C_COUBLE_PRECISION,
+    C_REAL AS C_REAL,
+    C_VARCHAR AS C_VARCHAR,
+    C_VARCHAR50 AS C_VARCHAR50,
+    C_CHAR AS C_CHAR,
+    C_CHAR10 AS C_CHAR10,
+    C_STRING AS C_STRING,
+    C_STRING20 AS C_STRING20,
+    C_TEXT AS C_TEXT,
+    C_TEXT30 AS C_TEXT30,
+    C_BINARY AS C_BINARY,
+    C_BINARY100 AS C_BINARY100,
+    C_VARBINARY AS C_VARBINARY,
+    C_BOOL AS C_BOOL,
+    C_TIMESTAMP AS C_TIMESTAMP,
+    C_DATE AS C_DATE,
+    C_DATETIME AS C_DATETIME,
+    C_TIME AS C_TIME,
+    C_ARRAY AS C_ARRAY,
+    C_OBJECT AS C_OBJECT,
+    C_GEOGRAPHY AS C_GEOGRAPHY,
+    concat({{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, C_CHAR10) AS c_macro2,
+    {% if v_model_int_main > 10 and                         var('v_project_int_parent')  %}
+      {{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }} AS c_if,
+    {% else %}
+      {{ SQL_SnoflakeMainProject.qa_concat_macro('c_string20') }} AS c_if,
+    {% endif %}
+    {{ var('v_project_expression_parent') }} AS c_expression_project_variable,
+    {{v_model_expression}} AS c_expression_model_variable,
+    {% for c_i in range(1, 4) %}
+      concat(C_STRING, {{c_i}}) AS col_{{c_i}},
+    {% endfor %}
+    
+    {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }} AS c_base_macro,
+    concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_dbutils_macro
+  
+  FROM ALL_TYPE_TABLE_SMALLER AS in0
+
+),
+
+Limit_1_1 AS (
+
+  {#Restricts the output to the first 29 records from the combined user accounts and usage logs.#}
+  SELECT * 
+  
+  FROM Reformat_1 AS in0
+  
+  LIMIT 10
 
 ),
 
@@ -881,12 +914,12 @@ Join_1 AS (
     in0.C_GEOGRAPHY AS C_GEOGRAPHY,
     in3.C_MACROS_DEP AS C_MACROS_DEP
   
-  FROM Reformat_1 AS in0
-  INNER JOIN raw_orders AS in1
+  FROM Limit_1_1 AS in0
+  INNER JOIN Limit_2 AS in1
      ON in0.C_STRING != in1.status
   INNER JOIN Limit_1 AS in2
      ON in1.status != in2.TITLE
-  INNER JOIN SQLStatement_1 AS in3
+  INNER JOIN Limit_1_1_1 AS in3
      ON in2.TITLE != in3.C_MACRO_MAIN
 
 ),
