@@ -604,6 +604,14 @@ ALL_TYPE_TABLE_SMALLER AS (
 
 ),
 
+env_uitesting_main_model_snow_2 AS (
+
+  SELECT * 
+  
+  FROM {{ ref('env_uitesting_main_model_snow_2')}}
+
+),
+
 Pivot_1 AS (
 
   {#Summarizes and organizes data related to specific greetings for better analysis.#}
@@ -810,16 +818,23 @@ SetOperation_1 AS (
 
 SQLStatement_1 AS (
 
-  {#Compares a specific function's call count against a filtered dataset to identify discrepancies.#}
+  {#Identifies discrepancies in call function counts compared to combined records from two filters.#}
   SELECT *
   
   FROM SetOperation_1
   
   WHERE C_CALL_FUNC != (
-          SELECT count(*)
-          
-          FROM Filter_1
-         )
+          (
+            SELECT count(*)
+            
+            FROM Filter_1
+           )
+          + (
+              SELECT count(*)
+              
+              FROM env_uitesting_main_model_snow_2
+             )
+        )
 
 ),
 

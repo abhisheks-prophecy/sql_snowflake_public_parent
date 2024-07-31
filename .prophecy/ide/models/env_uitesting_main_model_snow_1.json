@@ -38,7 +38,7 @@
         "y" : 360,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "Compares a specific function's call count against a filtered dataset to identify discrepancies.",
+        "comment" : "Identifies discrepancies in call function counts compared to combined records from two filters.",
         "autoUpdateComment" : true
       },
       "properties" : {
@@ -46,7 +46,7 @@
           "path" : "out",
           "id" : "out",
           "language" : "sql",
-          "content" : "select * from SetOperation_1 where C_CALL_FUNC != (select count(*) from Filter_1)"
+          "content" : "select * from SetOperation_1 where C_CALL_FUNC != ((select count(*) from Filter_1) + (select count(*) from env_uitesting_main_model_snow_2))"
         } ]
       },
       "ports" : {
@@ -194,6 +194,173 @@
             } ]
           },
           "slug" : "SetOperation_1"
+        }, {
+          "id" : "jWKBTLjg8_UJwvZ3E3Gr-",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_TIMESTAMPLTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIMESTAMP_NTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_VARIANT",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "env_uitesting_main_model_snow_2"
         } ],
         "outputs" : [ {
           "id" : "cqqwiTqUJK6aHDPVmYol1$$3RU7wSmVTaiEFpPZvrtz7",
@@ -442,7 +609,7 @@
           "alias" : "C_MACROS_DEP"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "IxVIiW5B##TITLE", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
+        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "IxVIiW5B##TITLE", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -1137,8 +1304,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "Employees_qa_SCHEMA",
-        "x" : 20,
-        "y" : 1020,
+        "x" : -100,
+        "y" : 760,
         "phase" : 0
       },
       "properties" : {
@@ -1637,8 +1804,8 @@
       "component" : "Seed",
       "metadata" : {
         "label" : "raw_orders",
-        "x" : 260,
-        "y" : 520,
+        "x" : 280,
+        "y" : 560,
         "phase" : 0
       },
       "properties" : {
@@ -1672,6 +1839,197 @@
               "name" : "status",
               "dataType" : {
                 "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Bb1vS3HJ2DxlxtjLmPdU6" : {
+      "id" : "Bb1vS3HJ2DxlxtjLmPdU6",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "env_uitesting_main_model_snow_2",
+        "slug" : "env_uitesting_main_model_snow_2",
+        "x" : 100,
+        "y" : 500,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "env_uitesting_main_model_snow_2",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "2OirFgMpOnamv1L4j1Fa_",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_TIMESTAMPLTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIMESTAMP_NTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_VARIANT",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
               }
             } ]
           },
@@ -2461,8 +2819,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_table",
-        "x" : 20,
-        "y" : 820,
+        "x" : -140,
+        "y" : 500,
         "phase" : 0
       },
       "properties" : {
@@ -2652,8 +3010,8 @@
       "metadata" : {
         "label" : "SetOperation_1",
         "slug" : "SetOperation_1",
-        "x" : 300,
-        "y" : 380,
+        "x" : 240,
+        "y" : 340,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3022,7 +3380,7 @@
       "metadata" : {
         "label" : "Pivot_1",
         "slug" : "Pivot_1",
-        "x" : -20,
+        "x" : -40,
         "y" : 340,
         "phase" : 0,
         "macroDependencies" : [ ],
@@ -4114,7 +4472,7 @@
       "metadata" : {
         "label" : "Unpivot_1",
         "slug" : "Unpivot_1",
-        "x" : 120,
+        "x" : 80,
         "y" : 340,
         "phase" : 0,
         "macroDependencies" : [ ],
@@ -4330,7 +4688,7 @@
       "metadata" : {
         "label" : "AllStunningOne",
         "slug" : "AllStunningOne",
-        "x" : -280,
+        "x" : -320,
         "y" : 380,
         "phase" : 0,
         "macroDependencies" : [ "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_BaseGitDepProjectAllFinal._qa_concat_string_cols", "SQL_SnoflakeMainProject.snowflake__language_specific_concat", "dbt_date.snowflake__day_name" ],
@@ -4709,8 +5067,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_table_2",
-        "x" : -200,
-        "y" : 700,
+        "x" : -300,
+        "y" : 660,
         "phase" : 0
       },
       "properties" : {
@@ -4899,8 +5257,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_table_3",
-        "x" : -440,
-        "y" : 520,
+        "x" : -460,
+        "y" : 540,
         "phase" : 0
       },
       "properties" : {
@@ -5089,8 +5447,8 @@
       "component" : "Limit",
       "metadata" : {
         "label" : "Limit_1",
-        "x" : 440,
-        "y" : 560,
+        "x" : 460,
+        "y" : 580,
         "phase" : 0
       },
       "properties" : {
@@ -5207,7 +5565,7 @@
       "metadata" : {
         "label" : "OrderBy_1",
         "slug" : "OrderBy_1",
-        "x" : -140,
+        "x" : -180,
         "y" : 340,
         "phase" : 0,
         "macroDependencies" : [ ]
@@ -5895,6 +6253,12 @@
     "sourcePort" : "cqqwiTqUJK6aHDPVmYol1$$3RU7wSmVTaiEFpPZvrtz7",
     "target" : "Join_1##SShRAsg4",
     "targetPort" : "EoXH-5JNjREzOk8gwk26o"
+  }, {
+    "id" : "Md_v_ha3BhDJwSRAIpI5n",
+    "source" : "Bb1vS3HJ2DxlxtjLmPdU6",
+    "sourcePort" : "2OirFgMpOnamv1L4j1Fa_",
+    "target" : "fFlL3QSk553HHw1iCmnLk$$udiENyvAvObfb_1f3SmMa",
+    "targetPort" : "jWKBTLjg8_UJwvZ3E3Gr-"
   } ],
   "component" : "Model"
 }
