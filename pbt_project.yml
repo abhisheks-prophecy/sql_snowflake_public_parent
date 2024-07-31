@@ -116,6 +116,9 @@ sqlModels:
       - name: C_GEOGRAPHY
         dataType:
           type: Geography
+      - name: C_MACROS_DEP
+        dataType:
+          type: String
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -128,6 +131,119 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2023-04-12 13:57:52'
+  .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_2:
+    name: env_uitesting_main_model_snow_2
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_TIMESTAMPLTZ
+        dataType:
+          type: Timestamp
+      - name: C_TIMESTAMP_NTZ
+        dataType:
+          type: Timestamp
+      - name: C_VARIANT
+        dataType:
+          type: Variant
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/other_models/env_uitesting_main_model_snow_2.sql
+    - .prophecy/ide/models/env_uitesting_main_model_snow_2.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-07-31 11:40:52'
 sqlSnapshots:
   .prophecy/metadata/sqlsnapshots/snapshot_parent_main:
     name: snapshot_parent_main
@@ -221,6 +337,9 @@ sqlSnapshots:
       - name: C_GEOGRAPHY
         dataType:
           type: Geography
+      - name: C_MACROS_DEP
+        dataType:
+          type: String
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -262,14 +381,6 @@ sqlMacros:
     files:
     - macros/functions/language_specific_concat.sql
     createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmacros/qa_concat_macro_column1:
-    name: qa_concat_macro_column1
-    macroType: expression
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - macros/functions/qa_boolean_macro.sql
-    createdAt: '2024-07-09 15:07:20'
   .prophecy/metadata/sqlmacros/qa_model_all_above_given_id:
     name: qa_model_all_above_given_id
     macroType: query
@@ -286,7 +397,7 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    createdAt: '2023-04-12 13:57:52'
+    createdAt: '2024-07-31 11:32:23'
   .prophecy/metadata/sqlmacros/qa_concat_macro:
     name: qa_concat_macro
     macroType: expression
@@ -294,7 +405,7 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    createdAt: '2023-04-12 13:57:52'
+    createdAt: '2024-07-31 11:32:23'
   .prophecy/metadata/sqlmacros/qa_epl_data_macro:
     name: qa_epl_data_macro
     macroType: query
@@ -303,15 +414,14 @@ sqlMacros:
     files:
     - macros/gems/qa_test_relationship.sql
     createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmacros/language_specific_concat:
-    name: language_specific_concat
+  .prophecy/metadata/sqlmacros/qa_macro_call_another_macro_column_test:
+    name: qa_macro_call_another_macro_column_test
     macroType: expression
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
-    - macros/functions/language_specific_concat.sql
-    - .prophecy/ide/macros/language_specific_concat.json
-    createdAt: '2023-04-12 13:57:52'
+    - macros/functions/qa_boolean_macro.sql
+    createdAt: '2024-07-31 11:32:23'
   .prophecy/metadata/sqlmacros/qa_all_not_null:
     name: qa_all_not_null
     macroType: query
@@ -336,7 +446,7 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    createdAt: '2023-04-12 13:57:52'
+    createdAt: '2024-07-31 11:32:23'
   .prophecy/metadata/sqlmacros/snowflake__language_specific_concat:
     name: snowflake__language_specific_concat
     macroType: expression
@@ -354,6 +464,14 @@ sqlMacros:
     - macros/gems/language_specific_deduplicate.sql
     - .prophecy/ide/macros/language_specific_deduplicate.json
     createdAt: '2023-04-12 13:57:52'
+  .prophecy/metadata/sqlmacros/qa_concat_macro_column1_test1:
+    name: qa_concat_macro_column1_test1
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/functions/qa_boolean_macro.sql
+    createdAt: '2024-07-31 11:37:49'
   .prophecy/metadata/sqlmacros/snowflake__language_specific_deduplicate:
     name: snowflake__language_specific_deduplicate
     macroType: query
@@ -369,7 +487,7 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    createdAt: '2023-04-21 09:58:10'
+    createdAt: '2024-07-31 11:32:23'
   .prophecy/metadata/sqlmacros/postgres__language_specific_deduplicate:
     name: postgres__language_specific_deduplicate
     macroType: query
@@ -378,6 +496,14 @@ sqlMacros:
     files:
     - macros/gems/language_specific_deduplicate.sql
     - macros/gems/gems.yml
+    createdAt: '2023-04-12 13:57:52'
+  .prophecy/metadata/sqlmacros/redshift__language_specific_deduplicate:
+    name: redshift__language_specific_deduplicate
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/gems/language_specific_deduplicate.sql
     createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmacros/qa_get_unique_count:
     name: qa_get_unique_count
@@ -406,22 +532,22 @@ sqlMacros:
     files:
     - macros/gems/qa_test_relationship.sql
     createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmacros/qa_boolean_macro:
-    name: qa_boolean_macro
+  .prophecy/metadata/sqlmacros/qa_boolean_macro_test:
+    name: qa_boolean_macro_test
     macroType: expression
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    - .prophecy/ide/macros/qa_boolean_macro.json
-    createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmacros/redshift__language_specific_deduplicate:
-    name: redshift__language_specific_deduplicate
+    createdAt: '2024-07-31 11:32:23'
+  .prophecy/metadata/sqlmacros/language_specific_concat:
+    name: language_specific_concat
     macroType: expression
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
-    - macros/gems/language_specific_deduplicate.sql
+    - macros/functions/language_specific_concat.sql
+    - .prophecy/ide/macros/language_specific_concat.json
     createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmacros/multi_macro_expressions:
     name: multi_macro_expressions
@@ -430,7 +556,7 @@ sqlMacros:
     author: abhisheks+e2etests@prophecy.io
     files:
     - macros/functions/qa_boolean_macro.sql
-    createdAt: '2023-04-12 13:57:52'
+    createdAt: '2024-07-31 11:32:23'
   .prophecy/metadata/sqlmacros/bigquery__language_specific_concat:
     name: bigquery__language_specific_concat
     macroType: expression
@@ -448,14 +574,6 @@ sqlMacros:
     - macros/gems/language_specific_deduplicate.sql
     - macros/gems/gems.yml
     createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmacros/qa_macro_call_another_macro_column:
-    name: qa_macro_call_another_macro_column
-    macroType: expression
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - macros/functions/qa_boolean_macro.sql
-    createdAt: '2023-04-21 09:58:10'
   .prophecy/metadata/sqlmacros/qa_all_null:
     name: qa_all_null
     macroType: query

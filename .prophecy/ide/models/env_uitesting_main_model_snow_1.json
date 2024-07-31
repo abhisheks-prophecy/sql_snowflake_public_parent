@@ -14,26 +14,260 @@
       },
       "userDefinedConfig" : {
         "vars" : {
+          "v_bool" : "True",
           "v_model_int_main" : "10",
           "v_model_dict_main" : "{ 'a': 10, 'b': 15 }",
           "v_model_dict_complex" : "{ 'a': 2, 'b': 10, 'c': [1, 2, 'hello'] }",
           "v_model_bool_main" : "True",
-          "v_model_expression" : "'concat(c_string, c_text)'"
+          "v_expression" : "\"concat(C_VARCHAR, C_TEXT, C_ARRAY[0], C_OBJECT['outer_key2']['inner_key2'])\"",
+          "v_model_expression" : "'concat(c_string, c_text)'",
+          "v_int" : "22"
         }
       }
     },
     "version" : 3
   },
   "processes" : {
+    "fFlL3QSk553HHw1iCmnLk$$udiENyvAvObfb_1f3SmMa" : {
+      "id" : "fFlL3QSk553HHw1iCmnLk$$udiENyvAvObfb_1f3SmMa",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_1",
+        "slug" : "SQLStatement_1",
+        "x" : 440,
+        "y" : 360,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Compares a specific function's call count against a filtered dataset to identify discrepancies.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out",
+          "id" : "out",
+          "language" : "sql",
+          "content" : "select * from SetOperation_1 where C_CALL_FUNC != (select count(*) from Filter_1)"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "25VRyd0CJLwpE27fMspmv",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ARRAY_INT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_FLOAT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_STRING",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_OBJECT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_VARIANT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT_1",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_2",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_3",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_4",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_5",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_VARIANT_1",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_2",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_3",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_4",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_5",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            } ]
+          },
+          "slug" : "Filter_1"
+        }, {
+          "id" : "HA_ljv1mh8o5gUDEqp4CO",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "SetOperation_1"
+        } ],
+        "outputs" : [ {
+          "id" : "cqqwiTqUJK6aHDPVmYol1$$3RU7wSmVTaiEFpPZvrtz7",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "Join_1##SShRAsg4" : {
       "id" : "Join_1##SShRAsg4",
       "component" : "Join",
       "metadata" : {
         "label" : "Join_1",
-        "x" : 760,
+        "x" : 600,
         "y" : 440,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "macroDependencies" : [ ],
+        "comment" : "Combines various data fields from multiple sources to analyze discrepancies in order statuses.",
+        "autoUpdateComment" : true
       },
       "properties" : {
         "conditions" : [ {
@@ -48,7 +282,14 @@
             "expression" : "in1.status != in2.TITLE"
           },
           "joinType" : "INNER"
+        }, {
+          "alias" : "in3",
+          "expression" : {
+            "expression" : "in2.TITLE!=in3.C_MACRO_MAIN"
+          },
+          "joinType" : "inner"
         } ],
+        "allowSelection" : false,
         "expressions" : [ {
           "expression" : {
             "expression" : "in0.C_NUM"
@@ -194,9 +435,14 @@
             "expression" : "in0.C_GEOGRAPHY"
           },
           "alias" : "C_GEOGRAPHY"
+        }, {
+          "expression" : {
+            "expression" : "in3.C_MACROS_DEP"
+          },
+          "alias" : "C_MACROS_DEP"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "XJMm9cDk##status" ],
+        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "IxVIiW5B##TITLE", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -350,11 +596,6 @@
                 "type" : "Geography"
               }
             }, {
-              "name" : "C_MACRO1",
-              "dataType" : {
-                "type" : "Boolean"
-              }
-            }, {
               "name" : "C_MACRO2",
               "dataType" : {
                 "type" : "String"
@@ -476,6 +717,63 @@
             } ]
           },
           "slug" : "in2"
+        }, {
+          "id" : "EoXH-5JNjREzOk8gwk26o",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "in3"
         } ],
         "outputs" : [ {
           "id" : "OVlYAGTQ",
@@ -626,6 +924,11 @@
               "dataType" : {
                 "type" : "Geography"
               }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
             } ]
           },
           "slug" : "out"
@@ -639,8 +942,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_2",
-        "x" : 340,
-        "y" : 220,
+        "x" : -20,
+        "y" : 180,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -879,8 +1182,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "TABLE_COMPLEX_TYPES_1_1",
-        "x" : 20,
-        "y" : 220,
+        "x" : -240,
+        "y" : 180,
         "phase" : 0
       },
       "properties" : {
@@ -984,13 +1287,358 @@
         "autoUpdateOnRun" : false
       }
     },
+    "k2NsXYBaxawkhh8oL_KE_$$sozIXCDHtci46LgblKcy7" : {
+      "id" : "k2NsXYBaxawkhh8oL_KE_$$sozIXCDHtci46LgblKcy7",
+      "component" : "Macro",
+      "metadata" : {
+        "label" : "qa_all_not_null_1",
+        "slug" : "qa_all_not_null_1",
+        "x" : 760,
+        "y" : 440,
+        "phase" : 0,
+        "macroDependencies" : [ "SQL_SnoflakeMainProject.qa_all_not_null" ],
+        "comment" : "Ensures that the timestamp column in the specified model contains no null values for data integrity.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "macroName" : "qa_all_not_null",
+        "parameters" : [ {
+          "name" : "model",
+          "value" : "'Join_1'"
+        }, {
+          "name" : "column_name",
+          "value" : "'C_TIMESTAMP'"
+        } ],
+        "projectName" : "SQL_SnoflakeMainProject"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Be185HqqULmp8rgk8UEGE",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Join_1"
+        } ],
+        "outputs" : [ {
+          "id" : "Rfinw2FhtXI3y4DKOv5H-$$aGcCtFslFgswD-FuV-xOz",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "raw_orders##CgvfjycU" : {
       "id" : "raw_orders##CgvfjycU",
       "component" : "Seed",
       "metadata" : {
         "label" : "raw_orders",
-        "x" : 560,
-        "y" : 440,
+        "x" : 260,
+        "y" : 520,
         "phase" : 0
       },
       "properties" : {
@@ -1038,10 +1686,10 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_1",
-        "x" : 560,
-        "y" : 20,
+        "x" : 460,
+        "y" : 200,
         "phase" : 0,
-        "macroDependencies" : [ "SQL_SnoflakeMainProject.qa_boolean_macro", "SQL_SnoflakeMainProject.qa_concat_macro", "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column" ],
+        "macroDependencies" : [ "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_SnoflakeMainProject.qa_boolean_macro", "SQL_SnoflakeMainProject.qa_concat_macro" ],
         "comment" : "this is filter nopde\n  this is filter only buddy"
       },
       "properties" : {
@@ -1193,12 +1841,7 @@
           "alias" : "C_GEOGRAPHY"
         }, {
           "expression" : {
-            "expression" : "{{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }}"
-          },
-          "alias" : "c_macro1"
-        }, {
-          "expression" : {
-            "expression" : "concat(\n  {{ SQL_SnoflakeMainProject.qa_concat_macro('c_string') }}, \n  {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }})"
+            "expression" : "concat( \n  {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, C_CHAR10)"
           },
           "alias" : "c_macro2"
         }, {
@@ -1563,11 +2206,6 @@
                 "type" : "Geography"
               }
             }, {
-              "name" : "C_MACRO1",
-              "dataType" : {
-                "type" : "Boolean"
-              }
-            }, {
               "name" : "C_MACRO2",
               "dataType" : {
                 "type" : "String"
@@ -1611,6 +2249,204 @@
               "name" : "C_DBUTILS_MACRO",
               "dataType" : {
                 "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "fCHAq1UtakM-OK0hp1arE$$7ljqlDNfXM7l-Q3lsqiTI" : {
+      "id" : "fCHAq1UtakM-OK0hp1arE$$7ljqlDNfXM7l-Q3lsqiTI",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 180,
+        "y" : 180,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ed2-KBxTAg7veaJ-p2jSP$$Yl0gTnLZx02H1dXyZYJPy",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ARRAY_INT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_FLOAT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_STRING",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_OBJECT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_VARIANT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT_1",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_2",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_3",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_4",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_5",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_VARIANT_1",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_2",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_3",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_4",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_5",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "nyPnQVQuKGo0Q58v6lZMK$$SYlbSVrIU0uLhV8ODqvuN",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ARRAY_INT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_FLOAT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_STRING",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_OBJECT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_ARRAY_VARIANT",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT_1",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_2",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_3",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_4",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_OBJECT_5",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_VARIANT_1",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_2",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_3",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_4",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_VARIANT_5",
+              "dataType" : {
+                "type" : "Variant"
               }
             } ]
           },
@@ -1810,13 +2646,208 @@
         "autoUpdateOnRun" : false
       }
     },
+    "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD" : {
+      "id" : "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD",
+      "component" : "SetOperation",
+      "metadata" : {
+        "label" : "SetOperation_1",
+        "slug" : "SetOperation_1",
+        "x" : 300,
+        "y" : 380,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "operationType" : "union",
+        "preserveDuplicates" : false,
+        "useMinus" : false,
+        "inputAliases" : [ "in0", "in1" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "171ULucS9TrbOjZqyX0kx$$kjSOgQvmSIu6q805JGlOo",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "OAGc65jh_ySvBMcaaexeK$$qgEpC6k8zlyxTaF_fi4xQ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "9H4U3ObWy9pZ1E9Pwirxf$$D_gUTMN3DMeoXBVVAoaGh",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "ALL_TYPE_TABLE_SMALLER##bz4CZB5t" : {
       "id" : "ALL_TYPE_TABLE_SMALLER##bz4CZB5t",
       "component" : "Source",
       "metadata" : {
         "label" : "ALL_TYPE_TABLE_SMALLER",
-        "x" : 340,
-        "y" : 20,
+        "x" : 180,
+        "y" : 40,
         "phase" : 0
       },
       "properties" : {
@@ -1985,13 +3016,279 @@
         "autoUpdateOnRun" : false
       }
     },
+    "Dlzr4aTRpsPwgp5b_vJw-$$al0niR-G2loabYhACfXpo" : {
+      "id" : "Dlzr4aTRpsPwgp5b_vJw-$$al0niR-G2loabYhACfXpo",
+      "component" : "Pivot",
+      "metadata" : {
+        "label" : "Pivot_1",
+        "slug" : "Pivot_1",
+        "x" : -20,
+        "y" : 340,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Summarizes and organizes data related to specific greetings for better analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "inputAlias" : "in0",
+        "allowSelection" : false,
+        "pivotColumnValues" : [ {
+          "expression" : {
+            "expression" : "'hello sir how are i am fine14'"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "'hello sir how are i am fine24'"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "'hello sir how are i am fine34'"
+          },
+          "alias" : ""
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "C_ADD"
+          },
+          "alias" : "C_ADD"
+        }, {
+          "expression" : {
+            "expression" : "C_BOOL"
+          },
+          "alias" : "C_BOOL"
+        }, {
+          "expression" : {
+            "expression" : "C_MACRO_MAIN"
+          },
+          "alias" : "C_MACRO_MAIN"
+        }, {
+          "expression" : {
+            "expression" : "C_MACROS_DEP"
+          },
+          "alias" : "C_MACROS_DEP"
+        }, {
+          "expression" : {
+            "expression" : "C_LANGUAGE_SPECIFIC"
+          },
+          "alias" : "C_LANGUAGE_SPECIFIC"
+        }, {
+          "expression" : {
+            "expression" : "C_SNOWFLAKE__DAY_NAME"
+          },
+          "alias" : "C_SNOWFLAKE__DAY_NAME"
+        }, {
+          "expression" : {
+            "expression" : "C_VAR_EXPRESSION"
+          },
+          "alias" : "C_VAR_EXPRESSION"
+        }, {
+          "expression" : {
+            "expression" : "C_CALL_FUNC"
+          },
+          "alias" : "C_CALL_FUNC"
+        }, {
+          "expression" : {
+            "expression" : "C_COMPLEX_CASE"
+          },
+          "alias" : "C_COMPLEX_CASE"
+        }, {
+          "expression" : {
+            "expression" : "'hello sir how are i am fine14'"
+          },
+          "alias" : "SIR1"
+        }, {
+          "expression" : {
+            "expression" : "'hello sir how are i am fine24'"
+          },
+          "alias" : "SIR2"
+        }, {
+          "expression" : {
+            "expression" : "'hello sir how are i am fine34'"
+          },
+          "alias" : "SIR3"
+        } ],
+        "pivotColumn" : {
+          "expression" : {
+            "expression" : "C_HELLO_SIR_OBJECT"
+          }
+        },
+        "activeTab" : "pivot",
+        "aggregateExpression" : {
+          "expression" : {
+            "expression" : "count(C_CONCAT)"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eh4EE6ga3rGs7czUkC4HJ$$IqmQUTHQj_vB0AjVOreOQ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_CONCAT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_HELLO_SIR_OBJECT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_IF",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VAR_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "rbPrZdC-eBEYIcdyVNWPn$$rFQG0WCytSNec_yVURcYD",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VAR_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR3",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "Join_2##htQn58ak" : {
       "id" : "Join_2##htQn58ak",
       "component" : "Join",
       "metadata" : {
         "label" : "Join_2",
-        "x" : 340,
-        "y" : 840,
+        "x" : 240,
+        "y" : 680,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -2021,6 +3318,7 @@
           },
           "joinType" : "INNER"
         } ],
+        "allowSelection" : false,
         "expressions" : [ {
           "expression" : {
             "expression" : "in3.TITLE"
@@ -2810,13 +4108,609 @@
         "autoUpdateOnRun" : false
       }
     },
+    "PLGNgCLZdyjwm8bEei9qZ$$FFopVru7lCxOXWwazbyte" : {
+      "id" : "PLGNgCLZdyjwm8bEei9qZ$$FFopVru7lCxOXWwazbyte",
+      "component" : "Unpivot",
+      "metadata" : {
+        "label" : "Unpivot_1",
+        "slug" : "Unpivot_1",
+        "x" : 120,
+        "y" : 340,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Transforms data from a pivoted format to a more detailed view for analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "inputAlias" : "in0",
+        "allowSelection" : true,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "C_ADD"
+          },
+          "alias" : "C_ADD"
+        }, {
+          "expression" : {
+            "expression" : "C_BOOL"
+          },
+          "alias" : "C_BOOL"
+        }, {
+          "expression" : {
+            "expression" : "C_MACRO_MAIN"
+          },
+          "alias" : "C_MACRO_MAIN"
+        }, {
+          "expression" : {
+            "expression" : "C_MACROS_DEP"
+          },
+          "alias" : "C_MACROS_DEP"
+        }, {
+          "expression" : {
+            "expression" : "C_LANGUAGE_SPECIFIC"
+          },
+          "alias" : "C_LANGUAGE_SPECIFIC"
+        }, {
+          "expression" : {
+            "expression" : "C_SNOWFLAKE__DAY_NAME"
+          },
+          "alias" : "C_SNOWFLAKE__DAY_NAME"
+        }, {
+          "expression" : {
+            "expression" : "C_COMPLEX_CASE"
+          },
+          "alias" : "C_COMPLEX_CASE"
+        }, {
+          "expression" : {
+            "expression" : "SIR1"
+          },
+          "alias" : "SIR1"
+        }, {
+          "expression" : {
+            "expression" : "SIR2"
+          },
+          "alias" : "SIR2"
+        }, {
+          "expression" : {
+            "expression" : "C_CALL_FUNC"
+          },
+          "alias" : "C_CALL_FUNC"
+        } ],
+        "activeTab" : "expressions",
+        "valueColumn" : {
+          "expression" : {
+            "expression" : "C_VALUE"
+          }
+        },
+        "columnList" : [ {
+          "expression" : {
+            "expression" : "SIR3"
+          },
+          "alias" : ""
+        } ],
+        "nameColumn" : {
+          "expression" : {
+            "expression" : "C_NAME"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CLOh8nLG_9ZTFPy-oelu1$$uUUPKb6nqlePVlsZe503j",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VAR_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR3",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "iDGD4adWI6dtL4uBjwt52$$T1ukcEqHK7J3vJfJdO6Pn",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "SIR1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SIR2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "HK5fbXyPpnpumPvrFZySa$$88KKRvTImCd_yJB-mQX5e" : {
+      "id" : "HK5fbXyPpnpumPvrFZySa$$88KKRvTImCd_yJB-mQX5e",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AllStunningOne",
+        "slug" : "AllStunningOne",
+        "x" : -280,
+        "y" : 380,
+        "phase" : 0,
+        "macroDependencies" : [ "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_BaseGitDepProjectAllFinal._qa_concat_string_cols", "SQL_SnoflakeMainProject.snowflake__language_specific_concat", "dbt_date.snowflake__day_name" ],
+        "comment" : "Performs a comprehensive analysis combining various calculations and transformations on data, potentially for advanced reporting or decision-making purposes.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_VARCHAR", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_TEXT", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_ARRAY", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_OBJECT", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_STRING", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_BOOL", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_INT", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_INTEGER", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##c_int", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##c_float", "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr##C_NUM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CONDITIONAL_CHANGE_EVENT(\n  c_int = 10) OVER (ORDER BY c_string)\n+ NTH_VALUE(c_int, 2) OVER (PARTITION BY c_float ORDER BY c_string)\n+ RANK() OVER (ORDER BY c_int DESC)\n+ DENSE_RANK() OVER (ORDER BY c_int DESC)\n+ ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))'))\n+ ST_HAUSDORFFDISTANCE(ST_POINT(0, 0), ST_POINT(0, 1))\n+ EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00'))\n+ DATE_PART(QUARTER, '2013-05-08'::DATE)\n+ abs(-10)\n+ ceil(10.12)\n+ floor(12.5656)\n+ mod(10, 2)\n+ round(-975.975, 1)\n+ SIGN(-1.35E-10)\n+ truncate(4.23423)\n+ truncate(4.23423, 2)\n+ cbrt(8)\n+ exp(2)\n+ factorial(1)\n+ pow(2, 3)\n+ power(1, 2)\n+ sqrt(4)\n+ square(2)\n+ ln(10)\n+ log(10, 10)\n+ COS(0)\n+ COS(PI() / 3)\n+ COS(RADIANS(90))\n+ SIN(0)\n+ SIN(PI() / 3)\n+ SIN(RADIANS(90))\n- HAVERSINE(40.7127, -74.0059, 34.05, -118.25)\n+ DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP)"
+          },
+          "alias" : "c_add"
+        }, {
+          "expression" : {
+            "expression" : "concat(\n  TRIM('?-?ABC-?-', '?-'), \n  REPLACE('abcd', 'bc'), \n  RIGHT('ABCDEFG', 3), \n  CAST(HASH(SEQ8()) AS string), \n  ASCII('A'), \n  REPEAT('xy', 5), \n  REVERSE('Hello, world!'), \n  SUBSTR('testing 1 2 3', 9, 5), \n  INSERT('abc', 1, 2, 'Z'), \n  RTRIM('$125.00', '0.'), \n  UUID_STRING(), \n  sha1('Snowflake'), \n  CAST(md5_binary('Snowflake') AS string), \n  LPAD(' hello ', 10, ' '), \n  DECOMPRESS_STRING(TO_BINARY('0920536E6F77666C616B65', 'HEX'), 'SNAPPY'), \n  LPAD('.  hi. ', 10, '$'), \n  DAYNAME(TO_DATE('2015-05-01')), \n  CAST(LAST_DAY(TO_DATE('2015-05-08T23:39:20.123-07:00')) AS string), \n  CAST(DATEADD(YEAR, 2, TO_DATE('2013-05-08')) AS string), \n  CAST(DATEDIFF(MONTH, '2021-01-01'::DATE, '2021-02-28'::DATE) AS string), \n  CAST(DATEDIFF(\n    HOUR, \n    '2013-05-08T23:39:20.123-07:00'::TIMESTAMP, \n    DATEADD(YEAR, 2, ('2013-05-08T23:39:20.123-07:00')::TIMESTAMP)) AS string), \n  CAST(TIMEDIFF(YEAR, '2017-01-01', '2019-01-01') AS string), \n  CAST(TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') AS string), \n  CAST(TRY_TO_TIME('12:30:00') AS string))"
+          },
+          "alias" : "c_concat"
+        }, {
+          "expression" : {
+            "expression" : "2 = 5\nor 5 != 10\nor 6 <> 7\nor 4 > 2\nor 5 <= 10\nor startswith('sasd', 'te')\nor REGEXP_LIKE('sanson', 'san.*')\nor RLIKE('city', 'san.*', 'i')\nor CONTAINS('hello', 'te')\nor ('subject' LIKE '%j%h%do%')\nor (BITNOT(10) = 2)\nor BITAND(1, 2) = 2\nor BITOR(3, 4) = 5\nor BITXOR(7, 8) = 4\nor GETBIT(11, 100) = 0\nor (1.35 BETWEEN 1 AND 2)\nor BOOLAND(1, -2)\nor BOOLNOT(10)\nor BOOLOR(-1.35, 0)\nor BOOLXOR(1, -1)\nor (COALESCE(1, 2, 3) = 2)\nor (decode(1, 1, 'one', 2, 'two', NULL, '-NULL-', 'other') = 'one')\nor EQUAL_NULL(1, 1)\nor (GREATEST(1, 2, 3) = 3)\nor iff(True, 'true', 'false')\nor ifnull(0, 1) = 0\nor (NULL IN (1, 2, NULL))\nor (NULL NOT IN (1, 2, NULL))\nor (1 IS NOT DISTINCT FROM 1)\nor (1 IS NOT NULL)\nor LEAST(1, 3, 0, 4) = 0\nor NULLIF(1, 2) = 0\nor NULLIFZERO(0) = NULL\nor NVL('food', 'bard') = 'food'\nor NVL2(2, 3, 5) = 5\nor REGR_VALX(NULL, 10) = NULL\nor REGR_VALY(NULL, 10) = NULL\nor ZEROIFNULL(1.0) = 10\nor (CURRENT_CLIENT() LIKE '%Snow%')\nor (CAST(CURRENT_TIME(2) AS string) LIKE '%2020%')\nor (LOCALTIMESTAMP() = CURRENT_TIMESTAMP)\nor (CURRENT_WAREHOUSE() != CURRENT_SCHEMA())\nor (CURRENT_USER() = 'Abhishek')\nor TRY_CAST('ABCD' AS VARCHAR (10)) = 'ABCD'\nor TRY_TO_TIMESTAMP('Invalid') = NULL\nor TO_ARRAY(1) = TO_ARRAY(1)\nor PARSE_JSON('{\"a\":1}') = PARSE_JSON('{\"a\":1}')\nor TO_OBJECT(PARSE_JSON('{\"a\":1}')) = TO_OBJECT(PARSE_JSON('{\"a\":1}'))\nor TO_VARIANT(3.14) = TO_VARIANT(3.14)\nor (TRY_TO_GEOGRAPHY('Not a valid input for this data type.') IS NULL)\nor (random() > 10)\nor normal(0, 1, random()) > 10\nor uniform(1, 10, random()) = 10\nor zipf(1, 10, random()) = 9\nor DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\nor time_from_parts(0, 100, 0) IS NOT NULL\nor timestamp_ntz_from_parts(2013, 4, 5, 12, 0, 0, 987654321) IS NOT NULL\nor DATE_PART(QUARTER, '2013-05-08'::DATE) = 2\nor DAYNAME('2013-05-08') IS NOT NULL\nor EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00')) = 2013\nor MONTHNAME(TO_TIMESTAMP('2015-04-03 10:00')) IS NOT NULL\nor PREVIOUS_DAY('2020-10-10', 'Friday ') IS NOT NULL\nor DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAYOFWEEK('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAYOFWEEKISO('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAYOFYEAR('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAY('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor WEEK('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor WEEKISO('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor WEEKOFYEAR('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor MONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor QUARTER('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor ADD_MONTHS('2016-05-15'::timestamp_ntz, 2) IS NOT NULL\nor DATEADD(MONTH, 1, '2000-01-31'::DATE) IS NOT NULL\nor DATEDIFF(YEAR, '2010-04-09 14:39:20'::TIMESTAMP, '2013-05-08 23:39:20'::TIMESTAMP) IS NOT NULL\nor ROUND(MONTHS_BETWEEN('2019-03-31 12:00:00'::TIMESTAMP, '2019-02-28 00:00:00'::TIMESTAMP)) IS NOT NULL\nor DATEADD(HOUR, 2, TO_TIMESTAMP_LTZ('2013-05-08 11:22:33.444')) IS NOT NULL\nor DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\nor TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') IS NOT NULL\nor trunc(to_date('2013-05-08'), 'QUARTER') IS NOT NULL\nor ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))')) IS NOT NULL\nor ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000)\nor ST_DISJOINT(\n     TO_GEOGRAPHY('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))'), \n     TO_GEOGRAPHY('POLYGON((3 3, 5 3, 5 5, 3 5, 3 3))'))\nor ST_STARTPOINT(TO_GEOMETRY('LINESTRING(1 1, 2 2, 3 3, 4 4)')) IS NOT NULL\nor ST_ENDPOINT(TO_GEOGRAPHY('LINESTRING(1 1, 2 2, 3 3, 4 4)')) IS NOT NULL\nor ST_SIMPLIFY(TO_GEOGRAPHY('LINESTRING(-122.306067 37.55412, -122.32328 37.561801, -122.325879 37.586852)'), 1000) IS NOT NULL\nor ST_INTERSECTION(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 2 1, 1 2, 2 3, 1 4, 0 4, 0 0))'), TO_GEOGRAPHY('POINT(0 2)')) IS NOT NULL\nor ST_GEOGFROMGEOHASH('9q9j8ue2v71y5zzy0s4q') IS NOT NULL\nor ST_AREA(ST_MAKEPOLYGONORIENTED(TO_GEOGRAPHY('LINESTRING(0.0 0.0, 1.0 0.0, 1.0 2.0, 0.0 2.0, 0.0 0.0)'))) > 20\nor ST_GEOGRAPHYFROMWKT('POINT(-122.35 37.55)') IS NOT NULL\nor ST_XMAX(TO_GEOGRAPHY('POINT(-180 0)')) IS NOT NULL\nor ST_XMIN(TO_GEOGRAPHY('POINT(-180 0)')) IS NOT NULL\nor ST_POINTN(TO_GEOGRAPHY('LINESTRING(1 1, 2 2, 3 3, 4 4)'), 2) IS NOT NULL\nor ST_BUFFER(TO_GEOMETRY('POINT(0 0)'), 1) IS NOT NULL\nor ST_CENTROID(TO_GEOGRAPHY('LINESTRING(0 0, 0 -2)')) IS NOT NULL\nor ST_INTERSECTION(\n     TO_GEOGRAPHY('POLYGON((0 0, 1 0, 2 1, 1 2, 2 3, 1 4, 0 4, 0 0))'), \n     TO_GEOGRAPHY('POLYGON((3 0, 3 4, 2 4, 1 3, 2 2, 1 1, 2 0, 3 0))')) IS NOT NULL\nor ST_SYMDIFFERENCE(\n     TO_GEOGRAPHY('POLYGON((0 0, 1 0, 2 1, 1 2, 2 3, 1 4, 0 4, 0 0))'), \n     TO_GEOGRAPHY('POLYGON((3 0, 3 4, 2 4, 1 3, 2 2, 1 1, 2 0, 3 0))')) IS NOT NULL\nor ST_UNION(TO_GEOGRAPHY('POINT(1 1)'), TO_GEOGRAPHY('LINESTRING(1 0, 1 2)')) IS NOT NULL\nor CHECK_XML('<name> Valid </name>') IS NOT NULL\nor CHECK_JSON('{\"a\": 2}') IS NOT NULL\nor JSON_EXTRACT_PATH_TEXT('{\"level_1_key\": {\"level_2_key\": \"level_2_value\"}}', 'level_1_key') IS NOT NULL\nor PARSE_JSON('null') IS NOT NULL\nor ARRAY_APPEND(ARRAY_CONSTRUCT(1, 2, 3), 'HELLO') IS NOT NULL\nor ARRAY_CAT(ARRAY_CONSTRUCT(1, 2), ARRAY_CONSTRUCT(1, 2)) IS NOT NULL\nor ARRAY_COMPACT(ARRAY_CONSTRUCT(1, 2)) IS NOT NULL\nor ARRAY_CONTAINS('hello'::variant, array_construct('hello', 'hi'))\nor ARRAY_DISTINCT(['A', 'A', 'B', NULL, NULL]) IS NOT NULL\nor ARRAY_INSERT(ARRAY_CONSTRUCT(0, 1, 2, 3), 2, 'hello') IS NOT NULL\nor array_intersection(ARRAY_CONSTRUCT('A', 'B'), ARRAY_CONSTRUCT('B', 'C')) IS NOT NULL\nor ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\nor ARRAY_SIZE(ARRAY_CONSTRUCT(1, 2, 3)) > 2\nor array_slice(array_construct(0, 1, 2, 3, 4, 5, 6), 0, 2) IS NOT NULL\nor ARRAY_TO_STRING(PARSE_JSON(NULL), '') IS NULL\nor ARRAYS_OVERLAP(array_construct('hello', 'aloha'), array_construct('hello', 'hi', 'hey'))\nor OBJECT_CONSTRUCT('a', 1, 'b', 'BBBB', 'c', NULL) IS NOT NULL\nor OBJECT_DELETE(OBJECT_CONSTRUCT('a', 1, 'b', 2, 'c', 3), 'a', 'b') IS NOT NULL\nor OBJECT_INSERT(OBJECT_CONSTRUCT('a', 1, 'b', 2), 'c', 3) IS NOT NULL\nor OBJECT_PICK(OBJECT_CONSTRUCT('a', 1, 'b', 2, 'c', 3), 'a', 'b') IS NOT NULL\nor TO_ARRAY(1) IS NOT NULL\nor AS_DECIMAL(TO_VARIANT(TO_DECIMAL(1.23, 6, 3)), 6, 3) IS NOT NULL\nor typeof(10) IS NOT NULL\nor split_part('11.22.33', '.', 0) IS NOT NULL"
+          },
+          "alias" : "c_bool"
+        }, {
+          "expression" : {
+            "expression" : "concat(C_VARCHAR, C_TEXT, C_ARRAY[0], C_OBJECT['outer_key2']['inner_key2'], C_VARCHAR)"
+          },
+          "alias" : "c_hello_sir_object"
+        }, {
+          "rowType" : "for",
+          "variable" : {
+            "expression" : "c_ifor"
+          },
+          "iterable" : {
+            "expression" : "range(1, 5)"
+          },
+          "children" : [ {
+            "expression" : {
+              "expression" : "concat(C_STRING, {{c_ifor}})"
+            },
+            "alias" : "\"col_for_{{c_ifor}}\""
+          } ]
+        }, {
+          "rowType" : "ifGroup",
+          "children" : [ {
+            "rowType" : "if",
+            "condition" : {
+              "expression" : "v_int > 10 and         var('v_p_dict') ['a'] == 10"
+            },
+            "children" : [ {
+              "expression" : {
+                "expression" : "concat(C_STRING, C_BOOL)"
+              },
+              "alias" : "c_if"
+            } ]
+          }, {
+            "rowType" : "elseIf",
+            "condition" : {
+              "expression" : "v_bool == True or         var('v_p_complex_dict') ['a'][0] > 10"
+            },
+            "children" : [ {
+              "expression" : {
+                "expression" : "concat(C_STRING, C_INT)"
+              },
+              "alias" : "c_if"
+            } ]
+          }, {
+            "rowType" : "else",
+            "children" : [ {
+              "expression" : {
+                "expression" : "concat(C_STRING, C_INTEGER)"
+              },
+              "alias" : "c_if"
+            } ]
+          } ]
+        }, {
+          "expression" : {
+            "expression" : "concat(C_STRING20, {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('C_STRING') }})"
+          },
+          "alias" : "c_macro_main"
+        }, {
+          "expression" : {
+            "expression" : "concat(\n  '{{ dbt_utils.pretty_time() }}', \n  '{{ dbt_utils.pretty_log_format(\"my pretty message\") }}', \n  {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, \n  {{ SQL_BaseGitDepProjectAllFinal._qa_concat_string_cols('c_string','c_varchar') }})"
+          },
+          "alias" : "c_macros_dep"
+        }, {
+          "expression" : {
+            "expression" : "{{ SQL_SnoflakeMainProject.snowflake__language_specific_concat() }}"
+          },
+          "alias" : "c_language_specific"
+        }, {
+          "expression" : {
+            "expression" : "{{ dbt_date.snowflake__day_name('c_date', 2) }}"
+          },
+          "alias" : "c_snowflake__day_name"
+        }, {
+          "expression" : {
+            "expression" : "{{v_expression}}"
+          },
+          "alias" : "c_var_expression"
+        }, {
+          "expression" : {
+            "expression" : "js_factorial(c_int) % MULTIPLY1(c_float, 2)"
+          },
+          "alias" : "c_call_func"
+        }, {
+          "expression" : {
+            "expression" : "CASE\n  WHEN C_NUM = 1\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 2\n    THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n  WHEN C_NUM = 3\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN CASE\n          WHEN C_NUM = 1\n            THEN CASE\n              WHEN C_NUM = 1\n                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n              WHEN C_NUM = 2\n                THEN false\n              WHEN C_NUM = 3\n                THEN true\n              WHEN C_NUM = 4\n                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n              WHEN C_NUM = 5\n                THEN true\n              WHEN C_NUM = 6\n                THEN false\n              ELSE true\n            END\n          WHEN C_NUM = 2\n            THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n          WHEN C_NUM = 3\n            THEN true\n          WHEN C_NUM = 4\n            THEN false\n          WHEN C_NUM = 5\n            THEN true\n          WHEN C_NUM = 6\n            THEN false\n          ELSE true\n        END\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 4\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN CASE\n          WHEN C_NUM = 1\n            THEN CASE\n              WHEN C_NUM = 1\n                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n              WHEN C_NUM = 2\n                THEN false\n              WHEN C_NUM = 3\n                THEN CASE\n                  WHEN C_NUM = 1\n                    THEN CASE\n                      WHEN C_NUM = 1\n                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                      WHEN C_NUM = 2\n                        THEN false\n                      WHEN C_NUM = 3\n                        THEN CASE\n                          WHEN C_NUM = 1\n                            THEN CASE\n                              WHEN C_NUM = 1\n                                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                              WHEN C_NUM = 2\n                                THEN false\n                              WHEN C_NUM = 3\n                                THEN true\n                              WHEN C_NUM = 4\n                                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                              WHEN C_NUM = 5\n                                THEN true\n                              WHEN C_NUM = 6\n                                THEN false\n                              ELSE true\n                            END\n                          WHEN C_NUM = 2\n                            THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n                          WHEN C_NUM = 3\n                            THEN true\n                          WHEN C_NUM = 4\n                            THEN false\n                          WHEN C_NUM = 5\n                            THEN true\n                          WHEN C_NUM = 6\n                            THEN false\n                          ELSE true\n                        END\n                      WHEN C_NUM = 4\n                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                      WHEN C_NUM = 5\n                        THEN true\n                      WHEN C_NUM = 6\n                        THEN false\n                      ELSE true\n                    END\n                  WHEN C_NUM = 2\n                    THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n                  WHEN C_NUM = 3\n                    THEN CASE\n                      WHEN C_NUM = 1\n                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                      WHEN C_NUM = 2\n                        THEN CASE\n                          WHEN C_NUM = 1\n                            THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                          WHEN C_NUM = 2\n                            THEN CASE\n                              WHEN C_NUM = 1\n                                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                              WHEN C_NUM = 2\n                                THEN CASE\n                                  WHEN C_NUM = 1\n                                    THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                  WHEN C_NUM = 2\n                                    THEN CASE\n                                      WHEN C_NUM = 1\n                                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                      WHEN C_NUM = 2\n                                        THEN CASE\n                                          WHEN C_NUM = 1\n                                            THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                          WHEN C_NUM = 2\n                                            THEN CASE\n                                              WHEN C_NUM = 1\n                                                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                              WHEN C_NUM = 2\n                                                THEN false\n                                              WHEN C_NUM = 3\n                                                THEN true\n                                              WHEN C_NUM = 4\n                                                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                              WHEN C_NUM = 5\n                                                THEN true\n                                              WHEN C_NUM = 6\n                                                THEN CASE\n                                                  WHEN C_NUM = 1\n                                                    THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                                  WHEN C_NUM = 2\n                                                    THEN CASE\n                                                      WHEN C_NUM = 1\n                                                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                                      WHEN C_NUM = 2\n                                                        THEN false\n                                                      WHEN C_NUM = 3\n                                                        THEN CASE\n                                                          WHEN C_NUM = 1\n                                                            THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                                          WHEN C_NUM = 2\n                                                            THEN false\n                                                          WHEN C_NUM = 3\n                                                            THEN true\n                                                          WHEN C_NUM = 4\n                                                            THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                                          WHEN C_NUM = 5\n                                                            THEN true\n                                                          WHEN C_NUM = 6\n                                                            THEN false\n                                                          ELSE true\n                                                        END\n                                                      WHEN C_NUM = 4\n                                                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                                      WHEN C_NUM = 5\n                                                        THEN true\n                                                      WHEN C_NUM = 6\n                                                        THEN false\n                                                      ELSE true\n                                                    END\n                                                  WHEN C_NUM = 3\n                                                    THEN true\n                                                  WHEN C_NUM = 4\n                                                    THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                                  WHEN C_NUM = 5\n                                                    THEN true\n                                                  WHEN C_NUM = 6\n                                                    THEN false\n                                                  ELSE true\n                                                END\n                                              ELSE true\n                                            END\n                                          WHEN C_NUM = 3\n                                            THEN true\n                                          WHEN C_NUM = 4\n                                            THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                          WHEN C_NUM = 5\n                                            THEN true\n                                          WHEN C_NUM = 6\n                                            THEN false\n                                          ELSE true\n                                        END\n                                      WHEN C_NUM = 3\n                                        THEN true\n                                      WHEN C_NUM = 4\n                                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                      WHEN C_NUM = 5\n                                        THEN true\n                                      WHEN C_NUM = 6\n                                        THEN false\n                                      ELSE true\n                                    END\n                                  WHEN C_NUM = 3\n                                    THEN true\n                                  WHEN C_NUM = 4\n                                    THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                  WHEN C_NUM = 5\n                                    THEN true\n                                  WHEN C_NUM = 6\n                                    THEN false\n                                  ELSE true\n                                END\n                              WHEN C_NUM = 3\n                                THEN true\n                              WHEN C_NUM = 4\n                                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                              WHEN C_NUM = 5\n                                THEN true\n                              WHEN C_NUM = 6\n                                THEN false\n                              ELSE true\n                            END\n                          WHEN C_NUM = 3\n                            THEN true\n                          WHEN C_NUM = 4\n                            THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                          WHEN C_NUM = 5\n                            THEN true\n                          WHEN C_NUM = 6\n                            THEN false\n                          ELSE true\n                        END\n                      WHEN C_NUM = 3\n                        THEN true\n                      WHEN C_NUM = 4\n                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                      WHEN C_NUM = 5\n                        THEN true\n                      WHEN C_NUM = 6\n                        THEN false\n                      ELSE true\n                    END\n                  WHEN C_NUM = 4\n                    THEN false\n                  WHEN C_NUM = 5\n                    THEN true\n                  WHEN C_NUM = 6\n                    THEN false\n                  ELSE true\n                END\n              WHEN C_NUM = 4\n                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n              WHEN C_NUM = 5\n                THEN true\n              WHEN C_NUM = 6\n                THEN false\n              ELSE true\n            END\n          WHEN C_NUM = 2\n            THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n          WHEN C_NUM = 3\n            THEN true\n          WHEN C_NUM = 4\n            THEN false\n          WHEN C_NUM = 5\n            THEN true\n          WHEN C_NUM = 6\n            THEN false\n          ELSE true\n        END\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 5\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 6\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  ELSE true\nEND"
+          },
+          "alias" : "c_complex_case"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_TIMESTAMPLTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIMESTAMP_NTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_VARIANT",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "4mT4aIb0wYdUt99OnFaN9$$3jlQ9usYt2RVYB4pW-n8M",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_CONCAT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_HELLO_SIR_OBJECT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_IF",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VAR_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "all_type_table_2##P6UoaX2o" : {
       "id" : "all_type_table_2##P6UoaX2o",
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_table_2",
-        "x" : 20,
-        "y" : 620,
+        "x" : -200,
+        "y" : 700,
         "phase" : 0
       },
       "properties" : {
@@ -3005,8 +4899,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_table_3",
-        "x" : 20,
-        "y" : 420,
+        "x" : -440,
+        "y" : 520,
         "phase" : 0
       },
       "properties" : {
@@ -3195,8 +5089,8 @@
       "component" : "Limit",
       "metadata" : {
         "label" : "Limit_1",
-        "x" : 560,
-        "y" : 860,
+        "x" : 440,
+        "y" : 560,
         "phase" : 0
       },
       "properties" : {
@@ -3307,6 +5201,219 @@
         "autoUpdateOnRun" : false
       }
     },
+    "7yXctRpPMi7SkvqODvkvu$$AiQ5OU8EEytBWSw6rtBUm" : {
+      "id" : "7yXctRpPMi7SkvqODvkvu$$AiQ5OU8EEytBWSw6rtBUm",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "OrderBy_1",
+        "slug" : "OrderBy_1",
+        "x" : -140,
+        "y" : 340,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "9bEwyeAtYRz5ZBhcP1G5A$$ms59bVzbJ4wxFAaeGi24V##C_ADD", "9bEwyeAtYRz5ZBhcP1G5A$$ms59bVzbJ4wxFAaeGi24V##C_CONCAT", "9bEwyeAtYRz5ZBhcP1G5A$$ms59bVzbJ4wxFAaeGi24V##C_BOOL" ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "C_ADD"
+          },
+          "sortType" : "asc",
+          "nullsType" : "nulls last"
+        }, {
+          "expression" : {
+            "expression" : "C_CONCAT"
+          },
+          "sortType" : "asc",
+          "nullsType" : "nulls first"
+        }, {
+          "expression" : {
+            "expression" : "C_BOOL"
+          },
+          "sortType" : "asc"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9bEwyeAtYRz5ZBhcP1G5A$$ms59bVzbJ4wxFAaeGi24V",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_CONCAT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_HELLO_SIR_OBJECT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_IF",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VAR_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "0jLnKeEOR43HIvdZsCr6I$$MTy25s3KXlkPhS7lFuCaP",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_CONCAT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_HELLO_SIR_OBJECT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "col_for_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_IF",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_MAIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_LANGUAGE_SPECIFIC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_SNOWFLAKE__DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VAR_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNC",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COMPLEX_CASE",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "env_uitesting_main_model_snow_1##jXjnShGZ" : {
       "id" : "env_uitesting_main_model_snow_1##jXjnShGZ",
       "component" : "TargetModel",
@@ -3321,7 +5428,8 @@
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM Join_1\n",
+        "query" : "SELECT * \n\nFROM qa_all_not_null_1\n",
+        "isModel" : true,
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -3477,9 +5585,14 @@
               "dataType" : {
                 "type" : "Geography"
               }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
             } ]
           },
-          "slug" : "Join_1"
+          "slug" : "qa_all_not_null_1"
         } ],
         "outputs" : [ {
           "id" : "E3MHBynX",
@@ -3630,6 +5743,11 @@
               "dataType" : {
                 "type" : "Geography"
               }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
             } ]
           },
           "slug" : "out"
@@ -3706,11 +5824,77 @@
     "target" : "Reformat_2##tfhFZdLw",
     "targetPort" : "CDmpQtVv"
   }, {
-    "id" : "dYk5ihon",
+    "id" : "VY5DJPy13HtPatyKwVMzi",
+    "source" : "all_type_table_3##vsbDsvcT",
+    "sourcePort" : "inlGZcrd",
+    "target" : "HK5fbXyPpnpumPvrFZySa$$88KKRvTImCd_yJB-mQX5e",
+    "targetPort" : "iYknQjX6Fvxv2NMiWNI5d$$Gnml7Ea_SRnlJGpU9g8Hr"
+  }, {
+    "id" : "zyCWOcG6l7xNNCdRLoYPi$$anHHCqmQAlGlevNE1eoD7",
+    "source" : "Reformat_2##tfhFZdLw",
+    "sourcePort" : "ifxB2Ehv",
+    "target" : "fCHAq1UtakM-OK0hp1arE$$7ljqlDNfXM7l-Q3lsqiTI",
+    "targetPort" : "ed2-KBxTAg7veaJ-p2jSP$$Yl0gTnLZx02H1dXyZYJPy"
+  }, {
+    "id" : "77HhlrOwlBUOyWa4Y6HVU$$kfSb9IvoTpbCaenszgIB7",
+    "source" : "HK5fbXyPpnpumPvrFZySa$$88KKRvTImCd_yJB-mQX5e",
+    "sourcePort" : "4mT4aIb0wYdUt99OnFaN9$$3jlQ9usYt2RVYB4pW-n8M",
+    "target" : "7yXctRpPMi7SkvqODvkvu$$AiQ5OU8EEytBWSw6rtBUm",
+    "targetPort" : "9bEwyeAtYRz5ZBhcP1G5A$$ms59bVzbJ4wxFAaeGi24V"
+  }, {
+    "id" : "xKsKsXJVsC1Xe0PRnnH_y$$AsorYpkjnbyKN_OEkrtJx",
+    "source" : "7yXctRpPMi7SkvqODvkvu$$AiQ5OU8EEytBWSw6rtBUm",
+    "sourcePort" : "0jLnKeEOR43HIvdZsCr6I$$MTy25s3KXlkPhS7lFuCaP",
+    "target" : "Dlzr4aTRpsPwgp5b_vJw-$$al0niR-G2loabYhACfXpo",
+    "targetPort" : "eh4EE6ga3rGs7czUkC4HJ$$IqmQUTHQj_vB0AjVOreOQ"
+  }, {
+    "id" : "DqADdg6ck2NX7D0Y3NpqA$$FRnJQMi3MVVZwluCK_rgm",
+    "source" : "Dlzr4aTRpsPwgp5b_vJw-$$al0niR-G2loabYhACfXpo",
+    "sourcePort" : "rbPrZdC-eBEYIcdyVNWPn$$rFQG0WCytSNec_yVURcYD",
+    "target" : "PLGNgCLZdyjwm8bEei9qZ$$FFopVru7lCxOXWwazbyte",
+    "targetPort" : "CLOh8nLG_9ZTFPy-oelu1$$uUUPKb6nqlePVlsZe503j"
+  }, {
+    "id" : "056xjlAKg9BV1tM7GOzOy",
+    "source" : "PLGNgCLZdyjwm8bEei9qZ$$FFopVru7lCxOXWwazbyte",
+    "sourcePort" : "iDGD4adWI6dtL4uBjwt52$$T1ukcEqHK7J3vJfJdO6Pn",
+    "target" : "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD",
+    "targetPort" : "171ULucS9TrbOjZqyX0kx$$kjSOgQvmSIu6q805JGlOo"
+  }, {
+    "id" : "9TdqfDD2OwbQxpRZewtOe",
+    "source" : "PLGNgCLZdyjwm8bEei9qZ$$FFopVru7lCxOXWwazbyte",
+    "sourcePort" : "iDGD4adWI6dtL4uBjwt52$$T1ukcEqHK7J3vJfJdO6Pn",
+    "target" : "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD",
+    "targetPort" : "OAGc65jh_ySvBMcaaexeK$$qgEpC6k8zlyxTaF_fi4xQ"
+  }, {
+    "id" : "2wPUq_wIpxOUPFuhyTUvq$$zig5NiBE9X5FrgBaGGCxY",
     "source" : "Join_1##SShRAsg4",
     "sourcePort" : "OVlYAGTQ",
+    "target" : "k2NsXYBaxawkhh8oL_KE_$$sozIXCDHtci46LgblKcy7",
+    "targetPort" : "Be185HqqULmp8rgk8UEGE"
+  }, {
+    "id" : "ehAQrSI4KR-YwN8yEez-1",
+    "source" : "k2NsXYBaxawkhh8oL_KE_$$sozIXCDHtci46LgblKcy7",
+    "sourcePort" : "Rfinw2FhtXI3y4DKOv5H-$$aGcCtFslFgswD-FuV-xOz",
     "target" : "env_uitesting_main_model_snow_1##jXjnShGZ",
     "targetPort" : "PVULU1c0"
+  }, {
+    "id" : "8vugUTrlT6UzoJ3MNJtRT",
+    "source" : "fCHAq1UtakM-OK0hp1arE$$7ljqlDNfXM7l-Q3lsqiTI",
+    "sourcePort" : "nyPnQVQuKGo0Q58v6lZMK$$SYlbSVrIU0uLhV8ODqvuN",
+    "target" : "fFlL3QSk553HHw1iCmnLk$$udiENyvAvObfb_1f3SmMa",
+    "targetPort" : "25VRyd0CJLwpE27fMspmv"
+  }, {
+    "id" : "17OHQ4PvKdHxBMsB-HG2e",
+    "source" : "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD",
+    "sourcePort" : "9H4U3ObWy9pZ1E9Pwirxf$$D_gUTMN3DMeoXBVVAoaGh",
+    "target" : "fFlL3QSk553HHw1iCmnLk$$udiENyvAvObfb_1f3SmMa",
+    "targetPort" : "HA_ljv1mh8o5gUDEqp4CO"
+  }, {
+    "id" : "13L3ecJ4XRIeRbop5Yw4x",
+    "source" : "fFlL3QSk553HHw1iCmnLk$$udiENyvAvObfb_1f3SmMa",
+    "sourcePort" : "cqqwiTqUJK6aHDPVmYol1$$3RU7wSmVTaiEFpPZvrtz7",
+    "target" : "Join_1##SShRAsg4",
+    "targetPort" : "EoXH-5JNjREzOk8gwk26o"
   } ],
   "component" : "Model"
 }

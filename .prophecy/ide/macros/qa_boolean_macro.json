@@ -124,14 +124,14 @@
     "staleState" : "none",
     "version" : 0
   },
-  "qa_concat_macro_column1" : {
-    "name" : "qa_concat_macro_column1",
+  "qa_boolean_macro_test" : {
+    "name" : "qa_boolean_macro_test",
     "macroType" : "expression",
-    "definition" : "concat({{param1_column}}, 'hellomain_password')",
+    "definition" : "startswith('sasd', 'te')\nor REGEXP_LIKE({{input_column}}, 'san.*')\nor RLIKE({{input_column}}, 'san.*', 'i')\nor CONTAINS({{input_column}}, 'te')\nor ({{input_column}} LIKE '%j%h%do%')",
     "parameters" : {
       "type" : "record",
       "fields" : [ {
-        "name" : "param1_column",
+        "name" : "input_column",
         "kind" : {
           "type" : "value"
         },
@@ -143,8 +143,8 @@
     "staleState" : "none",
     "version" : 0
   },
-  "qa_macro_call_another_macro_column" : {
-    "name" : "qa_macro_call_another_macro_column",
+  "qa_macro_call_another_macro_column_test" : {
+    "name" : "qa_macro_call_another_macro_column_test",
     "macroType" : "expression",
     "definition" : "concat({{ SQL_SnoflakeMainProject.qa_concat_macro_column1(param_column) }}, {{param_column}})",
     "parameters" : {
@@ -162,14 +162,14 @@
     "staleState" : "none",
     "version" : 0
   },
-  "qa_boolean_macro" : {
-    "name" : "qa_boolean_macro",
+  "qa_concat_macro_column1_test1" : {
+    "name" : "qa_concat_macro_column1_test1",
     "macroType" : "expression",
-    "definition" : "startswith('sasd', 'te')\nor REGEXP_LIKE({{input_column}}, 'san.*')\nor RLIKE({{input_column}}, 'san.*', 'i')\nor CONTAINS({{input_column}}, 'te')\nor ({{input_column}} LIKE '%j%h%do%')",
+    "definition" : "concat({{param1_column}}, 'hellomain_password')",
     "parameters" : {
       "type" : "record",
       "fields" : [ {
-        "name" : "input_column",
+        "name" : "param1_column",
         "kind" : {
           "type" : "value"
         },

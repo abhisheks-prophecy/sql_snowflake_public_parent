@@ -10,8 +10,8 @@
     "graphConfig" : {
       "entityConfig" : {
         "fail_calc" : "'count(*)'",
-        "error_if" : "'< 1000'",
         "severity" : "'error'",
+        "error_if" : "'< 1000'",
         "warn_if" : "'<5000'",
         "type" : "TestConfig"
       }
@@ -184,6 +184,11 @@
               "dataType" : {
                 "type" : "Geography"
               }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
             } ]
           },
           "slug" : "OrderBy_1"
@@ -336,6 +341,11 @@
               "name" : "C_GEOGRAPHY",
               "dataType" : {
                 "type" : "Geography"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
               }
             } ]
           },
@@ -512,6 +522,11 @@
               "name" : "C_GEOGRAPHY",
               "dataType" : {
                 "type" : "Geography"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
               }
             } ]
           },
@@ -711,6 +726,11 @@
               "dataType" : {
                 "type" : "Geography"
               }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
             } ]
           },
           "slug" : "in0"
@@ -863,6 +883,11 @@
               "name" : "C_GEOGRAPHY",
               "dataType" : {
                 "type" : "Geography"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
               }
             } ]
           },
@@ -1039,6 +1064,11 @@
               "dataType" : {
                 "type" : "Geography"
               }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
+              }
             } ]
           },
           "slug" : "in0"
@@ -1191,6 +1221,11 @@
               "name" : "C_GEOGRAPHY",
               "dataType" : {
                 "type" : "Geography"
+              }
+            }, {
+              "name" : "C_MACROS_DEP",
+              "dataType" : {
+                "type" : "String"
               }
             } ]
           },

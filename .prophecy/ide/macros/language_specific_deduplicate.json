@@ -1,7 +1,6 @@
 {
   "macro_GEqatOGT" : {
     "name" : "postgres__language_specific_deduplicate",
-    "macroId" : "macro_GEqatOGT",
     "macroType" : "query",
     "definition" : "\n\n    select\n        distinct on ({{ partition_by }}) *\n    from {{ relation }}\n    order by {{ partition_by }}{{ ',' ~ order_by }}",
     "parameters" : {
@@ -14,7 +13,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "partition_by",
         "kind" : {
@@ -23,7 +23,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "order_by",
         "kind" : {
@@ -32,7 +33,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -93,12 +95,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_cxzDxJF3" : {
     "name" : "bigquery__language_specific_deduplicate",
-    "macroId" : "macro_cxzDxJF3",
     "macroType" : "query",
     "definition" : "\n\n    select unique.*\n    from (\n        select\n            array_agg (\n                original\n                order by {{ order_by }}\n                limit 1\n            )[offset(0)] unique\n        from {{ relation }} original\n        group by {{ partition_by }}\n    )",
     "parameters" : {
@@ -109,21 +111,24 @@
           "type" : "table"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "partition_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "order_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -149,12 +154,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_FD6OKKbC" : {
     "name" : "default__language_specific_deduplicate",
-    "macroId" : "macro_FD6OKKbC",
     "macroType" : "query",
     "definition" : "\n\n    with row_numbered as (\n        select\n            _inner.*,\n            row_number() over (\n                partition by {{ partition_by }}\n                order by {{ order_by }}\n            ) as rn\n        from {{ relation }} as _inner\n    )\n\n    select\n        distinct data.*\n    from {{ relation }} as data\n    \n    natural join row_numbered\n    where row_numbered.rn = 1",
     "parameters" : {
@@ -167,7 +172,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "partition_by",
         "kind" : {
@@ -176,7 +182,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "order_by",
         "kind" : {
@@ -185,7 +192,8 @@
         },
         "optional" : false,
         "comment" : "",
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none",
@@ -230,12 +238,12 @@
           "macroType" : "query"
         } ]
       },
-      "packagesYml" : null
+      "packagesYml" : null,
+      "editable" : null
     }
   },
   "macro_yiuT9Mm1" : {
     "name" : "redshift__language_specific_deduplicate",
-    "macroId" : "macro_yiuT9Mm1",
     "macroType" : "expression",
     "definition" : "{{ return(dbt_utils.default__language_specific_deduplicate(relation, partition_by, order_by = order_by)) }}",
     "parameters" : {
@@ -246,28 +254,30 @@
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "partition_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "order_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none"
   },
   "macro_DdGpHBkJ" : {
     "name" : "snowflake__language_specific_deduplicate",
-    "macroId" : "macro_DdGpHBkJ",
     "macroType" : "query",
     "definition" : "\n\n    select *\n    from {{ relation }}\n    qualify\n        row_number() over (\n            partition by {{ partition_by }}\n            order by {{ order_by }}\n        ) = 1",
     "parameters" : {
@@ -278,28 +288,30 @@
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "partition_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "order_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none"
   },
   "macro_mpf2lzfJ" : {
     "name" : "language_specific_deduplicate",
-    "macroId" : "macro_mpf2lzfJ",
     "macroType" : "expression",
     "definition" : "{{ return(adapter.dispatch('language_specific_deduplicate', 'SQL_SnoflakeMainProject')(relation, partition_by, order_by)) }}",
     "parameters" : {
@@ -310,21 +322,24 @@
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "partition_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       }, {
         "name" : "order_by",
         "kind" : {
           "type" : "unknown"
         },
         "optional" : false,
-        "isWorkflowNodeConfiguration" : false
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
       } ]
     },
     "staleState" : "none"

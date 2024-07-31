@@ -29,10 +29,12 @@ target-path: "target"
 # Variable Configs
 # ==================
 vars:
+  v_p_complex_dict: "{'a': [1,2,3,4], 'b': ['hello', 'sir']}"
+  v_p_dict: "{'a': 10, 'b': 20}"
   v_project_bool_parent: "True"
+  v_project_dict_parent: "{ 'a' : 2, 'b' : 10, 'c' : [1, 2, 'hello'] }"
   v_project_expression_parent: "'concat(c_string, c_text, c_varchar)'"
   v_project_int_parent: "12"
-  v_project_dict_parent: "{ 'a' : 2, 'b' : 10, 'c' : [1, 2, 'hello'] }"
   v_project_list_parent: "[1, 2, 'hello']"
 
 # ============

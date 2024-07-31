@@ -1,13 +1,17 @@
-{% macro qa_concat_macro_column1(param1_column) %}
+{% macro qa_concat_macro_column1_test1(param1_column) %}
 concat({{param1_column}}, 'hellomain_password')
 {% endmacro %}
 
- {% macro qa_macro_call_another_macro_column(param_column) %}
+ {% macro qa_macro_call_another_macro_column_test(param_column) %}
 concat({{ SQL_SnoflakeMainProject.qa_concat_macro_column1(param_column) }}, {{param_column}})
 {% endmacro %}
 
- {% macro qa_boolean_macro(input_column) %}
+ {% macro qa_boolean_macro_test(input_column) %}
 startswith('sasd', 'te') or REGEXP_LIKE({{input_column}}, 'san.*') or RLIKE({{input_column}}, 'san.*', 'i') or CONTAINS({{input_column}}, 'te') or ({{input_column}} LIKE '%j%h%do%')
+{% endmacro %}
+
+ {% macro qa_concat_macro(input_string) %}
+concat(TRIM('{{input_string}}', '?-'), REPLACE('{{input_string}}', 'bc'), RIGHT('{{input_string}}', 3), CAST(HASH(SEQ8()) AS string), ASCII('A'), REPEAT('xy', 5), REVERSE('Hello, world!'), SUBSTR('testing 1 2 3', 9, 5), INSERT('abc', 1, 2, 'Z'), RTRIM('$125.00', '0.'), UUID_STRING(), sha1('{{input_string}}'), CAST(md5_binary('{{input_string}}') AS string), LPAD(' hello ', 10, ' '), DECOMPRESS_STRING(TO_BINARY('0920536E6F77666C616B65', 'HEX'), 'SNAPPY'), LPAD('.  hi. ', 10, '$'), DAYNAME(TO_DATE('2015-05-01')), CAST(LAST_DAY(TO_DATE('2015-05-08T23:39:20.123-07:00')) AS string), CAST(DATEADD(YEAR, 2, TO_DATE('2013-05-08')) AS string), CAST(DATEDIFF(MONTH, '2021-01-01'::DATE, '2021-02-28'::DATE) AS string), CAST(DATEDIFF(HOUR, '2013-05-08T23:39:20.123-07:00'::TIMESTAMP, DATEADD(YEAR, 2, ('2013-05-08T23:39:20.123-07:00')::TIMESTAMP)) AS string), CAST(TIMEDIFF(YEAR, '2017-01-01', '2019-01-01') AS string), CAST(TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') AS string), CAST(TRY_TO_TIME('12:30:00') AS string))
 {% endmacro %}
 
  {% macro qa_concat_macro(input_string) %}
