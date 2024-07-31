@@ -18,7 +18,7 @@ def Model_0():
           "run_parents": False,
           "run_children": False,
           "run_tests": True,
-          "run_mode": "model",
+          "run_mode": "project",
           "entity_kind": "model",
           "entity_name": "env_uitesting_main_model_snow_1",
           "project_id": "67",
@@ -31,4 +31,5 @@ def Model_0():
           "run_props": " --profile run_profile",
           "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
         },
+        retries = 0
     )

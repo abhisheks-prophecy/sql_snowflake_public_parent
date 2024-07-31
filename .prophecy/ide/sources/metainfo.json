@@ -6619,14 +6619,6 @@
     "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ {
-    "name" : "env_uitesting_main_model_snow_1",
-    "type" : "Model",
-    "syncedOnce" : false
-  }, {
-    "name" : "env_uitesting_main_model_snow_2",
-    "type" : "Model",
-    "syncedOnce" : false
-  }, {
     "name" : "snapshot_parent_main",
     "type" : "Snapshot",
     "syncedOnce" : true
