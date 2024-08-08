@@ -17,8 +17,7 @@
       },
       "userDefinedConfig" : {
         "vars" : { }
-      },
-      "mergeApproach" : "scd2"
+      }
     },
     "version" : 3
   },
@@ -539,7 +538,7 @@
     },
     "snapshot_parent_main##oaEx0kDG" : {
       "id" : "snapshot_parent_main##oaEx0kDG",
-      "component" : "TargetModel",
+      "component" : "TargetSnapshot",
       "metadata" : {
         "label" : "snapshot_parent_main",
         "x" : 420,
@@ -552,7 +551,6 @@
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
         "query" : "SELECT * \n\nFROM Reformat_1\n",
-        "isModel" : false,
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
