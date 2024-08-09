@@ -209,7 +209,7 @@ sources:
     - name: "C_GEOGRAPHY"
       dataType:
         type: "Geography"
-- name: "QA_DATABASE.\"qa_SCHEMA\""
+- name: "alias_test_QA_DATABASE.\"qa_SCHEMA\""
   database: "QA_DATABASE"
   schema: "\"qa_SCHEMA\""
   config:
@@ -332,7 +332,7 @@ sources:
     - name: "MANAGER_ID"
       dataType:
         type: "Number"
-- name: "JAFFLE_SHOP.PUBLIC"
+- name: "alias_test_JAFFLE_SHOP.PUBLIC"
   database: "JAFFLE_SHOP"
   schema: "PUBLIC"
   config:
@@ -343,7 +343,7 @@ sources:
     - name: "A"
       dataType:
         type: "Number"
-- name: "\"qa_database\".\"qa_SCHEMA\""
+- name: "alias_test_\"qa_database\".\"qa_SCHEMA\""
   database: "\"qa_database\""
   schema: "\"qa_SCHEMA\""
   config:
@@ -447,7 +447,7 @@ sources:
     - name: "C_GEOGRAPHY"
       dataType:
         type: "Geography"
-- name: "\"qa_database_lower_case_only\".\"qa_schema_lower_case\""
+- name: "alias_test_\"qa_database_lower_case_only\".\"qa_schema_lower_case\""
   database: "\"qa_database_lower_case_only\""
   schema: "\"qa_schema_lower_case\""
   config:

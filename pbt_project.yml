@@ -677,13 +677,142 @@ sqlSeeds:
     - seeds/raw_data/raw_payments.csv
     createdAt: '2023-04-12 13:57:52'
 sqlSources:
-  .prophecy/metadata/sqlsources/_qa_database_lower_case_only___qa_schema_lower_case_:
-    name: '"qa_database_lower_case_only"."qa_schema_lower_case"'
+  .prophecy/metadata/sqlsources/alias_test__qa_database___qa_SCHEMA_:
+    name: alias_test_"qa_database"."qa_SCHEMA"
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
     - prophecy-sources/sources.yml
-    createdAt: '2023-06-21 15:20:58'
+    createdAt: '2024-08-09 06:14:57'
+    tables:
+    - name: '"all_type_table"'
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2024-08-09 06:14:57'
+  .prophecy/metadata/sqlsources/alias_test_JAFFLE_SHOP_PUBLIC:
+    name: alias_test_JAFFLE_SHOP.PUBLIC
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-08-09 06:14:57'
+    tables:
+    - name: '"DeltaO1"'
+      schema:
+        providerType: snowflake
+        fields:
+        - name: A
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2024-08-09 06:14:57'
+  .prophecy/metadata/sqlsources/alias_test__qa_database_lower_case_only___qa_schema_lower_case_:
+    name: alias_test_"qa_database_lower_case_only"."qa_schema_lower_case"
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-08-09 06:14:57'
     tables:
     - name: '"employees"'
       schema:
@@ -700,25 +829,147 @@ sqlSources:
             type: Number
       description: null
       author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-06-21 15:20:58'
-  .prophecy/metadata/sqlsources/JAFFLE_SHOP_PUBLIC:
-    name: JAFFLE_SHOP.PUBLIC
+      createdAt: '2024-08-09 06:14:57'
+  .prophecy/metadata/sqlsources/alias_test_QA_DATABASE__qa_SCHEMA_:
+    name: alias_test_QA_DATABASE."qa_SCHEMA"
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
     - prophecy-sources/sources.yml
-    createdAt: '2023-06-19 13:51:13'
+    createdAt: '2024-08-09 06:14:57'
     tables:
-    - name: '"DeltaO1"'
+    - name: '"all_type_table"'
       schema:
         providerType: snowflake
         fields:
-        - name: A
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2024-08-09 06:14:57'
+    - name: '"ALL_TYPE_Table"'
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_STRING
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2024-08-09 06:14:57'
+    - name: '"Employees_qa_SCHEMA"'
+      schema:
+        providerType: snowflake
+        fields:
+        - name: TITLE
+          dataType:
+            type: String
+        - name: EMPLOYEE_ID
+          dataType:
+            type: Number
+        - name: MANAGER_ID
           dataType:
             type: Number
       description: null
       author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-06-19 13:51:13'
+      createdAt: '2024-08-09 06:14:57'
   .prophecy/metadata/sqlsources/alisa_qa_database_qa_SIMPLE_schema:
     name: alisa_qa_database_qa_SIMPLE_schema
     description: null
@@ -851,257 +1102,6 @@ sqlSources:
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-05-03 11:55:41'
-  .prophecy/metadata/sqlsources/QA_DATABASE__qa_SCHEMA_:
-    name: QA_DATABASE."qa_SCHEMA"
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - prophecy-sources/sources.yml
-    createdAt: '2023-06-19 13:55:46'
-    tables:
-    - name: '"all_type_table"'
-      schema:
-        providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
-      description: null
-      author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-06-19 13:55:46'
-    - name: '"ALL_TYPE_Table"'
-      schema:
-        providerType: snowflake
-        fields:
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_STRING
-          dataType:
-            type: String
-      description: null
-      author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-06-19 13:55:46'
-    - name: '"Employees_qa_SCHEMA"'
-      schema:
-        providerType: snowflake
-        fields:
-        - name: TITLE
-          dataType:
-            type: String
-        - name: EMPLOYEE_ID
-          dataType:
-            type: Number
-        - name: MANAGER_ID
-          dataType:
-            type: Number
-      description: null
-      author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-06-19 13:58:08'
-  .prophecy/metadata/sqlsources/_qa_database___qa_SCHEMA_:
-    name: '"qa_database"."qa_SCHEMA"'
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - prophecy-sources/sources.yml
-    createdAt: '2023-06-19 13:55:03'
-    tables:
-    - name: '"all_type_table"'
-      schema:
-        providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
-      description: null
-      author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-06-19 13:55:03'
   .prophecy/metadata/sqlsources/alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA:
     name: alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA
     description: null

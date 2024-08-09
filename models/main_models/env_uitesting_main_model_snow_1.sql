@@ -640,27 +640,27 @@ Pivot_1 AS (
 
 ),
 
-Employees_qa_SCHEMA AS (
-
-  SELECT * 
-  
-  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"Employees_qa_SCHEMA"') }}
-
-),
-
 all_type_table AS (
 
   SELECT * 
   
-  FROM {{ source('"qa_database"."qa_SCHEMA"', '"all_type_table"') }}
+  FROM {{ source('alias_test_"qa_database"."qa_SCHEMA"', '"all_type_table"') }}
 
 ),
 
-all_type_table_2 AS (
+Employees_qa_SCHEMA AS (
 
   SELECT * 
   
-  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"all_type_table"') }}
+  FROM {{ source('alias_test_QA_DATABASE."qa_SCHEMA"', '"Employees_qa_SCHEMA"') }}
+
+),
+
+all_type_table_1 AS (
+
+  SELECT * 
+  
+  FROM {{ source('alisa_qa_database_qa_SIMPLE_schema', '"all_type_table"') }}
 
 ),
 
@@ -679,11 +679,11 @@ Join_2 AS (
   FROM all_type_table AS in0
   INNER JOIN all_type_table_3 AS in1
      ON in0.c_int = in1.c_int
-  INNER JOIN all_type_table_2 AS in2
+  INNER JOIN all_type_table_1 AS in2
      ON in1.c_int = in2.c_int
   INNER JOIN Employees_qa_SCHEMA AS in3
      ON in2.C_NUM != in3.EMPLOYEE_ID
-  INNER JOIN all_type_table AS in5
+  INNER JOIN all_type_table_1 AS in5
      ON in3.EMPLOYEE_ID != in5.C_INT
 
 ),

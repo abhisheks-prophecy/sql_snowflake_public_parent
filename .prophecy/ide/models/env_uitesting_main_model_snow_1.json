@@ -5,7 +5,442 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ ]
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "\"employees\"",
+            "sourceName" : "alias_test_\"qa_database_lower_case_only\".\"qa_schema_lower_case\"",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "employees",
+        "canJoinWith" : [ {
+          "processLabel" : "Employees_qa_SCHEMA",
+          "processId" : "h0eO8H0GLhhKItWWGjeqz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMPLOYEE_ID", "MANAGER_ID", "TITLE" ],
+            "conditions" : [ {
+              "alias" : "employees",
+              "expression" : {
+                "expression" : "employees.EMPLOYEE_ID = Employees_qa_SCHEMA.EMPLOYEE_ID AND employees.MANAGER_ID = Employees_qa_SCHEMA.MANAGER_ID AND employees.TITLE = Employees_qa_SCHEMA.TITLE"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            } ],
+            "headAlias" : "employees",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMPLOYEE_ID", "MANAGER_ID", "TITLE" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "EMPLOYEES",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "EMPLOYEES",
+        "canJoinWith" : [ {
+          "processLabel" : "Employees_qa_SCHEMA",
+          "processId" : "h0eO8H0GLhhKItWWGjeqz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMPLOYEE_ID", "MANAGER_ID", "TITLE" ],
+            "conditions" : [ {
+              "alias" : "EMPLOYEES",
+              "expression" : {
+                "expression" : "EMPLOYEES.EMPLOYEE_ID = Employees_qa_SCHEMA.EMPLOYEE_ID AND EMPLOYEES.MANAGER_ID = Employees_qa_SCHEMA.MANAGER_ID AND EMPLOYEES.TITLE = Employees_qa_SCHEMA.TITLE"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            } ],
+            "headAlias" : "EMPLOYEES",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMPLOYEE_ID", "MANAGER_ID", "TITLE" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "EMPLOYEE_HIERARCHY",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "EMPLOYEE_HIERARCHY",
+        "canJoinWith" : [ {
+          "processLabel" : "Employees_qa_SCHEMA",
+          "processId" : "h0eO8H0GLhhKItWWGjeqz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMPLOYEE_ID", "MANAGER_ID", "TITLE" ],
+            "conditions" : [ {
+              "alias" : "EMPLOYEE_HIERARCHY",
+              "expression" : {
+                "expression" : "EMPLOYEE_HIERARCHY.EMPLOYEE_ID = Employees_qa_SCHEMA.EMPLOYEE_ID AND EMPLOYEE_HIERARCHY.MANAGER_ID = Employees_qa_SCHEMA.MANAGER_ID AND EMPLOYEE_HIERARCHY.TITLE = Employees_qa_SCHEMA.TITLE"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "EMPLOYEE_HIERARCHY.`MGR_EMP_ID (SHOULD BE SAME)`"
+              },
+              "alias" : "MGR_EMP_ID (SHOULD BE SAME)"
+            }, {
+              "expression" : {
+                "expression" : "EMPLOYEE_HIERARCHY.`MGR TITLE`"
+              },
+              "alias" : "MGR TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            } ],
+            "headAlias" : "EMPLOYEE_HIERARCHY",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMPLOYEE_ID", "MANAGER_ID", "TITLE" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "ITEM",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "ITEM",
+        "canJoinWith" : [ {
+          "processLabel" : "Employees_qa_SCHEMA",
+          "processId" : "h0eO8H0GLhhKItWWGjeqz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "MANAGER_ID" ],
+            "conditions" : [ {
+              "alias" : "ITEM",
+              "expression" : {
+                "expression" : "ITEM.I_MANAGER_ID = Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "ITEM.I_ITEM_SK"
+              },
+              "alias" : "I_ITEM_SK"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_ITEM_ID"
+              },
+              "alias" : "I_ITEM_ID"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_REC_START_DATE"
+              },
+              "alias" : "I_REC_START_DATE"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_REC_END_DATE"
+              },
+              "alias" : "I_REC_END_DATE"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_ITEM_DESC"
+              },
+              "alias" : "I_ITEM_DESC"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_CURRENT_PRICE"
+              },
+              "alias" : "I_CURRENT_PRICE"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_WHOLESALE_COST"
+              },
+              "alias" : "I_WHOLESALE_COST"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_BRAND_ID"
+              },
+              "alias" : "I_BRAND_ID"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_BRAND"
+              },
+              "alias" : "I_BRAND"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_CLASS_ID"
+              },
+              "alias" : "I_CLASS_ID"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_CLASS"
+              },
+              "alias" : "I_CLASS"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_CATEGORY_ID"
+              },
+              "alias" : "I_CATEGORY_ID"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_CATEGORY"
+              },
+              "alias" : "I_CATEGORY"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_MANUFACT_ID"
+              },
+              "alias" : "I_MANUFACT_ID"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_MANUFACT"
+              },
+              "alias" : "I_MANUFACT"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_SIZE"
+              },
+              "alias" : "I_SIZE"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_FORMULATION"
+              },
+              "alias" : "I_FORMULATION"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_COLOR"
+              },
+              "alias" : "I_COLOR"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_UNITS"
+              },
+              "alias" : "I_UNITS"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_CONTAINER"
+              },
+              "alias" : "I_CONTAINER"
+            }, {
+              "expression" : {
+                "expression" : "ITEM.I_PRODUCT_NAME"
+              },
+              "alias" : "I_PRODUCT_NAME"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            } ],
+            "headAlias" : "ITEM",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "MANAGER_ID" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "MONTHLY_SALES",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "MONTHLY_SALES",
+        "canJoinWith" : [ {
+          "processLabel" : "Employees_qa_SCHEMA",
+          "processId" : "h0eO8H0GLhhKItWWGjeqz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "MANAGER_ID" ],
+            "conditions" : [ {
+              "alias" : "MONTHLY_SALES",
+              "expression" : {
+                "expression" : "MONTHLY_SALES.MAR = Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "MONTHLY_SALES.EMPID"
+              },
+              "alias" : "EMPID"
+            }, {
+              "expression" : {
+                "expression" : "MONTHLY_SALES.DEPT"
+              },
+              "alias" : "DEPT"
+            }, {
+              "expression" : {
+                "expression" : "MONTHLY_SALES.JAN"
+              },
+              "alias" : "JAN"
+            }, {
+              "expression" : {
+                "expression" : "MONTHLY_SALES.FEB"
+              },
+              "alias" : "FEB"
+            }, {
+              "expression" : {
+                "expression" : "MONTHLY_SALES.APRIL"
+              },
+              "alias" : "APRIL"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            } ],
+            "headAlias" : "MONTHLY_SALES",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "MANAGER_ID" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TEST1",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TEST1",
+        "canJoinWith" : [ {
+          "processLabel" : "Employees_qa_SCHEMA",
+          "processId" : "h0eO8H0GLhhKItWWGjeqz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "MANAGER_ID" ],
+            "conditions" : [ {
+              "alias" : "TEST1",
+              "expression" : {
+                "expression" : "TEST1.MAR = Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TEST1.EMPID"
+              },
+              "alias" : "EMPID"
+            }, {
+              "expression" : {
+                "expression" : "TEST1.DEPT"
+              },
+              "alias" : "DEPT"
+            }, {
+              "expression" : {
+                "expression" : "TEST1.JAN"
+              },
+              "alias" : "JAN"
+            }, {
+              "expression" : {
+                "expression" : "TEST1.FEB"
+              },
+              "alias" : "FEB"
+            }, {
+              "expression" : {
+                "expression" : "TEST1.APRIL"
+              },
+              "alias" : "APRIL"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "Employees_qa_SCHEMA.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            } ],
+            "headAlias" : "TEST1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "MANAGER_ID" ],
+          "isRecommended" : false
+        } ]
+      } ]
     },
     "graphConfig" : {
       "entityConfig" : {
@@ -609,7 +1044,7 @@
           "alias" : "C_MACROS_DEP"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "drbpcyqB##C_STRING", "IxVIiW5B##TITLE", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
+        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -1299,51 +1734,6 @@
         "autoUpdateOnRun" : false
       }
     },
-    "Employees_qa_SCHEMA##J9DRLkqO" : {
-      "id" : "Employees_qa_SCHEMA##J9DRLkqO",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "Employees_qa_SCHEMA",
-        "x" : -100,
-        "y" : 760,
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "\"Employees_qa_SCHEMA\"",
-          "sourceType" : "Source",
-          "sourceName" : "QA_DATABASE.\"qa_SCHEMA\""
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "nFZ3Zjqy",
-          "schema" : {
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "TITLE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EMPLOYEE_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "MANAGER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
     "TABLE_COMPLEX_TYPES_1_1##FFvA9Qfa" : {
       "id" : "TABLE_COMPLEX_TYPES_1_1##FFvA9Qfa",
       "component" : "Source",
@@ -1839,6 +2229,53 @@
               "name" : "status",
               "dataType" : {
                 "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "h0eO8H0GLhhKItWWGjeqz" : {
+      "id" : "h0eO8H0GLhhKItWWGjeqz",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Employees_qa_SCHEMA",
+        "slug" : "Employees_qa_SCHEMA",
+        "x" : -120,
+        "y" : 820,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "\"Employees_qa_SCHEMA\"",
+          "sourceType" : "Source",
+          "sourceName" : "alias_test_QA_DATABASE.\"qa_SCHEMA\"",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "IGzNJiitaNwPr0ZBrdiG0",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMPLOYEE_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MANAGER_ID",
+              "dataType" : {
+                "type" : "Number"
               }
             } ]
           },
@@ -2814,196 +3251,6 @@
         "autoUpdateOnRun" : false
       }
     },
-    "all_type_table##cHsDlBec" : {
-      "id" : "all_type_table##cHsDlBec",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "all_type_table",
-        "x" : -140,
-        "y" : 500,
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "\"all_type_table\"",
-          "sourceType" : "Source",
-          "sourceName" : "\"qa_database\".\"qa_SCHEMA\""
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "eXiNfqlc",
-          "schema" : {
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "C_NUM",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NUM10",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_DEC",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NUMERIC",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_INT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_INTEGER",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_DOUBLE",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "C_FLOAT",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "C_COUBLE_PRECISION",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "C_REAL",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "C_VARCHAR",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_VARCHAR50",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CHAR",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CHAR10",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_STRING",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_STRING20",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_TEXT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_TEXT30",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_BINARY",
-              "dataType" : {
-                "type" : "Binary"
-              }
-            }, {
-              "name" : "C_BINARY100",
-              "dataType" : {
-                "type" : "Binary"
-              }
-            }, {
-              "name" : "C_VARBINARY",
-              "dataType" : {
-                "type" : "Binary"
-              }
-            }, {
-              "name" : "C_BOOL",
-              "dataType" : {
-                "type" : "Boolean"
-              }
-            }, {
-              "name" : "C_TIMESTAMP",
-              "dataType" : {
-                "type" : "Timestamp"
-              }
-            }, {
-              "name" : "C_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "C_DATETIME",
-              "dataType" : {
-                "type" : "Timestamp"
-              }
-            }, {
-              "name" : "C_TIME",
-              "dataType" : {
-                "type" : "Time"
-              }
-            }, {
-              "name" : "C_TIMESTAMPLTZ",
-              "dataType" : {
-                "type" : "Timestamp"
-              }
-            }, {
-              "name" : "C_TIMESTAMP_NTZ",
-              "dataType" : {
-                "type" : "Timestamp"
-              }
-            }, {
-              "name" : "C_VARIANT",
-              "dataType" : {
-                "type" : "Variant"
-              }
-            }, {
-              "name" : "C_ARRAY",
-              "dataType" : {
-                "type" : "Array"
-              }
-            }, {
-              "name" : "C_OBJECT",
-              "dataType" : {
-                "type" : "Object"
-              }
-            }, {
-              "name" : "C_GEOGRAPHY",
-              "dataType" : {
-                "type" : "Geography"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
     "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD" : {
       "id" : "ne5PB6qgqhwvtZrGYUY3m$$AkXjKprQjzQs1LhcrYuGD",
       "component" : "SetOperation",
@@ -3859,7 +4106,7 @@
           "alias" : "C_VARCHAR"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "XretAywF##c_int", "qcDE32Id##c_int", "PkmCbb8F##c_int", "PkmCbb8F##C_NUM", "LyRdvoJP##EMPLOYEE_ID", "kDcDpwRu##C_INT", "LyRdvoJP##TITLE", "LyRdvoJP##EMPLOYEE_ID", "LyRdvoJP##MANAGER_ID", "kDcDpwRu##C_INT", "kDcDpwRu##C_STRING", "PkmCbb8F##C_NUMERIC", "qcDE32Id##C_REAL", "XretAywF##C_VARCHAR" ],
+        "columnsSelector" : [ "XretAywF##c_int", "qcDE32Id##c_int", "PkmCbb8F##c_int", "PkmCbb8F##C_NUM", "kDcDpwRu##C_INT", "kDcDpwRu##C_INT", "kDcDpwRu##C_STRING", "PkmCbb8F##C_NUMERIC", "qcDE32Id##C_REAL", "XretAywF##C_VARCHAR" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -5202,26 +5449,28 @@
         "autoUpdateOnRun" : false
       }
     },
-    "all_type_table_2##P6UoaX2o" : {
-      "id" : "all_type_table_2##P6UoaX2o",
+    "g4cx1cT1gDfMeW-XZ3RAw" : {
+      "id" : "g4cx1cT1gDfMeW-XZ3RAw",
       "component" : "Source",
       "metadata" : {
-        "label" : "all_type_table_2",
-        "x" : -300,
-        "y" : 660,
+        "label" : "all_type_table",
+        "slug" : "all_type_table",
+        "x" : -220,
+        "y" : 500,
         "phase" : 0
       },
       "properties" : {
         "table" : {
           "name" : "\"all_type_table\"",
           "sourceType" : "Source",
-          "sourceName" : "QA_DATABASE.\"qa_SCHEMA\""
+          "sourceName" : "alias_test_\"qa_database\".\"qa_SCHEMA\"",
+          "alias" : ""
         }
       },
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "yi1NwLii",
+          "id" : "8bTUvqiOB6jGfjvLCj6QR",
           "schema" : {
             "providerType" : "snowflake",
             "fields" : [ {
@@ -5771,6 +6020,198 @@
               "name" : "C_VARCHAR",
               "dataType" : {
                 "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "llVIfOzZX85aaIdRJqgjS" : {
+      "id" : "llVIfOzZX85aaIdRJqgjS",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "all_type_table_1",
+        "slug" : "all_type_table_1",
+        "x" : -400,
+        "y" : 680,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "\"all_type_table\"",
+          "sourceType" : "Source",
+          "sourceName" : "alisa_qa_database_qa_SIMPLE_schema",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "oZGoZL9tn4Pr6t8SSXcJ1",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_TIMESTAMPLTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIMESTAMP_NTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_VARIANT",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
               }
             } ]
           },
@@ -6756,35 +7197,11 @@
     }
   },
   "connections" : [ {
-    "id" : "eSnzldro",
-    "source" : "all_type_table##cHsDlBec",
-    "sourcePort" : "eXiNfqlc",
-    "target" : "Join_2##htQn58ak",
-    "targetPort" : "XretAywF"
-  }, {
     "id" : "X99y5j5f",
     "source" : "all_type_table_3##vsbDsvcT",
     "sourcePort" : "inlGZcrd",
     "target" : "Join_2##htQn58ak",
     "targetPort" : "qcDE32Id"
-  }, {
-    "id" : "HgstL1RG",
-    "source" : "all_type_table_2##P6UoaX2o",
-    "sourcePort" : "yi1NwLii",
-    "target" : "Join_2##htQn58ak",
-    "targetPort" : "PkmCbb8F"
-  }, {
-    "id" : "cVxwBZ7X",
-    "source" : "Employees_qa_SCHEMA##J9DRLkqO",
-    "sourcePort" : "nFZ3Zjqy",
-    "target" : "Join_2##htQn58ak",
-    "targetPort" : "LyRdvoJP"
-  }, {
-    "id" : "HbhcI9TC",
-    "source" : "all_type_table##cHsDlBec",
-    "sourcePort" : "eXiNfqlc",
-    "target" : "Join_2##htQn58ak",
-    "targetPort" : "kDcDpwRu"
   }, {
     "id" : "HdcthlwA",
     "source" : "Join_2##htQn58ak",
@@ -6917,6 +7334,30 @@
     "sourcePort" : "4P3XUdDjVUDGrBO146PrF$$toLXnVym5LvXVZGscJtWJ",
     "target" : "Join_1##SShRAsg4",
     "targetPort" : "XJMm9cDk"
+  }, {
+    "id" : "BQdmPM4FovmGLr2023YM8",
+    "source" : "g4cx1cT1gDfMeW-XZ3RAw",
+    "sourcePort" : "8bTUvqiOB6jGfjvLCj6QR",
+    "target" : "Join_2##htQn58ak",
+    "targetPort" : "XretAywF"
+  }, {
+    "id" : "O2BZsDzS3BDmdWygtHdN8",
+    "source" : "llVIfOzZX85aaIdRJqgjS",
+    "sourcePort" : "oZGoZL9tn4Pr6t8SSXcJ1",
+    "target" : "Join_2##htQn58ak",
+    "targetPort" : "PkmCbb8F"
+  }, {
+    "id" : "2q2CywSVV1iF-0qwvfZFy",
+    "source" : "llVIfOzZX85aaIdRJqgjS",
+    "sourcePort" : "oZGoZL9tn4Pr6t8SSXcJ1",
+    "target" : "Join_2##htQn58ak",
+    "targetPort" : "kDcDpwRu"
+  }, {
+    "id" : "lfkvHoSx35bIRIsDGe1cJ",
+    "source" : "h0eO8H0GLhhKItWWGjeqz",
+    "sourcePort" : "IGzNJiitaNwPr0ZBrdiG0",
+    "target" : "Join_2##htQn58ak",
+    "targetPort" : "LyRdvoJP"
   } ],
   "component" : "Model"
 }
