@@ -33,6 +33,7 @@ jobs:
     createdAt: '2024-07-31 12:09:01'
     author: abhisheks+e2etests@prophecy.io
     models: []
+    sqlProjects: []
   jobs/SQL_Snow_Parent_AirflowMWAAJob:
     name: SQL_Snow_Parent_AirflowMWAAJob
     description: ''
@@ -57,6 +58,7 @@ jobs:
     createdAt: '2024-07-31 12:09:56'
     author: abhisheks+e2etests@prophecy.io
     models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
@@ -75,6 +77,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_1:
     name: env_uitesting_main_model_snow_1
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: C_NUM
@@ -182,6 +185,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_2:
     name: env_uitesting_main_model_snow_2
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: C_NUM
@@ -296,6 +300,7 @@ sqlSnapshots:
   .prophecy/metadata/sqlsnapshots/snapshot_parent_main:
     name: snapshot_parent_main
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: C_NUM
@@ -635,6 +640,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: id
@@ -657,6 +663,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: id
@@ -687,6 +694,7 @@ sqlSources:
     tables:
     - name: '"all_type_table"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_NUM
@@ -798,6 +806,7 @@ sqlSources:
     tables:
     - name: '"DeltaO1"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: A
@@ -816,6 +825,7 @@ sqlSources:
     tables:
     - name: '"employees"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: TITLE
@@ -840,6 +850,7 @@ sqlSources:
     tables:
     - name: '"all_type_table"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_NUM
@@ -943,6 +954,7 @@ sqlSources:
       createdAt: '2024-08-09 06:14:57'
     - name: '"ALL_TYPE_Table"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_INT
@@ -956,6 +968,7 @@ sqlSources:
       createdAt: '2024-08-09 06:14:57'
     - name: '"Employees_qa_SCHEMA"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: TITLE
@@ -980,6 +993,7 @@ sqlSources:
     tables:
     - name: '"all_type_table"'
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_NUM
@@ -1091,6 +1105,7 @@ sqlSources:
     tables:
     - name: test-tb
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: new col
@@ -1112,6 +1127,7 @@ sqlSources:
     tables:
     - name: ALL_TYPE_TABLE_SMALLER
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_NUM
@@ -1206,6 +1222,7 @@ sqlSources:
       createdAt: '2023-04-14 05:41:23'
     - name: CUSTOMERS
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: ID
@@ -1222,6 +1239,7 @@ sqlSources:
       createdAt: '2023-04-14 05:41:23'
     - name: TABLE_COMPLEX_TYPES
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_ARRAY_INT
@@ -1265,6 +1283,7 @@ sqlSources:
       createdAt: '2023-04-14 05:41:23'
     - name: TABLE_COMPLEX_TYPES_1
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_ARRAY_INT
@@ -1328,6 +1347,7 @@ sqlSources:
     tables:
     - name: ALL_TYPE_TABLE_NON_GEOMETRY
       schema:
+        entityType: ''
         providerType: snowflake
         fields:
         - name: C_NUM

@@ -82,6 +82,7 @@
         "name" : "QA_SCHEMA",
         "tables" : {
           "TEST_COPY_AUTOMATED_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -131,6 +132,7 @@
             } ]
           },
           "RAW_ORDERS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -155,6 +157,7 @@
             } ]
           },
           "SHIP_MODE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "SM_SHIP_MODE_SK",
@@ -189,6 +192,7 @@
             } ]
           },
           "ECONOMIC_SURVEY_MANUFACTURING" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "SERIES_REFERENCE",
@@ -263,6 +267,7 @@
             } ]
           },
           "ENV_UITESTING_SHARED_EXCLUDED_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -282,6 +287,7 @@
             } ]
           },
           "DBGEN_VERSION" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "DV_VERSION",
@@ -306,6 +312,7 @@
             } ]
           },
           "TEST_2_AUTOMATED_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INTEGER",
@@ -455,6 +462,7 @@
             } ]
           },
           "SEEDSCENARIOSFULL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -484,6 +492,7 @@
             } ]
           },
           "SEEDSCENARIOSPARTIAL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -513,6 +522,7 @@
             } ]
           },
           "JASVINDER2" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -522,6 +532,7 @@
             } ]
           },
           "ITEM" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "I_ITEM_SK",
@@ -636,6 +647,7 @@
             } ]
           },
           "ENV_UITESTING_SHARED_MID_MODEL_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -785,6 +797,7 @@
             } ]
           },
           "RAW_CUSTOMER" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -804,6 +817,7 @@
             } ]
           },
           "ALL_TYPE_TABLE_NON_GEOMETRY" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -968,6 +982,7 @@
             } ]
           },
           "CALL_CENTER" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CC_CALL_CENTER_SK",
@@ -1127,6 +1142,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1697392060710" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1156,6 +1172,7 @@
             } ]
           },
           "TESTSEED_FULL_1696409534585" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1185,6 +1202,7 @@
             } ]
           },
           "CUSTOMER_ADDRESS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CA_ADDRESS_SK",
@@ -1254,6 +1272,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1698755273555" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1283,6 +1302,7 @@
             } ]
           },
           "TESTSEED_FULL_1696620779986" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1312,6 +1332,7 @@
             } ]
           },
           "TEST_SEED_NEW11212312312" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1321,6 +1342,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1698756232679" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1350,6 +1372,7 @@
             } ]
           },
           "WEB_PAGE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "WP_WEB_PAGE_SK",
@@ -1424,6 +1447,7 @@
             } ]
           },
           "HELLOWORLD" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -1443,6 +1467,7 @@
             } ]
           },
           "CUSTOMERS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -1482,6 +1507,7 @@
             } ]
           },
           "THOUSAND_ROWS_TABLE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "A",
@@ -1491,6 +1517,7 @@
             } ]
           },
           "STG_CUSTOMERS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -1510,6 +1537,7 @@
             } ]
           },
           "QA_TEST_SEED_JOB_SNOWFLAKE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1539,6 +1567,7 @@
             } ]
           },
           "TEST_AUTOMATED_SNOWFLAKE_JOBS_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1568,6 +1597,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1696655613174_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1577,6 +1607,7 @@
             } ]
           },
           "TESTSEED_FULL_1697696025194" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1606,6 +1637,7 @@
             } ]
           },
           "TEST_COPY_AUTOMATION_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -1655,6 +1687,7 @@
             } ]
           },
           "GOODS_CLASSIFICATION" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "NZHSC_LEVEL_2_CODE_HS4",
@@ -1684,6 +1717,7 @@
             } ]
           },
           "TEST_VERSION_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "VERSION",
@@ -1698,6 +1732,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1699380524358" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1727,6 +1762,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1699513497908" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -1756,6 +1792,7 @@
             } ]
           },
           "ENV_UITESTING_SHARED_CHILD_MODEL_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -1905,6 +1942,7 @@
             } ]
           },
           "\"All_type_table\"" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -2069,6 +2107,7 @@
             } ]
           },
           "CUSTOMER_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -2088,6 +2127,7 @@
             } ]
           },
           "ENV_UITESTING_SHARED_USEALLMODEL_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -2237,6 +2277,7 @@
             } ]
           },
           "DUMMY_SEED" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -2261,6 +2302,7 @@
             } ]
           },
           "TEST_2_AUTOMATION_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INTEGER",
@@ -2410,6 +2452,7 @@
             } ]
           },
           "CUSTOMER_DEMOGRAPHICS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CD_DEMO_SK",
@@ -2459,6 +2502,7 @@
             } ]
           },
           "MODEL_WITH_ONLY_SEED_BASE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -2488,6 +2532,7 @@
             } ]
           },
           "STG_ORDERS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -2512,6 +2557,7 @@
             } ]
           },
           "CATALOG_RETURNS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CR_RETURNED_DATE_SK",
@@ -2651,6 +2697,7 @@
             } ]
           },
           "STORE_RETURNS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "SR_RETURNED_DATE_SK",
@@ -2755,6 +2802,7 @@
             } ]
           },
           "TEST1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPID",
@@ -2789,6 +2837,7 @@
             } ]
           },
           "TPCDS_1_ENV_UITESTING_SHARED" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "I_ITEM_ID",
@@ -2838,6 +2887,7 @@
             } ]
           },
           "JASVINDER_TEMP" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -2847,6 +2897,7 @@
             } ]
           },
           "INCOME_BAND" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "IB_INCOME_BAND_SK",
@@ -2866,6 +2917,7 @@
             } ]
           },
           "WEB_SITE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "WEB_SITE_SK",
@@ -3000,6 +3052,7 @@
             } ]
           },
           "TEST_SEED_12_SEPT_2023_11_28_123123" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3009,6 +3062,7 @@
             } ]
           },
           "TESTSEED_FULL_1699380378196" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3038,6 +3092,7 @@
             } ]
           },
           "WEB_SALES" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "WS_SOLD_DATE_SK",
@@ -3212,6 +3267,7 @@
             } ]
           },
           "WEB_RETURNS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "WR_RETURNED_DATE_SK",
@@ -3336,6 +3392,7 @@
             } ]
           },
           "TESTSEED_FULL_1696621082692" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3365,6 +3422,7 @@
             } ]
           },
           "TESTSEED_FULL_1696409534585_2" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3374,6 +3432,7 @@
             } ]
           },
           "CUSTOMERSEED" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -3393,6 +3452,7 @@
             } ]
           },
           "STORE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "S_STORE_SK",
@@ -3542,6 +3602,7 @@
             } ]
           },
           "TESTSEED_FULL_1695879426254" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3571,6 +3632,7 @@
             } ]
           },
           "TIME_DIM" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "T_TIME_SK",
@@ -3625,6 +3687,7 @@
             } ]
           },
           "TEST_AUTOMATION_SNOWFLAKE_JOBS_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3654,6 +3717,7 @@
             } ]
           },
           "TESTSEED_FULL_1697861629143" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3683,6 +3747,7 @@
             } ]
           },
           "HUNDRED_ROWS_TABLE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "A",
@@ -3692,6 +3757,7 @@
             } ]
           },
           "TEST_1_AUTOMATION_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -3741,6 +3807,7 @@
             } ]
           },
           "TESTSEED_FULL_1696620475758" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3770,6 +3837,7 @@
             } ]
           },
           "SERVICE_CLASSIFICATION" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CODE_1",
@@ -3784,6 +3852,7 @@
             } ]
           },
           "TESTSEED_FULL_1698754143304" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3813,6 +3882,7 @@
             } ]
           },
           "RAW_CUSTOMERS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -3832,6 +3902,7 @@
             } ]
           },
           "TESTSEED_FULL_1695327488809" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -3861,6 +3932,7 @@
             } ]
           },
           "CUSTOMER" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_CUSTOMER_SK",
@@ -3955,6 +4027,7 @@
             } ]
           },
           "DATE_DIM" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "D_DATE_SK",
@@ -4099,6 +4172,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1697696149947" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4128,6 +4202,7 @@
             } ]
           },
           "ORDERS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -4177,6 +4252,7 @@
             } ]
           },
           "COUNTRY_CLASSIFICATION" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -4191,6 +4267,7 @@
             } ]
           },
           "\"ALL_TYPE_Table\"" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4205,6 +4282,7 @@
             } ]
           },
           "CATALOG_PAGE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CP_CATALOG_PAGE_SK",
@@ -4254,6 +4332,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1697834052760" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4283,6 +4362,7 @@
             } ]
           },
           "ROWS_100_TABLE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "A",
@@ -4292,6 +4372,7 @@
             } ]
           },
           "TESTSEED_FULL_1700508404887" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4321,6 +4402,7 @@
             } ]
           },
           "ALL_TYPE_TABLE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -4485,6 +4567,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1697861749914" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4514,6 +4597,7 @@
             } ]
           },
           "TESTSEED_FULL_1697833932327" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4543,6 +4627,7 @@
             } ]
           },
           "EMPLOYEE_HIERARCHY" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "TITLE",
@@ -4572,6 +4657,7 @@
             } ]
           },
           "TESTSEED_FULL_1696359102540" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4601,6 +4687,7 @@
             } ]
           },
           "ENV_UITESTING_MAIN_MODEL_SNOW_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -4750,6 +4837,7 @@
             } ]
           },
           "ALL_COMPLEX_COLUMN_NAMES" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "c-1 comlex(1)*&^%$[#]{@!}~-= name int",
@@ -4764,6 +4852,7 @@
             } ]
           },
           "TEN_THOUSAND_ROWS_TABLE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "A",
@@ -4773,6 +4862,7 @@
             } ]
           },
           "HUNDRED_THOUSAND_ROWS_TABLE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "A",
@@ -4782,6 +4872,7 @@
             } ]
           },
           "TESTSEED_FULL_1696359415123" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -4811,6 +4902,7 @@
             } ]
           },
           "MONTHLY_SALES" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPID",
@@ -4845,6 +4937,7 @@
             } ]
           },
           "HOUSEHOLD_DEMOGRAPHICS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "HD_DEMO_SK",
@@ -4874,6 +4967,7 @@
             } ]
           },
           "ALL_TYPE_TABLE_100K_ROWS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -5038,6 +5132,7 @@
             } ]
           },
           "EMPLOYEES" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "TITLE",
@@ -5057,6 +5152,7 @@
             } ]
           },
           "TESTSEED_FULL_1696359728856" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -5086,6 +5182,7 @@
             } ]
           },
           "REASON" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "R_REASON_SK",
@@ -5105,6 +5202,7 @@
             } ]
           },
           "RAW_PAYMENTS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ID",
@@ -5129,6 +5227,7 @@
             } ]
           },
           "TEST_CORRUPTED_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPID",
@@ -5158,6 +5257,7 @@
             } ]
           },
           "TEST_CAN_CORRUPT_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -5322,6 +5422,7 @@
             } ]
           },
           "TEST_AUTOMATED_MODEL_2" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INTEGER",
@@ -5471,6 +5572,7 @@
             } ]
           },
           "STORE_SALES" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "SS_SOLD_DATE_SK",
@@ -5590,6 +5692,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1696655613174" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -5619,6 +5722,7 @@
             } ]
           },
           "ENV_UITESTING_SHARED_PARENT_MODEL_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -5768,6 +5872,7 @@
             } ]
           },
           "TESTSEED_FULL_1699513374354" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -5797,6 +5902,7 @@
             } ]
           },
           "PIVOT_SEED" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPID",
@@ -5816,6 +5922,7 @@
             } ]
           },
           "MONTHLY_SALES_FOR_PIVOT" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPID",
@@ -5835,6 +5942,7 @@
             } ]
           },
           "TEST_SIMSHADY_MODEL_1" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -5999,6 +6107,7 @@
             } ]
           },
           "TESTSEED_FULL_1697243887640" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -6028,6 +6137,7 @@
             } ]
           },
           "WAREHOUSE" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "W_WAREHOUSE_SK",
@@ -6102,6 +6212,7 @@
             } ]
           },
           "TEST_SEED_12_SEPT_2023_11_28" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -6111,6 +6222,7 @@
             } ]
           },
           "STG_PAYMENTS" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "PAYMENT_ID",
@@ -6135,6 +6247,7 @@
             } ]
           },
           "TEST_1_AUTOMATED_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -6184,6 +6297,7 @@
             } ]
           },
           "TEST_AUTOMATED_MODEL" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "COUNTRY_CODE",
@@ -6233,6 +6347,7 @@
             } ]
           },
           "TESTSEED_PARTIAL_1700508529722" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_INT",
@@ -6262,6 +6377,7 @@
             } ]
           },
           "CATALOG_SALES" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CS_SOLD_DATE_SK",
@@ -6436,6 +6552,7 @@
             } ]
           },
           "PROMOTION" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "P_PROMO_SK",
@@ -6535,6 +6652,7 @@
             } ]
           },
           "INVENTORY" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "INV_DATE_SK",

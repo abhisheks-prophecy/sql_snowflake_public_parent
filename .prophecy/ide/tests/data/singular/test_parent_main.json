@@ -38,6 +38,7 @@
         "inputs" : [ {
           "id" : "IxZzKVvT",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -196,6 +197,7 @@
         "outputs" : [ {
           "id" : "TcniiweU",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -377,6 +379,7 @@
         "outputs" : [ {
           "id" : "ZQkMhXby1TFkn1SJF9L1n",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -580,6 +583,7 @@
         "inputs" : [ {
           "id" : "LuGQNniTX62jz6jkPhPvM$$E_8NYOF6riQ9qugP-zDQq",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -738,6 +742,7 @@
         "outputs" : [ {
           "id" : "w3jR-PZe8_UktLI8mmwIG$$EIDaUdq9Fim_Yffd74Wks",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -918,6 +923,7 @@
         "inputs" : [ {
           "id" : "3YnPKTWbF_g0F_4phQelV$$dqNuB-tJrItJqucKcB1jS",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
@@ -1076,6 +1082,7 @@
         "outputs" : [ {
           "id" : "WTEHWGEF0tpo9GmKCoqNy$$5WBA8J-5IWJZqFvusfE5z",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NUM",
