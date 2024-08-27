@@ -27,6 +27,7 @@ def Model_0():
           "git_ssh_url": "https://github.com/abhisheks-prophecy/sql_snowflake_public_parent",
           "git_sub_path": "",
           "select": "",
+          "threads": "",
           "exclude": "",
           "run_props": " --profile run_profile",
           "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
