@@ -393,6 +393,18 @@ sqlSnapshots:
       - name: C_MACROS_DEP
         dataType:
           type: String
+      - name: DBT_SCD_ID
+        dataType:
+          type: String
+      - name: DBT_UPDATED_AT
+        dataType:
+          type: Date
+      - name: DBT_VALID_FROM
+        dataType:
+          type: Date
+      - name: DBT_VALID_TO
+        dataType:
+          type: Date
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -1449,6 +1461,107 @@ sqlSources:
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-14 05:41:23'
+    - name: CALL_CENTER
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: CC_CALL_CENTER_SK
+          dataType:
+            type: Number
+        - name: CC_CALL_CENTER_ID
+          dataType:
+            type: String
+        - name: CC_REC_START_DATE
+          dataType:
+            type: Date
+        - name: CC_REC_END_DATE
+          dataType:
+            type: Date
+        - name: CC_CLOSED_DATE_SK
+          dataType:
+            type: Number
+        - name: CC_OPEN_DATE_SK
+          dataType:
+            type: Number
+        - name: CC_NAME
+          dataType:
+            type: String
+        - name: CC_CLASS
+          dataType:
+            type: String
+        - name: CC_EMPLOYEES
+          dataType:
+            type: Number
+        - name: CC_SQ_FT
+          dataType:
+            type: Number
+        - name: CC_HOURS
+          dataType:
+            type: String
+        - name: CC_MANAGER
+          dataType:
+            type: String
+        - name: CC_MKT_ID
+          dataType:
+            type: Number
+        - name: CC_MKT_CLASS
+          dataType:
+            type: String
+        - name: CC_MKT_DESC
+          dataType:
+            type: String
+        - name: CC_MARKET_MANAGER
+          dataType:
+            type: String
+        - name: CC_DIVISION
+          dataType:
+            type: Number
+        - name: CC_DIVISION_NAME
+          dataType:
+            type: String
+        - name: CC_COMPANY
+          dataType:
+            type: Number
+        - name: CC_COMPANY_NAME
+          dataType:
+            type: String
+        - name: CC_STREET_NUMBER
+          dataType:
+            type: String
+        - name: CC_STREET_NAME
+          dataType:
+            type: String
+        - name: CC_STREET_TYPE
+          dataType:
+            type: String
+        - name: CC_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: CC_CITY
+          dataType:
+            type: String
+        - name: CC_COUNTY
+          dataType:
+            type: String
+        - name: CC_STATE
+          dataType:
+            type: String
+        - name: CC_ZIP
+          dataType:
+            type: String
+        - name: CC_COUNTRY
+          dataType:
+            type: String
+        - name: CC_GMT_OFFSET
+          dataType:
+            type: Number
+        - name: CC_TAX_PERCENTAGE
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2024-09-18 09:43:25'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline

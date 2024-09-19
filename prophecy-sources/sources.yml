@@ -1,13 +1,13 @@
 ---
 version: 2
 sources:
-- name: "alias_base_QA_DATABASE_QA_SCHEMA"
-  database: "QA_DATABASE"
-  schema: "QA_SCHEMA"
+- name: "alias_test_\"qa_database\".\"qa_SCHEMA\""
+  database: "\"qa_database\""
+  schema: "\"qa_SCHEMA\""
   config:
     enabled: true
   tables:
-  - name: "ALL_TYPE_TABLE_NON_GEOMETRY"
+  - name: "\"all_type_table\""
     columns:
     - name: "C_NUM"
       dataType:
@@ -105,6 +105,200 @@ sources:
     - name: "C_GEOGRAPHY"
       dataType:
         type: "Geography"
+- name: "alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA"
+  database: "QA_DATABASE"
+  schema: "QA_SIMPLE_SCHEMA"
+  config:
+    enabled: true
+  tables:
+  - name: "ALL_TYPE_TABLE_SMALLER"
+    columns:
+    - name: "C_NUM"
+      dataType:
+        type: "Number"
+    - name: "C_NUM10"
+      dataType:
+        type: "Number"
+    - name: "C_DEC"
+      dataType:
+        type: "Number"
+    - name: "C_NUMERIC"
+      dataType:
+        type: "Number"
+    - name: "C_INT"
+      dataType:
+        type: "Number"
+    - name: "C_INTEGER"
+      dataType:
+        type: "Number"
+    - name: "C_DOUBLE"
+      dataType:
+        type: "Float"
+    - name: "C_FLOAT"
+      dataType:
+        type: "Float"
+    - name: "C_COUBLE_PRECISION"
+      dataType:
+        type: "Float"
+    - name: "C_REAL"
+      dataType:
+        type: "Float"
+    - name: "C_VARCHAR"
+      dataType:
+        type: "String"
+    - name: "C_VARCHAR50"
+      dataType:
+        type: "String"
+    - name: "C_CHAR"
+      dataType:
+        type: "String"
+    - name: "C_CHAR10"
+      dataType:
+        type: "String"
+    - name: "C_STRING"
+      dataType:
+        type: "String"
+    - name: "C_STRING20"
+      dataType:
+        type: "String"
+    - name: "C_TEXT"
+      dataType:
+        type: "String"
+    - name: "C_TEXT30"
+      dataType:
+        type: "String"
+    - name: "C_BINARY"
+      dataType:
+        type: "Binary"
+    - name: "C_BINARY100"
+      dataType:
+        type: "Binary"
+    - name: "C_VARBINARY"
+      dataType:
+        type: "Binary"
+    - name: "C_BOOL"
+      dataType:
+        type: "Boolean"
+    - name: "C_TIMESTAMP"
+      dataType:
+        type: "Timestamp"
+    - name: "C_DATE"
+      dataType:
+        type: "Date"
+    - name: "C_DATETIME"
+      dataType:
+        type: "Timestamp"
+    - name: "C_TIME"
+      dataType:
+        type: "Time"
+    - name: "C_ARRAY"
+      dataType:
+        type: "Array"
+    - name: "C_OBJECT"
+      dataType:
+        type: "Object"
+    - name: "C_GEOGRAPHY"
+      dataType:
+        type: "Geography"
+  - name: "CUSTOMERS"
+    columns:
+    - name: "ID"
+      dataType:
+        type: "Number"
+    - name: "FIRST_NAME"
+      dataType:
+        type: "String"
+    - name: "LAST_NAME"
+      dataType:
+        type: "String"
+  - name: "TABLE_COMPLEX_TYPES"
+    columns:
+    - name: "C_ARRAY_INT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_FLOAT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_STRING"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_OBJECT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_ARRAY"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_VARIANT"
+      dataType:
+        type: "Array"
+    - name: "C_OBJECT_1"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_2"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_3"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_4"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_5"
+      dataType:
+        type: "Object"
+    - name: "C_VARIANT_1"
+      dataType:
+        type: "Variant"
+  - name: "TABLE_COMPLEX_TYPES_1"
+    columns:
+    - name: "C_ARRAY_INT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_FLOAT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_STRING"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_OBJECT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_ARRAY"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_VARIANT"
+      dataType:
+        type: "Array"
+    - name: "C_OBJECT_1"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_2"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_3"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_4"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_5"
+      dataType:
+        type: "Object"
+    - name: "C_VARIANT_1"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_2"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_3"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_4"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_5"
+      dataType:
+        type: "Variant"
 - name: "alisa_qa_database_qa_SIMPLE_schema"
   database: "\"qa_database\""
   schema: "\"qa_SIMPLE_schema\""
@@ -343,13 +537,30 @@ sources:
     - name: "A"
       dataType:
         type: "Number"
-- name: "alias_test_\"qa_database\".\"qa_SCHEMA\""
-  database: "\"qa_database\""
-  schema: "\"qa_SCHEMA\""
+- name: "alias_test_\"qa_database_lower_case_only\".\"qa_schema_lower_case\""
+  database: "\"qa_database_lower_case_only\""
+  schema: "\"qa_schema_lower_case\""
   config:
     enabled: true
   tables:
-  - name: "\"all_type_table\""
+  - name: "\"employees\""
+    columns:
+    - name: "TITLE"
+      dataType:
+        type: "String"
+    - name: "EMPLOYEE_ID"
+      dataType:
+        type: "Number"
+    - name: "MANAGER_ID"
+      dataType:
+        type: "Number"
+- name: "alias_base_QA_DATABASE_QA_SCHEMA"
+  database: "QA_DATABASE"
+  schema: "QA_SCHEMA"
+  config:
+    enabled: true
+  tables:
+  - name: "ALL_TYPE_TABLE_NON_GEOMETRY"
     columns:
     - name: "C_NUM"
       dataType:
@@ -447,214 +658,98 @@ sources:
     - name: "C_GEOGRAPHY"
       dataType:
         type: "Geography"
-- name: "alias_test_\"qa_database_lower_case_only\".\"qa_schema_lower_case\""
-  database: "\"qa_database_lower_case_only\""
-  schema: "\"qa_schema_lower_case\""
-  config:
-    enabled: true
-  tables:
-  - name: "\"employees\""
+  - name: "CALL_CENTER"
     columns:
-    - name: "TITLE"
-      dataType:
-        type: "String"
-    - name: "EMPLOYEE_ID"
+    - name: "CC_CALL_CENTER_SK"
       dataType:
         type: "Number"
-    - name: "MANAGER_ID"
-      dataType:
-        type: "Number"
-- name: "alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA"
-  database: "QA_DATABASE"
-  schema: "QA_SIMPLE_SCHEMA"
-  config:
-    enabled: true
-  tables:
-  - name: "ALL_TYPE_TABLE_SMALLER"
-    columns:
-    - name: "C_NUM"
-      dataType:
-        type: "Number"
-    - name: "C_NUM10"
-      dataType:
-        type: "Number"
-    - name: "C_DEC"
-      dataType:
-        type: "Number"
-    - name: "C_NUMERIC"
-      dataType:
-        type: "Number"
-    - name: "C_INT"
-      dataType:
-        type: "Number"
-    - name: "C_INTEGER"
-      dataType:
-        type: "Number"
-    - name: "C_DOUBLE"
-      dataType:
-        type: "Float"
-    - name: "C_FLOAT"
-      dataType:
-        type: "Float"
-    - name: "C_COUBLE_PRECISION"
-      dataType:
-        type: "Float"
-    - name: "C_REAL"
-      dataType:
-        type: "Float"
-    - name: "C_VARCHAR"
+    - name: "CC_CALL_CENTER_ID"
       dataType:
         type: "String"
-    - name: "C_VARCHAR50"
-      dataType:
-        type: "String"
-    - name: "C_CHAR"
-      dataType:
-        type: "String"
-    - name: "C_CHAR10"
-      dataType:
-        type: "String"
-    - name: "C_STRING"
-      dataType:
-        type: "String"
-    - name: "C_STRING20"
-      dataType:
-        type: "String"
-    - name: "C_TEXT"
-      dataType:
-        type: "String"
-    - name: "C_TEXT30"
-      dataType:
-        type: "String"
-    - name: "C_BINARY"
-      dataType:
-        type: "Binary"
-    - name: "C_BINARY100"
-      dataType:
-        type: "Binary"
-    - name: "C_VARBINARY"
-      dataType:
-        type: "Binary"
-    - name: "C_BOOL"
-      dataType:
-        type: "Boolean"
-    - name: "C_TIMESTAMP"
-      dataType:
-        type: "Timestamp"
-    - name: "C_DATE"
+    - name: "CC_REC_START_DATE"
       dataType:
         type: "Date"
-    - name: "C_DATETIME"
+    - name: "CC_REC_END_DATE"
       dataType:
-        type: "Timestamp"
-    - name: "C_TIME"
-      dataType:
-        type: "Time"
-    - name: "C_ARRAY"
-      dataType:
-        type: "Array"
-    - name: "C_OBJECT"
-      dataType:
-        type: "Object"
-    - name: "C_GEOGRAPHY"
-      dataType:
-        type: "Geography"
-  - name: "CUSTOMERS"
-    columns:
-    - name: "ID"
+        type: "Date"
+    - name: "CC_CLOSED_DATE_SK"
       dataType:
         type: "Number"
-    - name: "FIRST_NAME"
+    - name: "CC_OPEN_DATE_SK"
+      dataType:
+        type: "Number"
+    - name: "CC_NAME"
       dataType:
         type: "String"
-    - name: "LAST_NAME"
+    - name: "CC_CLASS"
       dataType:
         type: "String"
-  - name: "TABLE_COMPLEX_TYPES"
-    columns:
-    - name: "C_ARRAY_INT"
+    - name: "CC_EMPLOYEES"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_FLOAT"
+        type: "Number"
+    - name: "CC_SQ_FT"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_STRING"
+        type: "Number"
+    - name: "CC_HOURS"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_OBJECT"
+        type: "String"
+    - name: "CC_MANAGER"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_ARRAY"
+        type: "String"
+    - name: "CC_MKT_ID"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_VARIANT"
+        type: "Number"
+    - name: "CC_MKT_CLASS"
       dataType:
-        type: "Array"
-    - name: "C_OBJECT_1"
+        type: "String"
+    - name: "CC_MKT_DESC"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_2"
+        type: "String"
+    - name: "CC_MARKET_MANAGER"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_3"
+        type: "String"
+    - name: "CC_DIVISION"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_4"
+        type: "Number"
+    - name: "CC_DIVISION_NAME"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_5"
+        type: "String"
+    - name: "CC_COMPANY"
       dataType:
-        type: "Object"
-    - name: "C_VARIANT_1"
+        type: "Number"
+    - name: "CC_COMPANY_NAME"
       dataType:
-        type: "Variant"
-  - name: "TABLE_COMPLEX_TYPES_1"
-    columns:
-    - name: "C_ARRAY_INT"
+        type: "String"
+    - name: "CC_STREET_NUMBER"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_FLOAT"
+        type: "String"
+    - name: "CC_STREET_NAME"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_STRING"
+        type: "String"
+    - name: "CC_STREET_TYPE"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_OBJECT"
+        type: "String"
+    - name: "CC_SUITE_NUMBER"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_ARRAY"
+        type: "String"
+    - name: "CC_CITY"
       dataType:
-        type: "Array"
-    - name: "C_ARRAY_VARIANT"
+        type: "String"
+    - name: "CC_COUNTY"
       dataType:
-        type: "Array"
-    - name: "C_OBJECT_1"
+        type: "String"
+    - name: "CC_STATE"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_2"
+        type: "String"
+    - name: "CC_ZIP"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_3"
+        type: "String"
+    - name: "CC_COUNTRY"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_4"
+        type: "String"
+    - name: "CC_GMT_OFFSET"
       dataType:
-        type: "Object"
-    - name: "C_OBJECT_5"
+        type: "Number"
+    - name: "CC_TAX_PERCENTAGE"
       dataType:
-        type: "Object"
-    - name: "C_VARIANT_1"
-      dataType:
-        type: "Variant"
-    - name: "C_VARIANT_2"
-      dataType:
-        type: "Variant"
-    - name: "C_VARIANT_3"
-      dataType:
-        type: "Variant"
-    - name: "C_VARIANT_4"
-      dataType:
-        type: "Variant"
-    - name: "C_VARIANT_5"
-      dataType:
-        type: "Variant"
+        type: "Number"

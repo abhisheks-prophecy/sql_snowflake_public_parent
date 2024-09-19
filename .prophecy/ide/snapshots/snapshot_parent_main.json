@@ -874,6 +874,26 @@
               "dataType" : {
                 "type" : "String"
               }
+            }, {
+              "name" : "DBT_SCD_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DBT_UPDATED_AT",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "DBT_VALID_FROM",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "DBT_VALID_TO",
+              "dataType" : {
+                "type" : "Date"
+              }
             } ]
           },
           "slug" : "out"

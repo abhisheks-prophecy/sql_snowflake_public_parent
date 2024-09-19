@@ -13,13 +13,6 @@
 {% set v_model_expression = 'concat(c_string, c_text)' %}
 {% set v_int = 22 %}
 
-
-
-
-
-
-
-
 WITH raw_orders AS (
 
   SELECT * 
