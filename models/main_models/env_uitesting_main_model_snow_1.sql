@@ -13,25 +13,7 @@
 {% set v_model_expression = 'concat(c_string, c_text)' %}
 {% set v_int = 22 %}
 
-WITH raw_orders AS (
-
-  SELECT * 
-  
-  FROM {{ ref('raw_orders')}}
-
-),
-
-Limit_2 AS (
-
-  SELECT * 
-  
-  FROM raw_orders AS in0
-  
-  LIMIT 10
-
-),
-
-Employees_qa_SCHEMA AS (
+WITH Employees_qa_SCHEMA AS (
 
   SELECT * 
   
@@ -87,12 +69,37 @@ Join_2 AS (
 
 ),
 
+deduplicated_employee_titles AS (
+
+  {#Removes duplicate employee titles to ensure accurate reporting.#}
+  {{ SQL_SnoflakeMainProject.parent_transform_deduplicate('Join_2', 'TITLE', 'EMPLOYEE_ID') }}
+
+),
+
+raw_orders AS (
+
+  SELECT * 
+  
+  FROM {{ ref('raw_orders')}}
+
+),
+
+Limit_2 AS (
+
+  SELECT * 
+  
+  FROM raw_orders AS in0
+  
+  LIMIT 10
+
+),
+
 Limit_1 AS (
 
   {#Restricts the output to the first 29 records from the combined user accounts and usage logs.#}
   SELECT * 
   
-  FROM Join_2 AS in0
+  FROM deduplicated_employee_titles AS in0
   
   LIMIT 10
 
@@ -141,7 +148,7 @@ Reformat_1 AS (
     C_OBJECT AS C_OBJECT,
     C_GEOGRAPHY AS C_GEOGRAPHY,
     concat({{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, C_CHAR10) AS c_macro2,
-    {% if v_model_int_main > 10 and                         var('v_project_int_parent')  %}
+    {% if v_model_int_main > 10 and var('v_project_int_parent')  %}
       {{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }} AS c_if,
     {% else %}
       {{ SQL_SnoflakeMainProject.qa_concat_macro('c_string20') }} AS c_if,
@@ -214,7 +221,7 @@ Subgraph_1 AS (
         TRIM('?-?ABC-?-', '?-'), 
         REPLACE('abcd', 'bc'), 
         RIGHT('ABCDEFG', 3), 
-        CAST(HASH(SEQ8()) AS string), 
+        CAST(HASH(SEQ8()) AS STRING), 
         ASCII('A'), 
         REPEAT('xy', 5), 
         REVERSE('Hello, world!'), 
@@ -223,21 +230,21 @@ Subgraph_1 AS (
         RTRIM('$125.00', '0.'), 
         UUID_STRING(), 
         sha1('Snowflake'), 
-        CAST(md5_binary('Snowflake') AS string), 
+        CAST(md5_binary('Snowflake') AS STRING), 
         LPAD(' hello ', 10, ' '), 
         DECOMPRESS_STRING(TO_BINARY('0920536E6F77666C616B65', 'HEX'), 'SNAPPY'), 
         LPAD('.  hi. ', 10, '$'), 
         DAYNAME(TO_DATE('2015-05-01')), 
-        CAST(LAST_DAY(TO_DATE('2015-05-08T23:39:20.123-07:00')) AS string), 
-        CAST(DATEADD(YEAR, 2, TO_DATE('2013-05-08')) AS string), 
-        CAST(DATEDIFF(MONTH, '2021-01-01'::DATE, '2021-02-28'::DATE) AS string), 
+        CAST(LAST_DAY(TO_DATE('2015-05-08T23:39:20.123-07:00')) AS STRING), 
+        CAST(DATEADD(YEAR, 2, TO_DATE('2013-05-08')) AS STRING), 
+        CAST(DATEDIFF(MONTH, '2021-01-01'::DATE, '2021-02-28'::DATE) AS STRING), 
         CAST(DATEDIFF(
           HOUR, 
           '2013-05-08T23:39:20.123-07:00'::TIMESTAMP, 
-          DATEADD(YEAR, 2, ('2013-05-08T23:39:20.123-07:00')::TIMESTAMP)) AS string), 
-        CAST(TIMEDIFF(YEAR, '2017-01-01', '2019-01-01') AS string), 
-        CAST(TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') AS string), 
-        CAST(TRY_TO_TIME('12:30:00') AS string)) AS c_concat,
+          DATEADD(YEAR, 2, ('2013-05-08T23:39:20.123-07:00')::TIMESTAMP)) AS STRING), 
+        CAST(TIMEDIFF(YEAR, '2017-01-01', '2019-01-01') AS STRING), 
+        CAST(TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') AS STRING), 
+        CAST(TRY_TO_TIME('12:30:00') AS STRING)) AS c_concat,
       2 = 5
       or 5 != 10
       or 6 <> 7
@@ -277,7 +284,7 @@ Subgraph_1 AS (
       or REGR_VALY(NULL, 10) = NULL
       or ZEROIFNULL(1.0) = 10
       or (CURRENT_CLIENT() LIKE '%Snow%')
-      or (CAST(CURRENT_TIME(2) AS string) LIKE '%2020%')
+      or (CAST(CURRENT_TIME(2) AS STRING) LIKE '%2020%')
       or (LOCALTIMESTAMP() = CURRENT_TIMESTAMP)
       or (CURRENT_WAREHOUSE() != CURRENT_SCHEMA())
       or (CURRENT_USER() = 'Abhishek')
@@ -371,9 +378,9 @@ Subgraph_1 AS (
         concat(C_STRING, {{c_ifor}}) AS "col_for_{{c_ifor}}",
       {% endfor %}
       
-      {% if v_int > 10 and         var('v_p_dict') ['a'] == 10 %}
+      {% if v_int > 10 and var('v_p_dict') ['a'] == 10 %}
         concat(C_STRING, C_BOOL) AS c_if,
-      {% elif v_bool == True or         var('v_p_complex_dict') ['a'][0] > 10 %}
+      {% elif v_bool == True or var('v_p_complex_dict') ['a'][0] > 10 %}
         concat(C_STRING, C_INT) AS c_if,
       {% else %}
         concat(C_STRING, C_INTEGER) AS c_if,
@@ -843,7 +850,6 @@ Subgraph_1 AS (
   
   SQLStatement_1 AS (
   
-    {#Identifies discrepancies in call function counts compared to combined records from two filters.#}
     SELECT *
     
     FROM SetOperation_1

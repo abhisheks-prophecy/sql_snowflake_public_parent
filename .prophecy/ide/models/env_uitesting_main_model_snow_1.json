@@ -28,6 +28,56 @@
     "version" : 3
   },
   "processes" : {
+    "Ri07yCHZaowbARx1MP5xW$$K4W3auh6ejgkrGicXM8bb" : {
+      "id" : "Ri07yCHZaowbARx1MP5xW$$K4W3auh6ejgkrGicXM8bb",
+      "component" : "parent_transform_deduplicate",
+      "metadata" : {
+        "label" : "deduplicated_employee_titles",
+        "slug" : "deduplicated_employee_titles",
+        "x" : 380,
+        "y" : 620,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Removes duplicate employee titles to ensure accurate reporting."
+      },
+      "properties" : {
+        "relation" : "Join_2",
+        "order_by" : "TITLE",
+        "partition_by" : "EMPLOYEE_ID",
+        "_oldMacroProperties" : {
+          "macroName" : "parent_transform_deduplicate",
+          "projectName" : "SQL_SnoflakeMainProject",
+          "parameters" : [ {
+            "name" : "relation",
+            "value" : "'Join_2'"
+          }, {
+            "name" : "order_by",
+            "value" : "'TITLE'"
+          }, {
+            "name" : "partition_by",
+            "value" : "'EMPLOYEE_ID'"
+          } ]
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "P4iiUuBSKXLTxoZde5Zjk$$HE7XpCHOhB2hhIXHSQrcz",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "cVfbaHZYvicwCcUJwY-EL$$acRLLCqEBxrUFKj2tOk3Q",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "componentInfo" : {
+        "gemId" : "parent_transform_deduplicate_SQL_SnoflakeMainProject",
+        "name" : "parent_transform_deduplicate",
+        "projectName" : "SQL_SnoflakeMainProject",
+        "sourceProjectName" : "SQL_SnoflakeMainProject"
+      }
+    },
     "Join_1##SShRAsg4" : {
       "id" : "Join_1##SShRAsg4",
       "component" : "Join",
@@ -213,7 +263,7 @@
           "alias" : "C_MACROS_DEP"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "IxVIiW5B##TITLE", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
+        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -593,7 +643,7 @@
       "component" : "Join",
       "metadata" : {
         "label" : "Join_2",
-        "x" : 240,
+        "x" : 220,
         "y" : 680,
         "phase" : 0,
         "macroDependencies" : [ ]
@@ -785,8 +835,8 @@
       "component" : "Limit",
       "metadata" : {
         "label" : "Limit_1",
-        "x" : 460,
-        "y" : 580,
+        "x" : 500,
+        "y" : 540,
         "phase" : 0,
         "comment" : "Restricts the output to the first 29 records from the combined user accounts and usage logs.",
         "autoUpdateComment" : true
@@ -3542,12 +3592,6 @@
     "target" : "Join_2##htQn58ak",
     "targetPort" : "qcDE32Id"
   }, {
-    "id" : "HdcthlwA",
-    "source" : "Join_2##htQn58ak",
-    "sourcePort" : "ewd0vN8R",
-    "target" : "Limit_1##whwKPFre",
-    "targetPort" : "Mi4nmflG"
-  }, {
     "id" : "JSu6vGm9",
     "source" : "ALL_TYPE_TABLE_SMALLER##bz4CZB5t",
     "sourcePort" : "hVDD8ppK",
@@ -3631,6 +3675,18 @@
     "sourcePort" : "nNo2Z1hQEm47A4ZhKD6H8$$79uEyYMhJdGsO4M5BkSJt",
     "target" : "Join_1##SShRAsg4",
     "targetPort" : "EoXH-5JNjREzOk8gwk26o"
+  }, {
+    "id" : "uqlo5uckOWEUJiLHm0sz8",
+    "source" : "Join_2##htQn58ak",
+    "sourcePort" : "ewd0vN8R",
+    "target" : "Ri07yCHZaowbARx1MP5xW$$K4W3auh6ejgkrGicXM8bb",
+    "targetPort" : "P4iiUuBSKXLTxoZde5Zjk$$HE7XpCHOhB2hhIXHSQrcz"
+  }, {
+    "id" : "tPx3NtCOLXZexII65Nbbf$$F_x1bmBwki7M9gXr4v_zY",
+    "source" : "Ri07yCHZaowbARx1MP5xW$$K4W3auh6ejgkrGicXM8bb",
+    "sourcePort" : "cVfbaHZYvicwCcUJwY-EL$$acRLLCqEBxrUFKj2tOk3Q",
+    "target" : "Limit_1##whwKPFre",
+    "targetPort" : "Mi4nmflG"
   } ],
   "component" : "Model"
 }

@@ -419,6 +419,14 @@ sqlSnapshots:
       snapshots: []
     createdAt: '2024-05-23 06:17:42'
 sqlTests:
+  .prophecy/metadata/sqltests/parent_multi_model_not_null:
+    name: parent_multi_model_not_null
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - tests/generic_parent/parent_multi_model_not_null.sql
+    testType: GenericDataTest
+    createdAt: '2024-10-15 06:07:30'
   .prophecy/metadata/sqltests/test_parent_main:
     name: test_parent_main
     description: null
@@ -429,15 +437,6 @@ sqlTests:
     testType: SingularDataTest
     createdAt: '2024-05-23 06:25:27'
 sqlMacros:
-  .prophecy/metadata/sqlmacros/default__language_specific_deduplicate:
-    name: default__language_specific_deduplicate
-    macroType: query
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - macros/gems/language_specific_deduplicate.sql
-    - macros/gems/gems.yml
-    createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmacros/databricks__language_specific_concat:
     name: databricks__language_specific_concat
     macroType: expression
@@ -553,6 +552,25 @@ sqlMacros:
     files:
     - macros/functions/qa_boolean_macro.sql
     createdAt: '2024-07-31 11:32:23'
+  .prophecy/metadata/sqlmacros/parent_transform_deduplicate:
+    name: parent_transform_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/gems/parent_transform/parent_transform_deduplicate.sql
+    - .prophecy/ide/macros/parent_transform_deduplicate.json
+    - gems/parent_transform_deduplicate.py
+    createdAt: '2024-10-15 06:16:25'
+  .prophecy/metadata/sqlmacros/default__language_specific_deduplicate:
+    name: default__language_specific_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/gems/language_specific_deduplicate.sql
+    - macros/gems/gems.yml
+    createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmacros/postgres__language_specific_deduplicate:
     name: postgres__language_specific_deduplicate
     macroType: query
