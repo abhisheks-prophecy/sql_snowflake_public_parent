@@ -419,14 +419,6 @@ sqlSnapshots:
       snapshots: []
     createdAt: '2024-05-23 06:17:42'
 sqlTests:
-  .prophecy/metadata/sqltests/parent_multi_model_not_null:
-    name: parent_multi_model_not_null
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - tests/generic_parent/parent_multi_model_not_null.sql
-    testType: GenericDataTest
-    createdAt: '2024-10-15 06:07:30'
   .prophecy/metadata/sqltests/parent_multi_model_not_null1:
     name: parent_multi_model_not_null1
     description: null
