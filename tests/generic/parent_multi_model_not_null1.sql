@@ -1,4 +1,4 @@
-{% test parent_multi_model_not_null(model, model1, column_name_model_1, column_name_model_2, column_name_mode1_1, column_name_mode1_2, value1=-200, value2=20000) %}
+{% test parent_multi_model_not_null1(model, model1, column_name_model_1, column_name_model_2, column_name_mode1_1, column_name_mode1_2, value1=-200, value2=2000) %}
 
 
 select * from {{ model }} 

@@ -16,6 +16,13 @@ snapshots:
     dataType:
       type: "Number"
   - name: "C_INT"
+    tests:
+    - unique:
+        config:
+          fail_calc: "count(*)"
+          warn_if: ""
+          where: "C_NUM = 2"
+        column_name: "C_INT"
     dataType:
       type: "Number"
   - name: "C_INTEGER"
@@ -46,6 +53,10 @@ snapshots:
     dataType:
       type: "String"
   - name: "C_STRING"
+    tests:
+    - not_null:
+        config:
+          fail_calc: "count(*)"
     dataType:
       type: "String"
   - name: "C_STRING20"

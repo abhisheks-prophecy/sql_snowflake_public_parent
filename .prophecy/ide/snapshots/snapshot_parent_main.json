@@ -27,8 +27,8 @@
       "component" : "Model",
       "metadata" : {
         "label" : "env_uitesting_main_model_snow_1",
-        "x" : 20,
-        "y" : 20,
+        "x" : -140,
+        "y" : -20,
         "phase" : 0
       },
       "properties" : {
