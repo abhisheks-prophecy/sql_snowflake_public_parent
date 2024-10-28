@@ -5,7 +5,1941 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ ]
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "\"all_type_table\"",
+            "sourceName" : "alias_test_\"qa_database\".\"qa_SCHEMA\"",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "all_type_table_2",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "all_type_table_2",
+              "expression" : {
+                "expression" : "all_type_table_2.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND all_type_table_2.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND all_type_table_2.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "all_type_table_2",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "ALL_TYPE_TABLE",
+            "sourceName" : "alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "ALL_TYPE_TABLE",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "ALL_TYPE_TABLE",
+              "expression" : {
+                "expression" : "ALL_TYPE_TABLE.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND ALL_TYPE_TABLE.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND ALL_TYPE_TABLE.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "ALL_TYPE_TABLE",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "ALL_TYPE_TABLE_NON_GEOMETRY",
+            "sourceName" : "alias_base_QA_DATABASE_QA_SCHEMA",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "ALL_TYPE_TABLE_NON_GEOMETRY",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "ALL_TYPE_TABLE_NON_GEOMETRY",
+              "expression" : {
+                "expression" : "ALL_TYPE_TABLE_NON_GEOMETRY.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND ALL_TYPE_TABLE_NON_GEOMETRY.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND ALL_TYPE_TABLE_NON_GEOMETRY.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "ALL_TYPE_TABLE_NON_GEOMETRY",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "ALL_TYPE_TABLE_SMALLER",
+            "sourceName" : "alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "ALL_TYPE_TABLE_SMALLER_1",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "ALL_TYPE_TABLE_SMALLER_1",
+              "expression" : {
+                "expression" : "ALL_TYPE_TABLE_SMALLER_1.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND ALL_TYPE_TABLE_SMALLER_1.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND ALL_TYPE_TABLE_SMALLER_1.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "ALL_TYPE_TABLE_SMALLER_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "CUSTOMERS",
+            "sourceName" : "alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "CUSTOMERS",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "CUSTOMERS",
+              "expression" : {
+                "expression" : "CUSTOMERS.C_BOOL = env_uitesting_main_model_snow_2_1.C_BOOL AND CUSTOMERS.C_INT = env_uitesting_main_model_snow_2_1.C_INT AND CUSTOMERS.C_STRING = env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "CUSTOMERS.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "CUSTOMERS.C_FLOAT64"
+              },
+              "alias" : "C_FLOAT64"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "CUSTOMERS",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_INT", "C_STRING" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "\"ALL_TYPE_Table\"",
+            "sourceName" : "alias_test_QA_DATABASE.\"qa_SCHEMA\"",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "ALL_TYPE_Table",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "ALL_TYPE_Table",
+              "expression" : {
+                "expression" : "ALL_TYPE_Table.C_INT = env_uitesting_main_model_snow_2_1.C_INT AND ALL_TYPE_Table.C_STRING = env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "ALL_TYPE_Table",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_INT", "C_STRING" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "\"all_type_table\"",
+            "sourceName" : "alias_test_QA_DATABASE.\"qa_SCHEMA\"",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "all_type_table_2",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "all_type_table_2",
+              "expression" : {
+                "expression" : "all_type_table_2.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND all_type_table_2.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND all_type_table_2.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "all_type_table_2",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "\"all_type_table\"",
+            "sourceName" : "alisa_qa_database_qa_SIMPLE_schema",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "all_type_table_2",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "all_type_table_2",
+              "expression" : {
+                "expression" : "all_type_table_2.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND all_type_table_2.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND all_type_table_2.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "all_type_table_2",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TEST_SEED_PVT",
+            "sourceName" : "QA_DATABASE.QA_SIMPLE_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TEST_SEED_PVT",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "TEST_SEED_PVT",
+              "expression" : {
+                "expression" : "TEST_SEED_PVT.C_INT = env_uitesting_main_model_snow_2_1.C_INT AND TEST_SEED_PVT.C_STRING = env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "TEST_SEED_PVT",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_INT", "C_STRING" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "snapshot_parent_main",
+            "sourceType" : "Snapshot"
+          }
+        },
+        "sourceComponentKind" : "Snapshot",
+        "sourceLabel" : "snapshot_parent_main",
+        "canJoinWith" : [ {
+          "processLabel" : "env_uitesting_main_model_snow_2_1",
+          "processId" : "oVYCWapdBN6djHY_HUvZY",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "snapshot_parent_main",
+              "expression" : {
+                "expression" : "snapshot_parent_main.C_ARRAY = env_uitesting_main_model_snow_2_1.C_ARRAY AND snapshot_parent_main.C_BINARY = env_uitesting_main_model_snow_2_1.C_BINARY AND snapshot_parent_main.C_BINARY100 = env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "snapshot_parent_main.C_MACROS_DEP"
+              },
+              "alias" : "C_MACROS_DEP"
+            }, {
+              "expression" : {
+                "expression" : "snapshot_parent_main.DBT_SCD_ID"
+              },
+              "alias" : "DBT_SCD_ID"
+            }, {
+              "expression" : {
+                "expression" : "snapshot_parent_main.DBT_UPDATED_AT"
+              },
+              "alias" : "DBT_UPDATED_AT"
+            }, {
+              "expression" : {
+                "expression" : "snapshot_parent_main.DBT_VALID_FROM"
+              },
+              "alias" : "DBT_VALID_FROM"
+            }, {
+              "expression" : {
+                "expression" : "snapshot_parent_main.DBT_VALID_TO"
+              },
+              "alias" : "DBT_VALID_TO"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "env_uitesting_main_model_snow_2_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            } ],
+            "headAlias" : "snapshot_parent_main",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : false
+        } ]
+      } ]
     },
     "graphConfig" : {
       "entityConfig" : {
@@ -263,7 +2197,7 @@
           "alias" : "C_MACROS_DEP"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
+        "columnsSelector" : [ "drbpcyqB##C_STRING", "XJMm9cDk##status", "IxVIiW5B##TITLE", "EoXH-5JNjREzOk8gwk26o##C_MACRO_MAIN", "drbpcyqB##C_NUM", "drbpcyqB##C_NUM10", "drbpcyqB##C_DEC", "drbpcyqB##C_NUMERIC", "drbpcyqB##C_INT", "drbpcyqB##C_INTEGER", "drbpcyqB##C_DOUBLE", "drbpcyqB##C_FLOAT", "drbpcyqB##C_COUBLE_PRECISION", "drbpcyqB##C_REAL", "drbpcyqB##C_VARCHAR", "drbpcyqB##C_VARCHAR50", "drbpcyqB##C_CHAR", "drbpcyqB##C_CHAR10", "drbpcyqB##C_STRING", "drbpcyqB##C_STRING20", "drbpcyqB##C_TEXT", "drbpcyqB##C_TEXT30", "drbpcyqB##C_BINARY", "drbpcyqB##C_BINARY100", "drbpcyqB##C_VARBINARY", "drbpcyqB##C_BOOL", "drbpcyqB##C_TIMESTAMP", "drbpcyqB##C_DATE", "drbpcyqB##C_DATETIME", "drbpcyqB##C_TIME", "drbpcyqB##C_ARRAY", "drbpcyqB##C_OBJECT", "drbpcyqB##C_GEOGRAPHY", "EoXH-5JNjREzOk8gwk26o##C_MACROS_DEP" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -928,8 +2862,8 @@
       "metadata" : {
         "label" : "Limit_1_1",
         "slug" : "Limit_1_1",
-        "x" : 440,
-        "y" : 240,
+        "x" : 420,
+        "y" : 200,
         "phase" : 0,
         "comment" : "Restricts the output to the first 29 records from the combined user accounts and usage logs.",
         "autoUpdateComment" : true
@@ -1466,7 +3400,7 @@
             "autoUpdateComment" : true
           },
           "properties" : {
-            "columnsSelector" : [ "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_VARCHAR", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_TEXT", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_ARRAY", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_OBJECT", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_STRING", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_BOOL", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_INT", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_INTEGER", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##c_int", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##c_float", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_NUM" ],
+            "columnsSelector" : [ "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_VARCHAR", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_TEXT", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_ARRAY", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_OBJECT", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_STRING", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_BOOL", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_INT", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_INTEGER", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_STRING20", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##c_int", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##c_float", "4nVgLyCXtFQIl2JJhabFZ$$ZDOLVWGsjjaUpZFqa8ptt##C_NUM" ],
             "expressions" : [ {
               "expression" : {
                 "expression" : "CONDITIONAL_CHANGE_EVENT(\n  c_int = 10) OVER (ORDER BY c_string)\n+ NTH_VALUE(c_int, 2) OVER (PARTITION BY c_float ORDER BY c_string)\n+ RANK() OVER (ORDER BY c_int DESC)\n+ DENSE_RANK() OVER (ORDER BY c_int DESC)\n+ ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))'))\n+ ST_HAUSDORFFDISTANCE(ST_POINT(0, 0), ST_POINT(0, 1))\n+ EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00'))\n+ DATE_PART(QUARTER, '2013-05-08'::DATE)\n+ abs(-10)\n+ ceil(10.12)\n+ floor(12.5656)\n+ mod(10, 2)\n+ round(-975.975, 1)\n+ SIGN(-1.35E-10)\n+ truncate(4.23423)\n+ truncate(4.23423, 2)\n+ cbrt(8)\n+ exp(2)\n+ factorial(1)\n+ pow(2, 3)\n+ power(1, 2)\n+ sqrt(4)\n+ square(2)\n+ ln(10)\n+ log(10, 10)\n+ COS(0)\n+ COS(PI() / 3)\n+ COS(RADIANS(90))\n+ SIN(0)\n+ SIN(PI() / 3)\n+ SIN(RADIANS(90))\n- HAVERSINE(40.7127, -74.0059, 34.05, -118.25)\n+ DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP)"

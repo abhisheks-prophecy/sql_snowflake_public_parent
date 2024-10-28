@@ -20,7 +20,6 @@ Reformat_1 AS (
 
 )
 
-{#Utilizes previously formatted patient records for further analysis.#}
 SELECT *
 
 FROM Reformat_1
