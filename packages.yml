@@ -7,3 +7,7 @@ packages:
 - revision: "main_staging"
   git: "https://github.com/abhisheks-prophecy/sql_generic_public_parent_all.git"
   subdirectory: ""
+- package: "Montreal-Analytics/snowflake_utils"
+  version: "0.6.3"
+- package: "Snowflake-Labs/dbt_constraints"
+  version: "1.0.4"
