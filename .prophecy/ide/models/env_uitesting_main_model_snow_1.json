@@ -986,69 +986,82 @@
               "expression" : {
                 "expression" : "C_ADD"
               },
-              "alias" : "C_ADD"
+              "alias" : "C_ADD",
+              "_row_id" : "274824777"
             }, {
               "expression" : {
                 "expression" : "C_BOOL"
               },
-              "alias" : "C_BOOL"
+              "alias" : "C_BOOL",
+              "_row_id" : "311985493"
             }, {
               "expression" : {
                 "expression" : "C_MACRO_MAIN"
               },
-              "alias" : "C_MACRO_MAIN"
+              "alias" : "C_MACRO_MAIN",
+              "_row_id" : "126494850"
             }, {
               "expression" : {
                 "expression" : "C_MACROS_DEP"
               },
-              "alias" : "C_MACROS_DEP"
+              "alias" : "C_MACROS_DEP",
+              "_row_id" : "1064825570"
             }, {
               "expression" : {
                 "expression" : "C_LANGUAGE_SPECIFIC"
               },
-              "alias" : "C_LANGUAGE_SPECIFIC"
+              "alias" : "C_LANGUAGE_SPECIFIC",
+              "_row_id" : "1146198957"
             }, {
               "expression" : {
                 "expression" : "C_SNOWFLAKE__DAY_NAME"
               },
-              "alias" : "C_SNOWFLAKE__DAY_NAME"
+              "alias" : "C_SNOWFLAKE__DAY_NAME",
+              "_row_id" : "111447963"
             }, {
               "expression" : {
                 "expression" : "C_COMPLEX_CASE"
               },
-              "alias" : "C_COMPLEX_CASE"
+              "alias" : "C_COMPLEX_CASE",
+              "_row_id" : "323385684"
             }, {
               "expression" : {
                 "expression" : "SIR1"
               },
-              "alias" : "SIR1"
+              "alias" : "SIR1",
+              "_row_id" : "1224380672"
             }, {
               "expression" : {
                 "expression" : "SIR2"
               },
-              "alias" : "SIR2"
+              "alias" : "SIR2",
+              "_row_id" : "1466434212"
             }, {
               "expression" : {
                 "expression" : "C_CALL_FUNC"
               },
-              "alias" : "C_CALL_FUNC"
+              "alias" : "C_CALL_FUNC",
+              "_row_id" : "1314535202"
             } ],
             "activeTab" : "expressions",
             "valueColumn" : {
               "expression" : {
                 "expression" : "C_VALUE"
-              }
+              },
+              "_row_id" : "64582202"
             },
             "columnList" : [ {
               "expression" : {
                 "expression" : "SIR3"
               },
-              "alias" : ""
+              "alias" : "",
+              "_row_id" : "1639737483"
             } ],
             "nameColumn" : {
               "expression" : {
                 "expression" : "C_NAME"
-              }
+              },
+              "_row_id" : "1310968216"
             }
           },
           "ports" : {
@@ -1204,89 +1217,106 @@
               "expression" : {
                 "expression" : "'hello sir how are i am fine14'"
               },
-              "alias" : ""
+              "alias" : "",
+              "_row_id" : "68786781"
             }, {
               "expression" : {
                 "expression" : "'hello sir how are i am fine24'"
               },
-              "alias" : ""
+              "alias" : "",
+              "_row_id" : "1637039303"
             }, {
               "expression" : {
                 "expression" : "'hello sir how are i am fine34'"
               },
-              "alias" : ""
+              "alias" : "",
+              "_row_id" : "1966649758"
             } ],
             "expressions" : [ {
               "expression" : {
                 "expression" : "C_ADD"
               },
-              "alias" : "C_ADD"
+              "alias" : "C_ADD",
+              "_row_id" : "1634528308"
             }, {
               "expression" : {
                 "expression" : "C_BOOL"
               },
-              "alias" : "C_BOOL"
+              "alias" : "C_BOOL",
+              "_row_id" : "1670627809"
             }, {
               "expression" : {
                 "expression" : "C_MACRO_MAIN"
               },
-              "alias" : "C_MACRO_MAIN"
+              "alias" : "C_MACRO_MAIN",
+              "_row_id" : "1939458113"
             }, {
               "expression" : {
                 "expression" : "C_MACROS_DEP"
               },
-              "alias" : "C_MACROS_DEP"
+              "alias" : "C_MACROS_DEP",
+              "_row_id" : "1530172655"
             }, {
               "expression" : {
                 "expression" : "C_LANGUAGE_SPECIFIC"
               },
-              "alias" : "C_LANGUAGE_SPECIFIC"
+              "alias" : "C_LANGUAGE_SPECIFIC",
+              "_row_id" : "832774908"
             }, {
               "expression" : {
                 "expression" : "C_SNOWFLAKE__DAY_NAME"
               },
-              "alias" : "C_SNOWFLAKE__DAY_NAME"
+              "alias" : "C_SNOWFLAKE__DAY_NAME",
+              "_row_id" : "1240760751"
             }, {
               "expression" : {
                 "expression" : "C_VAR_EXPRESSION"
               },
-              "alias" : "C_VAR_EXPRESSION"
+              "alias" : "C_VAR_EXPRESSION",
+              "_row_id" : "1935050004"
             }, {
               "expression" : {
                 "expression" : "C_CALL_FUNC"
               },
-              "alias" : "C_CALL_FUNC"
+              "alias" : "C_CALL_FUNC",
+              "_row_id" : "1272356379"
             }, {
               "expression" : {
                 "expression" : "C_COMPLEX_CASE"
               },
-              "alias" : "C_COMPLEX_CASE"
+              "alias" : "C_COMPLEX_CASE",
+              "_row_id" : "659911873"
             }, {
               "expression" : {
                 "expression" : "'hello sir how are i am fine14'"
               },
-              "alias" : "SIR1"
+              "alias" : "SIR1",
+              "_row_id" : "486108316"
             }, {
               "expression" : {
                 "expression" : "'hello sir how are i am fine24'"
               },
-              "alias" : "SIR2"
+              "alias" : "SIR2",
+              "_row_id" : "801424901"
             }, {
               "expression" : {
                 "expression" : "'hello sir how are i am fine34'"
               },
-              "alias" : "SIR3"
+              "alias" : "SIR3",
+              "_row_id" : "2097432595"
             } ],
             "pivotColumn" : {
               "expression" : {
                 "expression" : "C_HELLO_SIR_OBJECT"
-              }
+              },
+              "_row_id" : "778502340"
             },
             "activeTab" : "pivot",
             "aggregateExpression" : {
               "expression" : {
                 "expression" : "count(C_CONCAT)"
-              }
+              },
+              "_row_id" : "1058527463"
             }
           },
           "ports" : {
@@ -1471,36 +1501,42 @@
               "expression" : {
                 "expression" : "CONDITIONAL_CHANGE_EVENT(\n  c_int = 10) OVER (ORDER BY c_string)\n+ NTH_VALUE(c_int, 2) OVER (PARTITION BY c_float ORDER BY c_string)\n+ RANK() OVER (ORDER BY c_int DESC)\n+ DENSE_RANK() OVER (ORDER BY c_int DESC)\n+ ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))'))\n+ ST_HAUSDORFFDISTANCE(ST_POINT(0, 0), ST_POINT(0, 1))\n+ EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00'))\n+ DATE_PART(QUARTER, '2013-05-08'::DATE)\n+ abs(-10)\n+ ceil(10.12)\n+ floor(12.5656)\n+ mod(10, 2)\n+ round(-975.975, 1)\n+ SIGN(-1.35E-10)\n+ truncate(4.23423)\n+ truncate(4.23423, 2)\n+ cbrt(8)\n+ exp(2)\n+ factorial(1)\n+ pow(2, 3)\n+ power(1, 2)\n+ sqrt(4)\n+ square(2)\n+ ln(10)\n+ log(10, 10)\n+ COS(0)\n+ COS(PI() / 3)\n+ COS(RADIANS(90))\n+ SIN(0)\n+ SIN(PI() / 3)\n+ SIN(RADIANS(90))\n- HAVERSINE(40.7127, -74.0059, 34.05, -118.25)\n+ DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP)"
               },
-              "alias" : "c_add"
+              "alias" : "c_add",
+              "_row_id" : "1943304008"
             }, {
               "expression" : {
                 "expression" : "concat(\n  TRIM('?-?ABC-?-', '?-'), \n  REPLACE('abcd', 'bc'), \n  RIGHT('ABCDEFG', 3), \n  CAST(HASH(SEQ8()) AS string), \n  ASCII('A'), \n  REPEAT('xy', 5), \n  REVERSE('Hello, world!'), \n  SUBSTR('testing 1 2 3', 9, 5), \n  INSERT('abc', 1, 2, 'Z'), \n  RTRIM('$125.00', '0.'), \n  UUID_STRING(), \n  sha1('Snowflake'), \n  CAST(md5_binary('Snowflake') AS string), \n  LPAD(' hello ', 10, ' '), \n  DECOMPRESS_STRING(TO_BINARY('0920536E6F77666C616B65', 'HEX'), 'SNAPPY'), \n  LPAD('.  hi. ', 10, '$'), \n  DAYNAME(TO_DATE('2015-05-01')), \n  CAST(LAST_DAY(TO_DATE('2015-05-08T23:39:20.123-07:00')) AS string), \n  CAST(DATEADD(YEAR, 2, TO_DATE('2013-05-08')) AS string), \n  CAST(DATEDIFF(MONTH, '2021-01-01'::DATE, '2021-02-28'::DATE) AS string), \n  CAST(DATEDIFF(\n    HOUR, \n    '2013-05-08T23:39:20.123-07:00'::TIMESTAMP, \n    DATEADD(YEAR, 2, ('2013-05-08T23:39:20.123-07:00')::TIMESTAMP)) AS string), \n  CAST(TIMEDIFF(YEAR, '2017-01-01', '2019-01-01') AS string), \n  CAST(TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') AS string), \n  CAST(TRY_TO_TIME('12:30:00') AS string))"
               },
-              "alias" : "c_concat"
+              "alias" : "c_concat",
+              "_row_id" : "2010432555"
             }, {
               "expression" : {
                 "expression" : "2 = 5\nor 5 != 10\nor 6 <> 7\nor 4 > 2\nor 5 <= 10\nor startswith('sasd', 'te')\nor REGEXP_LIKE('sanson', 'san.*')\nor RLIKE('city', 'san.*', 'i')\nor CONTAINS('hello', 'te')\nor ('subject' LIKE '%j%h%do%')\nor (BITNOT(10) = 2)\nor BITAND(1, 2) = 2\nor BITOR(3, 4) = 5\nor BITXOR(7, 8) = 4\nor GETBIT(11, 100) = 0\nor (1.35 BETWEEN 1 AND 2)\nor BOOLAND(1, -2)\nor BOOLNOT(10)\nor BOOLOR(-1.35, 0)\nor BOOLXOR(1, -1)\nor (COALESCE(1, 2, 3) = 2)\nor (decode(1, 1, 'one', 2, 'two', NULL, '-NULL-', 'other') = 'one')\nor EQUAL_NULL(1, 1)\nor (GREATEST(1, 2, 3) = 3)\nor iff(True, 'true', 'false')\nor ifnull(0, 1) = 0\nor (NULL IN (1, 2, NULL))\nor (NULL NOT IN (1, 2, NULL))\nor (1 IS NOT DISTINCT FROM 1)\nor (1 IS NOT NULL)\nor LEAST(1, 3, 0, 4) = 0\nor NULLIF(1, 2) = 0\nor NULLIFZERO(0) = NULL\nor NVL('food', 'bard') = 'food'\nor NVL2(2, 3, 5) = 5\nor REGR_VALX(NULL, 10) = NULL\nor REGR_VALY(NULL, 10) = NULL\nor ZEROIFNULL(1.0) = 10\nor (CURRENT_CLIENT() LIKE '%Snow%')\nor (CAST(CURRENT_TIME(2) AS string) LIKE '%2020%')\nor (LOCALTIMESTAMP() = CURRENT_TIMESTAMP)\nor (CURRENT_WAREHOUSE() != CURRENT_SCHEMA())\nor (CURRENT_USER() = 'Abhishek')\nor TRY_CAST('ABCD' AS VARCHAR (10)) = 'ABCD'\nor TRY_TO_TIMESTAMP('Invalid') = NULL\nor TO_ARRAY(1) = TO_ARRAY(1)\nor PARSE_JSON('{\"a\":1}') = PARSE_JSON('{\"a\":1}')\nor TO_OBJECT(PARSE_JSON('{\"a\":1}')) = TO_OBJECT(PARSE_JSON('{\"a\":1}'))\nor TO_VARIANT(3.14) = TO_VARIANT(3.14)\nor (TRY_TO_GEOGRAPHY('Not a valid input for this data type.') IS NULL)\nor (random() > 10)\nor normal(0, 1, random()) > 10\nor uniform(1, 10, random()) = 10\nor zipf(1, 10, random()) = 9\nor DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\nor time_from_parts(0, 100, 0) IS NOT NULL\nor timestamp_ntz_from_parts(2013, 4, 5, 12, 0, 0, 987654321) IS NOT NULL\nor DATE_PART(QUARTER, '2013-05-08'::DATE) = 2\nor DAYNAME('2013-05-08') IS NOT NULL\nor EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00')) = 2013\nor MONTHNAME(TO_TIMESTAMP('2015-04-03 10:00')) IS NOT NULL\nor PREVIOUS_DAY('2020-10-10', 'Friday ') IS NOT NULL\nor DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAYOFWEEK('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAYOFWEEKISO('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAYOFYEAR('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor DAY('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor WEEK('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor WEEKISO('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor WEEKOFYEAR('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor MONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor QUARTER('2013-05-08T23:39:20.123-07:00'::TIMESTAMP) IS NOT NULL\nor ADD_MONTHS('2016-05-15'::timestamp_ntz, 2) IS NOT NULL\nor DATEADD(MONTH, 1, '2000-01-31'::DATE) IS NOT NULL\nor DATEDIFF(YEAR, '2010-04-09 14:39:20'::TIMESTAMP, '2013-05-08 23:39:20'::TIMESTAMP) IS NOT NULL\nor ROUND(MONTHS_BETWEEN('2019-03-31 12:00:00'::TIMESTAMP, '2019-02-28 00:00:00'::TIMESTAMP)) IS NOT NULL\nor DATEADD(HOUR, 2, TO_TIMESTAMP_LTZ('2013-05-08 11:22:33.444')) IS NOT NULL\nor DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\nor TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') IS NOT NULL\nor trunc(to_date('2013-05-08'), 'QUARTER') IS NOT NULL\nor ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))')) IS NOT NULL\nor ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000)\nor ST_DISJOINT(\n     TO_GEOGRAPHY('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))'), \n     TO_GEOGRAPHY('POLYGON((3 3, 5 3, 5 5, 3 5, 3 3))'))\nor ST_STARTPOINT(TO_GEOMETRY('LINESTRING(1 1, 2 2, 3 3, 4 4)')) IS NOT NULL\nor ST_ENDPOINT(TO_GEOGRAPHY('LINESTRING(1 1, 2 2, 3 3, 4 4)')) IS NOT NULL\nor ST_SIMPLIFY(TO_GEOGRAPHY('LINESTRING(-122.306067 37.55412, -122.32328 37.561801, -122.325879 37.586852)'), 1000) IS NOT NULL\nor ST_INTERSECTION(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 2 1, 1 2, 2 3, 1 4, 0 4, 0 0))'), TO_GEOGRAPHY('POINT(0 2)')) IS NOT NULL\nor ST_GEOGFROMGEOHASH('9q9j8ue2v71y5zzy0s4q') IS NOT NULL\nor ST_AREA(ST_MAKEPOLYGONORIENTED(TO_GEOGRAPHY('LINESTRING(0.0 0.0, 1.0 0.0, 1.0 2.0, 0.0 2.0, 0.0 0.0)'))) > 20\nor ST_GEOGRAPHYFROMWKT('POINT(-122.35 37.55)') IS NOT NULL\nor ST_XMAX(TO_GEOGRAPHY('POINT(-180 0)')) IS NOT NULL\nor ST_XMIN(TO_GEOGRAPHY('POINT(-180 0)')) IS NOT NULL\nor ST_POINTN(TO_GEOGRAPHY('LINESTRING(1 1, 2 2, 3 3, 4 4)'), 2) IS NOT NULL\nor ST_BUFFER(TO_GEOMETRY('POINT(0 0)'), 1) IS NOT NULL\nor ST_CENTROID(TO_GEOGRAPHY('LINESTRING(0 0, 0 -2)')) IS NOT NULL\nor ST_INTERSECTION(\n     TO_GEOGRAPHY('POLYGON((0 0, 1 0, 2 1, 1 2, 2 3, 1 4, 0 4, 0 0))'), \n     TO_GEOGRAPHY('POLYGON((3 0, 3 4, 2 4, 1 3, 2 2, 1 1, 2 0, 3 0))')) IS NOT NULL\nor ST_SYMDIFFERENCE(\n     TO_GEOGRAPHY('POLYGON((0 0, 1 0, 2 1, 1 2, 2 3, 1 4, 0 4, 0 0))'), \n     TO_GEOGRAPHY('POLYGON((3 0, 3 4, 2 4, 1 3, 2 2, 1 1, 2 0, 3 0))')) IS NOT NULL\nor ST_UNION(TO_GEOGRAPHY('POINT(1 1)'), TO_GEOGRAPHY('LINESTRING(1 0, 1 2)')) IS NOT NULL\nor CHECK_XML('<name> Valid </name>') IS NOT NULL\nor CHECK_JSON('{\"a\": 2}') IS NOT NULL\nor JSON_EXTRACT_PATH_TEXT('{\"level_1_key\": {\"level_2_key\": \"level_2_value\"}}', 'level_1_key') IS NOT NULL\nor PARSE_JSON('null') IS NOT NULL\nor ARRAY_APPEND(ARRAY_CONSTRUCT(1, 2, 3), 'HELLO') IS NOT NULL\nor ARRAY_CAT(ARRAY_CONSTRUCT(1, 2), ARRAY_CONSTRUCT(1, 2)) IS NOT NULL\nor ARRAY_COMPACT(ARRAY_CONSTRUCT(1, 2)) IS NOT NULL\nor ARRAY_CONTAINS('hello'::variant, array_construct('hello', 'hi'))\nor ARRAY_DISTINCT(['A', 'A', 'B', NULL, NULL]) IS NOT NULL\nor ARRAY_INSERT(ARRAY_CONSTRUCT(0, 1, 2, 3), 2, 'hello') IS NOT NULL\nor array_intersection(ARRAY_CONSTRUCT('A', 'B'), ARRAY_CONSTRUCT('B', 'C')) IS NOT NULL\nor ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\nor ARRAY_SIZE(ARRAY_CONSTRUCT(1, 2, 3)) > 2\nor array_slice(array_construct(0, 1, 2, 3, 4, 5, 6), 0, 2) IS NOT NULL\nor ARRAY_TO_STRING(PARSE_JSON(NULL), '') IS NULL\nor ARRAYS_OVERLAP(array_construct('hello', 'aloha'), array_construct('hello', 'hi', 'hey'))\nor OBJECT_CONSTRUCT('a', 1, 'b', 'BBBB', 'c', NULL) IS NOT NULL\nor OBJECT_DELETE(OBJECT_CONSTRUCT('a', 1, 'b', 2, 'c', 3), 'a', 'b') IS NOT NULL\nor OBJECT_INSERT(OBJECT_CONSTRUCT('a', 1, 'b', 2), 'c', 3) IS NOT NULL\nor OBJECT_PICK(OBJECT_CONSTRUCT('a', 1, 'b', 2, 'c', 3), 'a', 'b') IS NOT NULL\nor TO_ARRAY(1) IS NOT NULL\nor AS_DECIMAL(TO_VARIANT(TO_DECIMAL(1.23, 6, 3)), 6, 3) IS NOT NULL\nor typeof(10) IS NOT NULL\nor split_part('11.22.33', '.', 0) IS NOT NULL"
               },
-              "alias" : "c_bool"
+              "alias" : "c_bool",
+              "_row_id" : "365989347"
             }, {
               "expression" : {
                 "expression" : "concat(C_VARCHAR, C_TEXT, C_ARRAY[0], C_OBJECT['outer_key2']['inner_key2'], C_VARCHAR)"
               },
-              "alias" : "c_hello_sir_object"
+              "alias" : "c_hello_sir_object",
+              "_row_id" : "748464615"
             }, {
               "rowType" : "for",
-              "variable" : {
-                "expression" : "c_ifor"
-              },
-              "iterable" : {
-                "expression" : "range(1, 5)"
-              },
               "children" : [ {
                 "expression" : {
                   "expression" : "concat(C_STRING, {{c_ifor}})"
                 },
-                "alias" : "\"col_for_{{c_ifor}}\""
-              } ]
+                "alias" : "\"col_for_{{c_ifor}}\"",
+                "_row_id" : "329898526"
+              } ],
+              "variable" : {
+                "expression" : "c_ifor"
+              },
+              "_row_id" : "445663530",
+              "iterable" : {
+                "expression" : "range(1, 5)"
+              }
             }, {
               "rowType" : "ifGroup",
               "children" : [ {
@@ -1513,7 +1549,8 @@
                     "expression" : "concat(C_STRING, C_BOOL)"
                   },
                   "alias" : "c_if"
-                } ]
+                } ],
+                "_row_id" : "1317141369"
               }, {
                 "rowType" : "elseIf",
                 "condition" : {
@@ -1524,7 +1561,8 @@
                     "expression" : "concat(C_STRING, C_INT)"
                   },
                   "alias" : "c_if"
-                } ]
+                } ],
+                "_row_id" : "358612640"
               }, {
                 "rowType" : "else",
                 "children" : [ {
@@ -1532,43 +1570,52 @@
                     "expression" : "concat(C_STRING, C_INTEGER)"
                   },
                   "alias" : "c_if"
-                } ]
-              } ]
+                } ],
+                "_row_id" : "929411932"
+              } ],
+              "_row_id" : "1449678947"
             }, {
               "expression" : {
                 "expression" : "concat(C_STRING20, {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('C_STRING') }})"
               },
-              "alias" : "c_macro_main"
+              "alias" : "c_macro_main",
+              "_row_id" : "1671064821"
             }, {
               "expression" : {
                 "expression" : "concat(\n  '{{ dbt_utils.pretty_time() }}', \n  '{{ dbt_utils.pretty_log_format(\"my pretty message\") }}', \n  {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, \n  {{ SQL_BaseGitDepProjectAllFinal._qa_concat_string_cols('c_string','c_varchar') }})"
               },
-              "alias" : "c_macros_dep"
+              "alias" : "c_macros_dep",
+              "_row_id" : "1272384883"
             }, {
               "expression" : {
                 "expression" : "{{ SQL_SnoflakeMainProject.snowflake__language_specific_concat() }}"
               },
-              "alias" : "c_language_specific"
+              "alias" : "c_language_specific",
+              "_row_id" : "656629205"
             }, {
               "expression" : {
                 "expression" : "{{ dbt_date.snowflake__day_name('c_date', 2) }}"
               },
-              "alias" : "c_snowflake__day_name"
+              "alias" : "c_snowflake__day_name",
+              "_row_id" : "1919529432"
             }, {
               "expression" : {
                 "expression" : "{{v_expression}}"
               },
-              "alias" : "c_var_expression"
+              "alias" : "c_var_expression",
+              "_row_id" : "2009371618"
             }, {
               "expression" : {
                 "expression" : "js_factorial(c_int) % MULTIPLY1(c_float, 2)"
               },
-              "alias" : "c_call_func"
+              "alias" : "c_call_func",
+              "_row_id" : "711684892"
             }, {
               "expression" : {
                 "expression" : "CASE\n  WHEN C_NUM = 1\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 2\n    THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n  WHEN C_NUM = 3\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN CASE\n          WHEN C_NUM = 1\n            THEN CASE\n              WHEN C_NUM = 1\n                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n              WHEN C_NUM = 2\n                THEN false\n              WHEN C_NUM = 3\n                THEN true\n              WHEN C_NUM = 4\n                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n              WHEN C_NUM = 5\n                THEN true\n              WHEN C_NUM = 6\n                THEN false\n              ELSE true\n            END\n          WHEN C_NUM = 2\n            THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n          WHEN C_NUM = 3\n            THEN true\n          WHEN C_NUM = 4\n            THEN false\n          WHEN C_NUM = 5\n            THEN true\n          WHEN C_NUM = 6\n            THEN false\n          ELSE true\n        END\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 4\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN CASE\n          WHEN C_NUM = 1\n            THEN CASE\n              WHEN C_NUM = 1\n                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n              WHEN C_NUM = 2\n                THEN false\n              WHEN C_NUM = 3\n                THEN CASE\n                  WHEN C_NUM = 1\n                    THEN CASE\n                      WHEN C_NUM = 1\n                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                      WHEN C_NUM = 2\n                        THEN false\n                      WHEN C_NUM = 3\n                        THEN CASE\n                          WHEN C_NUM = 1\n                            THEN CASE\n                              WHEN C_NUM = 1\n                                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                              WHEN C_NUM = 2\n                                THEN false\n                              WHEN C_NUM = 3\n                                THEN true\n                              WHEN C_NUM = 4\n                                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                              WHEN C_NUM = 5\n                                THEN true\n                              WHEN C_NUM = 6\n                                THEN false\n                              ELSE true\n                            END\n                          WHEN C_NUM = 2\n                            THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n                          WHEN C_NUM = 3\n                            THEN true\n                          WHEN C_NUM = 4\n                            THEN false\n                          WHEN C_NUM = 5\n                            THEN true\n                          WHEN C_NUM = 6\n                            THEN false\n                          ELSE true\n                        END\n                      WHEN C_NUM = 4\n                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                      WHEN C_NUM = 5\n                        THEN true\n                      WHEN C_NUM = 6\n                        THEN false\n                      ELSE true\n                    END\n                  WHEN C_NUM = 2\n                    THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n                  WHEN C_NUM = 3\n                    THEN CASE\n                      WHEN C_NUM = 1\n                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                      WHEN C_NUM = 2\n                        THEN CASE\n                          WHEN C_NUM = 1\n                            THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                          WHEN C_NUM = 2\n                            THEN CASE\n                              WHEN C_NUM = 1\n                                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                              WHEN C_NUM = 2\n                                THEN CASE\n                                  WHEN C_NUM = 1\n                                    THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                  WHEN C_NUM = 2\n                                    THEN CASE\n                                      WHEN C_NUM = 1\n                                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                      WHEN C_NUM = 2\n                                        THEN CASE\n                                          WHEN C_NUM = 1\n                                            THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                          WHEN C_NUM = 2\n                                            THEN CASE\n                                              WHEN C_NUM = 1\n                                                THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                              WHEN C_NUM = 2\n                                                THEN false\n                                              WHEN C_NUM = 3\n                                                THEN true\n                                              WHEN C_NUM = 4\n                                                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                              WHEN C_NUM = 5\n                                                THEN true\n                                              WHEN C_NUM = 6\n                                                THEN CASE\n                                                  WHEN C_NUM = 1\n                                                    THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                                  WHEN C_NUM = 2\n                                                    THEN CASE\n                                                      WHEN C_NUM = 1\n                                                        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                                      WHEN C_NUM = 2\n                                                        THEN false\n                                                      WHEN C_NUM = 3\n                                                        THEN CASE\n                                                          WHEN C_NUM = 1\n                                                            THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n                                                          WHEN C_NUM = 2\n                                                            THEN false\n                                                          WHEN C_NUM = 3\n                                                            THEN true\n                                                          WHEN C_NUM = 4\n                                                            THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                                          WHEN C_NUM = 5\n                                                            THEN true\n                                                          WHEN C_NUM = 6\n                                                            THEN false\n                                                          ELSE true\n                                                        END\n                                                      WHEN C_NUM = 4\n                                                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                                      WHEN C_NUM = 5\n                                                        THEN true\n                                                      WHEN C_NUM = 6\n                                                        THEN false\n                                                      ELSE true\n                                                    END\n                                                  WHEN C_NUM = 3\n                                                    THEN true\n                                                  WHEN C_NUM = 4\n                                                    THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                                  WHEN C_NUM = 5\n                                                    THEN true\n                                                  WHEN C_NUM = 6\n                                                    THEN false\n                                                  ELSE true\n                                                END\n                                              ELSE true\n                                            END\n                                          WHEN C_NUM = 3\n                                            THEN true\n                                          WHEN C_NUM = 4\n                                            THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                          WHEN C_NUM = 5\n                                            THEN true\n                                          WHEN C_NUM = 6\n                                            THEN false\n                                          ELSE true\n                                        END\n                                      WHEN C_NUM = 3\n                                        THEN true\n                                      WHEN C_NUM = 4\n                                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                      WHEN C_NUM = 5\n                                        THEN true\n                                      WHEN C_NUM = 6\n                                        THEN false\n                                      ELSE true\n                                    END\n                                  WHEN C_NUM = 3\n                                    THEN true\n                                  WHEN C_NUM = 4\n                                    THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                                  WHEN C_NUM = 5\n                                    THEN true\n                                  WHEN C_NUM = 6\n                                    THEN false\n                                  ELSE true\n                                END\n                              WHEN C_NUM = 3\n                                THEN true\n                              WHEN C_NUM = 4\n                                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                              WHEN C_NUM = 5\n                                THEN true\n                              WHEN C_NUM = 6\n                                THEN false\n                              ELSE true\n                            END\n                          WHEN C_NUM = 3\n                            THEN true\n                          WHEN C_NUM = 4\n                            THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                          WHEN C_NUM = 5\n                            THEN true\n                          WHEN C_NUM = 6\n                            THEN false\n                          ELSE true\n                        END\n                      WHEN C_NUM = 3\n                        THEN true\n                      WHEN C_NUM = 4\n                        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n                      WHEN C_NUM = 5\n                        THEN true\n                      WHEN C_NUM = 6\n                        THEN false\n                      ELSE true\n                    END\n                  WHEN C_NUM = 4\n                    THEN false\n                  WHEN C_NUM = 5\n                    THEN true\n                  WHEN C_NUM = 6\n                    THEN false\n                  ELSE true\n                END\n              WHEN C_NUM = 4\n                THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n              WHEN C_NUM = 5\n                THEN true\n              WHEN C_NUM = 6\n                THEN false\n              ELSE true\n            END\n          WHEN C_NUM = 2\n            THEN DATE_TRUNC('HOUR', TO_TIMESTAMP('2015-05-08T23:39:20.123-07:00')) IS NOT NULL\n          WHEN C_NUM = 3\n            THEN true\n          WHEN C_NUM = 4\n            THEN false\n          WHEN C_NUM = 5\n            THEN true\n          WHEN C_NUM = 6\n            THEN false\n          ELSE true\n        END\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 5\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  WHEN C_NUM = 6\n    THEN CASE\n      WHEN C_NUM = 1\n        THEN ARRAY_PREPEND(ARRAY_CONSTRUCT(0, 1, 2, 3), 'hello') IS NOT NULL\n      WHEN C_NUM = 2\n        THEN false\n      WHEN C_NUM = 3\n        THEN true\n      WHEN C_NUM = 4\n        THEN DATE_FROM_PARTS(2010, 1, 100) = DATE_FROM_PARTS(2010, 1, 100)\n      WHEN C_NUM = 5\n        THEN true\n      WHEN C_NUM = 6\n        THEN false\n      ELSE true\n    END\n  ELSE true\nEND"
               },
-              "alias" : "c_complex_case"
+              "alias" : "c_complex_case",
+              "_row_id" : "1212563552"
             } ]
           },
           "ports" : {
