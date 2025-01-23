@@ -295,7 +295,7 @@
         "label" : "qa_all_not_null_1",
         "slug" : "qa_all_not_null_1",
         "x" : 780,
-        "y" : 440,
+        "y" : 500,
         "phase" : 0,
         "macroDependencies" : [ "SQL_SnoflakeMainProject.qa_all_not_null" ],
         "comment" : "Ensures that the timestamp column in the specified model contains no null values for data integrity.",
