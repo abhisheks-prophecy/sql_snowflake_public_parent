@@ -1758,6 +1758,8 @@ sqlSources:
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-09-18 09:43:25'
 sqlUnreferencedSources: {}
+sqlOrchestratorPipelines: {}
+sqlBusinessApps: {}
 sqlPipeline:
   name: sqlPipeline
   description: null
