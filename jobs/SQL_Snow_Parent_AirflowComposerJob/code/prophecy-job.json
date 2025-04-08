@@ -114,6 +114,7 @@
         "target" : null,
         "exclude" : null,
         "runDeps" : true,
+        "sqlProjectType" : "snowflake",
         "loadingSnapshots" : false,
         "gitEntityValueBranch" : "dev_staging",
         "noAnonymousUsageStats" : null,

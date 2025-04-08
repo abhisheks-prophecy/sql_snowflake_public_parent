@@ -17,9 +17,177 @@
       },
       "userDefinedConfig" : {
         "vars" : { }
-      }
+      },
+      "mergeApproach" : "scd2"
     },
-    "version" : 3
+    "version" : 3,
+    "properties" : {
+      "name" : "snapshot_parent_main",
+      "columns" : [ {
+        "name" : "C_NUM",
+        "dataType" : {
+          "type" : "Number"
+        }
+      }, {
+        "name" : "C_NUM10",
+        "dataType" : {
+          "type" : "Number"
+        }
+      }, {
+        "name" : "C_DEC",
+        "dataType" : {
+          "type" : "Number"
+        }
+      }, {
+        "name" : "C_NUMERIC",
+        "dataType" : {
+          "type" : "Number"
+        }
+      }, {
+        "name" : "C_INT",
+        "tests" : [ {
+          "unique" : {
+            "config" : {
+              "fail_calc" : "count(*)",
+              "warn_if" : "",
+              "where" : "C_NUM = 2"
+            },
+            "column_name" : "\"C_INT\""
+          }
+        } ],
+        "dataType" : {
+          "type" : "Number"
+        }
+      }, {
+        "name" : "C_INTEGER",
+        "dataType" : {
+          "type" : "Number"
+        }
+      }, {
+        "name" : "C_DOUBLE",
+        "dataType" : {
+          "type" : "Float"
+        }
+      }, {
+        "name" : "C_FLOAT",
+        "dataType" : {
+          "type" : "Float"
+        }
+      }, {
+        "name" : "C_COUBLE_PRECISION",
+        "dataType" : {
+          "type" : "Float"
+        }
+      }, {
+        "name" : "C_REAL",
+        "dataType" : {
+          "type" : "Float"
+        }
+      }, {
+        "name" : "C_VARCHAR",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_VARCHAR50",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_CHAR",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_CHAR10",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_STRING",
+        "tests" : [ {
+          "not_null" : {
+            "config" : {
+              "fail_calc" : "count(*)"
+            }
+          }
+        } ],
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_STRING20",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_TEXT",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_TEXT30",
+        "dataType" : {
+          "type" : "String"
+        }
+      }, {
+        "name" : "C_BINARY",
+        "dataType" : {
+          "type" : "Binary"
+        }
+      }, {
+        "name" : "C_BINARY100",
+        "dataType" : {
+          "type" : "Binary"
+        }
+      }, {
+        "name" : "C_VARBINARY",
+        "dataType" : {
+          "type" : "Binary"
+        }
+      }, {
+        "name" : "C_BOOL",
+        "dataType" : {
+          "type" : "Boolean"
+        }
+      }, {
+        "name" : "C_TIMESTAMP",
+        "dataType" : {
+          "type" : "Timestamp"
+        }
+      }, {
+        "name" : "C_DATE",
+        "dataType" : {
+          "type" : "Date"
+        }
+      }, {
+        "name" : "C_DATETIME",
+        "dataType" : {
+          "type" : "Timestamp"
+        }
+      }, {
+        "name" : "C_TIME",
+        "dataType" : {
+          "type" : "Time"
+        }
+      }, {
+        "name" : "C_ARRAY",
+        "dataType" : {
+          "type" : "Array"
+        }
+      }, {
+        "name" : "C_OBJECT",
+        "dataType" : {
+          "type" : "Object"
+        }
+      }, {
+        "name" : "C_GEOGRAPHY",
+        "dataType" : {
+          "type" : "Geography"
+        }
+      } ],
+      "providerType" : "snowflake"
+    }
   },
   "processes" : {
     "env_uitesting_main_model_snow_1##JS0VXBRi" : {
@@ -76,7 +244,7 @@
     },
     "snapshot_parent_main##oaEx0kDG" : {
       "id" : "snapshot_parent_main##oaEx0kDG",
-      "component" : "TargetSnapshot",
+      "component" : "TargetModel",
       "metadata" : {
         "label" : "snapshot_parent_main",
         "x" : 420,
@@ -89,6 +257,7 @@
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
         "query" : "SELECT * \n\nFROM Reformat_1\n",
+        "isModel" : false,
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"

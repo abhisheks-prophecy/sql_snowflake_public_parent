@@ -825,6 +825,7 @@ sqlSources:
             type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-08-09 06:14:57'
   .prophecy/metadata/sqlsources/alias_test_JAFFLE_SHOP_PUBLIC:
     name: alias_test_JAFFLE_SHOP.PUBLIC
@@ -844,6 +845,7 @@ sqlSources:
             type: Number
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-08-09 06:14:57'
   .prophecy/metadata/sqlsources/alias_test__qa_database_lower_case_only___qa_schema_lower_case_:
     name: alias_test_"qa_database_lower_case_only"."qa_schema_lower_case"
@@ -869,6 +871,7 @@ sqlSources:
             type: Number
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-08-09 06:14:57'
   .prophecy/metadata/sqlsources/alias_test_QA_DATABASE__qa_SCHEMA_:
     name: alias_test_QA_DATABASE."qa_SCHEMA"
@@ -981,6 +984,7 @@ sqlSources:
             type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-08-09 06:14:57'
     - name: '"ALL_TYPE_Table"'
       schema:
@@ -995,6 +999,7 @@ sqlSources:
             type: String
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-08-09 06:14:57'
     - name: '"Employees_qa_SCHEMA"'
       schema:
@@ -1012,6 +1017,7 @@ sqlSources:
             type: Number
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-08-09 06:14:57'
   .prophecy/metadata/sqlsources/alisa_qa_database_qa_SIMPLE_schema:
     name: alisa_qa_database_qa_SIMPLE_schema
@@ -1124,6 +1130,7 @@ sqlSources:
             type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-06-19 14:03:50'
   .prophecy/metadata/sqlsources/test:
     name: test
@@ -1146,6 +1153,7 @@ sqlSources:
             type: String
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-05-03 11:55:41'
   .prophecy/metadata/sqlsources/alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA:
     name: alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA
@@ -1249,6 +1257,7 @@ sqlSources:
             type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-04-14 05:41:23'
     - name: CUSTOMERS
       schema:
@@ -1272,6 +1281,7 @@ sqlSources:
             type: Boolean
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-04-14 05:41:23'
     - name: TABLE_COMPLEX_TYPES
       schema:
@@ -1316,6 +1326,7 @@ sqlSources:
             type: Variant
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-04-14 05:41:23'
     - name: TABLE_COMPLEX_TYPES_1
       schema:
@@ -1372,6 +1383,7 @@ sqlSources:
             type: Variant
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-06-22 14:01:14'
     - name: VARIANT_DEEPLY_NESTED
       schema:
@@ -1383,6 +1395,7 @@ sqlSources:
             type: Variant
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-10-20 07:50:43'
     - name: VARIANT_TABLE_COMPLEX_TYPES_1
       schema:
@@ -1439,6 +1452,7 @@ sqlSources:
             type: Variant
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-10-20 07:50:45'
     - name: ALL_TYPE_TABLE
       schema:
@@ -1543,6 +1557,7 @@ sqlSources:
             type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-10-20 07:50:51'
   .prophecy/metadata/sqlsources/alias_base_QA_DATABASE_QA_SCHEMA:
     name: alias_base_QA_DATABASE_QA_SCHEMA
@@ -1655,6 +1670,7 @@ sqlSources:
             type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2023-04-14 05:41:23'
     - name: CALL_CENTER
       schema:
@@ -1756,6 +1772,7 @@ sqlSources:
             type: Number
       description: null
       author: abhisheks+e2etests@prophecy.io
+      tableType: null
       createdAt: '2024-09-18 09:43:25'
 sqlUnreferencedSources: {}
 sqlOrchestratorPipelines: {}
@@ -1766,7 +1783,23 @@ sqlPipeline:
   author: abhisheks+e2etests@prophecy.io
   createdAt: '2023-04-11 14:20:26'
 dependencies: '[]'
-projectDependencies: {}
+projectDependencies:
+  '22364':
+    projectUID: 22364
+    projectName: ProphecySnowflakeSqlBasics
+    repositoryPath: gitUri=https://github.com/prophecy-io/snowflake-sql-basics&subPath=
+    version: 0.0.3.dev1
+    isDefault: true
+    author: null
+    createdAt: '2025-04-08 10:02:07'
+  '22363':
+    projectUID: 22363
+    projectName: ProphecyDatabricksSqlBasics
+    repositoryPath: gitUri=https://github.com/prophecy-io/databricks-sql-basics&subPath=
+    version: 0.0.3.dev1
+    isDefault: true
+    author: null
+    createdAt: '2025-04-08 10:02:07'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

@@ -29,7 +29,7 @@ def Model_0():
           "select": "",
           "threads": "",
           "exclude": "",
-          "run_props": " --profile run_profile_snowflake",
+          "run_props": " --profile run_profile",
           "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
         },
         retries = 0
