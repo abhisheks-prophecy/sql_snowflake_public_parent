@@ -76,6 +76,22 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_1:
     name: env_uitesting_main_model_snow_1
+    schema: null
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/main_models/env_uitesting_main_model_snow_1.sql
+    - .prophecy/ide/models/env_uitesting_main_model_snow_1.json
+    - models/main_models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-04-12 13:57:52'
+  .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_2:
+    name: env_uitesting_main_model_snow_2
     schema:
       entityType: ''
       providerType: Snowflake
@@ -158,6 +174,15 @@ sqlModels:
       - name: C_TIME
         dataType:
           type: Time
+      - name: C_TIMESTAMPLTZ
+        dataType:
+          type: Timestamp
+      - name: C_TIMESTAMP_NTZ
+        dataType:
+          type: Timestamp
+      - name: C_VARIANT
+        dataType:
+          type: Variant
       - name: C_ARRAY
         dataType:
           type: Array
@@ -167,24 +192,6 @@ sqlModels:
       - name: C_GEOGRAPHY
         dataType:
           type: Geography
-      - name: C_MACROS_DEP
-        dataType:
-          type: String
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - models/main_models/env_uitesting_main_model_snow_1.sql
-    - .prophecy/ide/models/env_uitesting_main_model_snow_1.json
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2023-04-12 13:57:52'
-  .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_2:
-    name: env_uitesting_main_model_snow_2
-    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -200,112 +207,7 @@ sqlModels:
 sqlSnapshots:
   .prophecy/metadata/sqlsnapshots/snapshot_parent_main:
     name: snapshot_parent_main
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: C_NUM
-        dataType:
-          type: Number
-      - name: C_NUM10
-        dataType:
-          type: Number
-      - name: C_DEC
-        dataType:
-          type: Number
-      - name: C_NUMERIC
-        dataType:
-          type: Number
-      - name: C_INT
-        dataType:
-          type: Number
-      - name: C_INTEGER
-        dataType:
-          type: Number
-      - name: C_DOUBLE
-        dataType:
-          type: Float
-      - name: C_FLOAT
-        dataType:
-          type: Float
-      - name: C_COUBLE_PRECISION
-        dataType:
-          type: Float
-      - name: C_REAL
-        dataType:
-          type: Float
-      - name: C_VARCHAR
-        dataType:
-          type: String
-      - name: C_VARCHAR50
-        dataType:
-          type: String
-      - name: C_CHAR
-        dataType:
-          type: String
-      - name: C_CHAR10
-        dataType:
-          type: String
-      - name: C_STRING
-        dataType:
-          type: String
-      - name: C_STRING20
-        dataType:
-          type: String
-      - name: C_TEXT
-        dataType:
-          type: String
-      - name: C_TEXT30
-        dataType:
-          type: String
-      - name: C_BINARY
-        dataType:
-          type: Binary
-      - name: C_BINARY100
-        dataType:
-          type: Binary
-      - name: C_VARBINARY
-        dataType:
-          type: Binary
-      - name: C_BOOL
-        dataType:
-          type: Boolean
-      - name: C_TIMESTAMP
-        dataType:
-          type: Timestamp
-      - name: C_DATE
-        dataType:
-          type: Date
-      - name: C_DATETIME
-        dataType:
-          type: Timestamp
-      - name: C_TIME
-        dataType:
-          type: Time
-      - name: C_ARRAY
-        dataType:
-          type: Array
-      - name: C_OBJECT
-        dataType:
-          type: Object
-      - name: C_GEOGRAPHY
-        dataType:
-          type: Geography
-      - name: C_MACROS_DEP
-        dataType:
-          type: String
-      - name: DBT_SCD_ID
-        dataType:
-          type: String
-      - name: DBT_UPDATED_AT
-        dataType:
-          type: Date
-      - name: DBT_VALID_FROM
-        dataType:
-          type: Date
-      - name: DBT_VALID_TO
-        dataType:
-          type: Date
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:

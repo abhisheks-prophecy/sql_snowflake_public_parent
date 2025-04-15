@@ -13,7 +13,25 @@
 {% set v_model_expression = 'concat(c_string, c_text)' %}
 {% set v_int = 22 %}
 
-WITH Employees_qa_SCHEMA AS (
+WITH raw_orders AS (
+
+  SELECT * 
+  
+  FROM {{ ref('raw_orders')}}
+
+),
+
+Limit_2 AS (
+
+  SELECT * 
+  
+  FROM raw_orders AS in0
+  
+  LIMIT 10
+
+),
+
+Employees_qa_SCHEMA AS (
 
   SELECT * 
   
@@ -73,24 +91,6 @@ deduplicated_employee_titles AS (
 
   {#Removes duplicate employee titles to ensure accurate reporting.#}
   {{ SQL_SnoflakeMainProject.parent_transform_deduplicate('Join_2', 'TITLE', 'EMPLOYEE_ID') }}
-
-),
-
-raw_orders AS (
-
-  SELECT * 
-  
-  FROM {{ ref('raw_orders')}}
-
-),
-
-Limit_2 AS (
-
-  SELECT * 
-  
-  FROM raw_orders AS in0
-  
-  LIMIT 10
 
 ),
 
@@ -936,8 +936,72 @@ qa_all_not_null_1 AS (
   {#Ensures that the timestamp column in the specified model contains no null values for data integrity.#}
   {{ SQL_SnoflakeMainProject.qa_all_not_null(model = 'Join_1', column_name = 'C_TIMESTAMP') }}
 
+),
+
+Transpose_1 AS (
+
+  {{
+    SnowflakeSqlBasics.Transpose(
+      'Limit_1', 
+      ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT'], 
+      ['C_NUMERIC', 'C_STRING', 'C_REAL', 'C_VARCHAR'], 
+      ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT', 'C_STRING', 'C_NUMERIC', 'C_REAL', 'C_VARCHAR']
+    )
+  }}
+
+),
+
+DynamicSelect_1 AS (
+
+  {{
+    SnowflakeSqlBasics.DynamicSelect(
+      'Transpose_1', 
+      [
+        { "name": "TITLE", "dataType": "String" }, 
+        { "name": "EMPLOYEE_ID", "dataType": "Number" }, 
+        { "name": "MANAGER_ID", "dataType": "Number" }, 
+        { "name": "C_INT", "dataType": "Number" }, 
+        { "name": "NAME", "dataType": "String" }, 
+        { "name": "VALUE", "dataType": "String" }
+      ], 
+      ["Boolean", "String", "Integer", "Long", "Float", "Date", "Timestamp", "Struct"], 
+      'SELECT_FIELD_TYPES', 
+      ""
+    )
+  }}
+
+),
+
+MultiColumnRename_1 AS (
+
+  {{
+    SnowflakeSqlBasics.MultiColumnRename(
+      'DynamicSelect_1', 
+      ['TITLE', 'NAME', 'VALUE'], 
+      'editPrefixSuffix', 
+      ['TITLE', 'NAME', 'VALUE'], 
+      'Suffix', 
+      '_suffix', 
+      ""
+    )
+  }}
+
+),
+
+SQLStatement_2 AS (
+
+  SELECT *
+  
+  FROM qa_all_not_null_1
+  
+  WHERE c_int != (
+          (SELECT count(*)
+          
+          FROM MultiColumnRename_1)
+         )
+
 )
 
 SELECT *
 
-FROM qa_all_not_null_1
+FROM SQLStatement_2
