@@ -23,7 +23,7 @@ runner = dbtRunner()
 
 def execute_dbt_cmd(command):
     LOG.info("Running dbt command %s", command)
-    response = runner.invoke(command.split()[1:])
+    response = runner.invoke(shlex.split(command)[1:])
     LOG.info(f"command %s and response %s", command, str(response))
     if response.success:
         return response.result
