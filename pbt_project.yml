@@ -1,6 +1,6 @@
 name: SQL_SnoflakeMainProject
 description: ''
-version: v4.1.0-3
+version: 4.1.1
 author: null
 language: sql
 buildSystem: ''
