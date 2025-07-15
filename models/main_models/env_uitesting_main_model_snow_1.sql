@@ -945,6 +945,8 @@ Transpose_1 AS (
       'Limit_1', 
       ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT'], 
       ['C_NUMERIC', 'C_STRING', 'C_REAL', 'C_VARCHAR'], 
+      'Name', 
+      'Value', 
       ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT', 'C_STRING', 'C_NUMERIC', 'C_REAL', 'C_VARCHAR']
     )
   }}

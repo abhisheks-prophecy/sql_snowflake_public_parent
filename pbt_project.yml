@@ -290,6 +290,7 @@ sqlModels:
     files:
     - models/other_models/env_uitesting_main_model_snow_2.sql
     - .prophecy/ide/models/env_uitesting_main_model_snow_2.json
+    - models/other_models/schema.yml
     sqlDependencies:
       models: []
       datasets: []
