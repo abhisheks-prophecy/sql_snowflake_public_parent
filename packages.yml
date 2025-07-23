@@ -11,6 +11,6 @@ packages:
   version: "0.6.3"
 - package: "Snowflake-Labs/dbt_constraints"
   version: "1.0.4"
-- revision: "0.0.5"
+- revision: "0.0.6"
   git: "https://github.com/prophecy-io/snowflake-sql-basics"
   subdirectory: ""
