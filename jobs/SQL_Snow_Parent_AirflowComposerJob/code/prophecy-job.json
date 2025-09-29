@@ -35,7 +35,8 @@
       "databricks" : false,
       "dataproc" : false,
       "emr" : false,
-      "onprem" : false
+      "onprem" : false,
+      "emr_serverless" : false
     }
   },
   "processes" : {
