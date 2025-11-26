@@ -2,11 +2,11 @@ from airflow.decorators import task
 
 
 
-def task_wrapper(task_id):
+def task_wrapper(task_id, **task_kwargs):
 
     def decorator(func):
 
-        @task(task_id = task_id)
+        @task(task_id = task_id, **task_kwargs)
         def wrapper(*args, **context):
             ## running the actual method.
             return func(*args, **context).execute(context)

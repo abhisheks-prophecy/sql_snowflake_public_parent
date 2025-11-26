@@ -108,7 +108,7 @@
         "noVersionCheck" : null,
         "noWriteJson" : null,
         "printerWidth" : null,
-        "sqlFabricId" : "7",
+        "sqlFabricId" : "6",
         "gitEntityValue" : "dev_staging",
         "logFormat" : null,
         "runModelWithChildren" : false,
