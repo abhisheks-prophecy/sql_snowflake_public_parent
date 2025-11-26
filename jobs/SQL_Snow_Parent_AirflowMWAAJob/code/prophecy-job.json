@@ -61,7 +61,7 @@
         } ]
       },
       "settings" : {
-        "retries" : 0
+        "retries" : 1
       },
       "properties" : {
         "entityId" : "67/.prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_1",
@@ -108,7 +108,7 @@
         "noVersionCheck" : null,
         "noWriteJson" : null,
         "printerWidth" : null,
-        "sqlFabricId" : "7",
+        "sqlFabricId" : "6",
         "gitEntityValue" : "dev_staging",
         "logFormat" : null,
         "runModelWithChildren" : false,
