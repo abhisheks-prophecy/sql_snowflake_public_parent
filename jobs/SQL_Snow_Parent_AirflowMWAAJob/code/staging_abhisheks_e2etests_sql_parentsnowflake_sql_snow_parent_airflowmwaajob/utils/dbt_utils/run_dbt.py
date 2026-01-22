@@ -258,6 +258,8 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
 
     file_path = os.path.dirname(os.path.abspath(__file__))
     temp_folder = tempfile.mkdtemp(dir="/tmp")
+    project_folder = ""
+    zip_path = ""
 
     try:
         file_path_as_list = file_path.split("/")
@@ -269,9 +271,18 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
                     if file.startswith(folder_name):
                         zip_ref.extract(file, temp_folder)
 
-        zip_path = "/".join(file_path_as_list[:(zip_index + 1)])
-        extract_folder_from_zip(zip_path, "project")
-        project_folder = f"{temp_folder}/project"
+        if zip_index is not None:
+            zip_path = "/".join(file_path_as_list[:(zip_index + 1)])
+            extract_folder_from_zip(zip_path, "project")
+            project_folder = f"{temp_folder}/project"
+        else:
+            from pathlib import Path
+            p = Path(__file__).resolve()
+
+            if len(p.parents) > 6:
+                possible_project_folder = p.parents[6]
+                if (possible_project_folder / "pbt_project.yml").is_file():
+                    project_folder = str(possible_project_folder)
 
         LOG.info(f"project_folder: {project_folder} + flag:{(os.path.isdir(project_folder))} zip_path:{zip_path}")
         cmd_list = []
