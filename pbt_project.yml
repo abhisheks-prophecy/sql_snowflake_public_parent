@@ -776,7 +776,7 @@ sqlSeeds:
           type: String
       - name: STATUS1
         dataType:
-          type: Boolean
+          type: String
       - name: UNITS1
         dataType:
           type: String
@@ -846,7 +846,7 @@ sqlSeeds:
           type: String
       - name: STATUS_1
         dataType:
-          type: Boolean
+          type: String
       - name: UNITS_1
         dataType:
           type: String
@@ -1113,7 +1113,7 @@ sqlSeeds:
           type: String
       - name: STATUS_1
         dataType:
-          type: Boolean
+          type: String
       - name: UNITS_1
         dataType:
           type: String

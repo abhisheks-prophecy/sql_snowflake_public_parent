@@ -840,6 +840,12 @@
             "name" : "schema",
             "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"MANAGER_ID\", \"dataType\": \"Number\"}, {\"name\": \"C_INT\", \"dataType\": \"Number\"}, {\"name\": \"C_STRING\", \"dataType\": \"String\"}, {\"name\": \"C_NUMERIC\", \"dataType\": \"Number\"}, {\"name\": \"C_REAL\", \"dataType\": \"Float\"}, {\"name\": \"C_VARCHAR\", \"dataType\": \"String\"}]"
           }, {
+            "name" : "nameColumn",
+            "value" : "Name"
+          }, {
+            "name" : "valueColumn",
+            "value" : "Value"
+          }, {
             "name" : "keyColumns",
             "value" : "[\"TITLE\", \"EMPLOYEE_ID\", \"MANAGER_ID\", \"C_INT\"]"
           }, {
@@ -848,8 +854,11 @@
           } ]
         },
         "dataColumns" : [ "C_NUMERIC", "C_STRING", "C_REAL", "C_VARCHAR" ],
+        "customNames" : false,
         "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"MANAGER_ID\", \"dataType\": \"Number\"}, {\"name\": \"C_INT\", \"dataType\": \"Number\"}, {\"name\": \"C_STRING\", \"dataType\": \"String\"}, {\"name\": \"C_NUMERIC\", \"dataType\": \"Number\"}, {\"name\": \"C_REAL\", \"dataType\": \"Float\"}, {\"name\": \"C_VARCHAR\", \"dataType\": \"String\"}]",
-        "keyColumns" : [ "TITLE", "EMPLOYEE_ID", "MANAGER_ID", "C_INT" ]
+        "valueColumn" : "Value",
+        "keyColumns" : [ "TITLE", "EMPLOYEE_ID", "MANAGER_ID", "C_INT" ],
+        "nameColumn" : "Name"
       },
       "ports" : {
         "inputs" : [ {
