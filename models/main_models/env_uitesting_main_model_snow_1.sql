@@ -15,6 +15,7 @@
 
 WITH raw_orders AS (
 
+  {#Loads the full set of raw order records to serve as the authoritative source for reconciliation, auditing, trend analysis and downstream reporting.#}
   SELECT * 
   
   FROM {{ ref('raw_orders')}}
@@ -147,7 +148,7 @@ Reformat_1 AS (
     C_ARRAY AS C_ARRAY,
     C_OBJECT AS C_OBJECT,
     C_GEOGRAPHY AS C_GEOGRAPHY,
-    concat({{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, C_CHAR10) AS c_macro2,
+    C_VARCHAR AS c_macro2,
     {% if v_model_int_main > 10 and var('v_project_int_parent')  %}
       {{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }} AS c_if,
     {% else %}
@@ -159,7 +160,7 @@ Reformat_1 AS (
       concat(C_STRING, {{c_i}}) AS col_{{c_i}},
     {% endfor %}
     
-    {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }} AS c_base_macro,
+    concat(C_VARCHAR, C_INT) AS c_base_macro,
     concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_dbutils_macro
   
   FROM ALL_TYPE_TABLE_SMALLER AS in0
@@ -385,12 +386,8 @@ Subgraph_1 AS (
       {% else %}
         concat(C_STRING, C_INTEGER) AS c_if,
       {% endif %}
-      concat(C_STRING20, {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('C_STRING') }}) AS c_macro_main,
-      concat(
-        '{{ dbt_utils.pretty_time() }}', 
-        '{{ dbt_utils.pretty_log_format("my pretty message") }}', 
-        {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}, 
-        {{ SQL_BaseGitDepProjectAllFinal._qa_concat_string_cols('c_string', 'c_varchar') }}) AS c_macros_dep,
+      concat(C_STRING20, C_CHAR) AS c_macro_main,
+      concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_macros_dep,
       {{ SQL_SnoflakeMainProject.snowflake__language_specific_concat() }} AS c_language_specific,
       {{ dbt_date.snowflake__day_name('c_date', 2) }} AS c_snowflake__day_name,
       {{v_expression}} AS c_var_expression,
@@ -923,9 +920,9 @@ Join_1 AS (
   
   FROM Limit_1_1 AS in0
   INNER JOIN Limit_2 AS in1
-     ON in0.C_STRING != in1.status
+     ON in0.C_STRING != in1.STATUS
   INNER JOIN Limit_1 AS in2
-     ON in1.status != in2.TITLE
+     ON in1.STATUS != in2.TITLE
   INNER JOIN Subgraph_1 AS in3
      ON in2.TITLE != in3.C_MACRO_MAIN
 
