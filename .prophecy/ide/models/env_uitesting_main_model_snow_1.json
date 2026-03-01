@@ -3,7 +3,7 @@
   "metainfo" : {
     "label" : "env_uitesting_main_model_snow_1",
     "autoLayout" : false,
-    "staleState" : "none",
+    "staleState" : "file",
     "sourceSuggestions" : {
       "sources" : [ ]
     },
@@ -398,7 +398,7 @@
         "x" : -20,
         "y" : 360,
         "phase" : 0,
-        "comment" : "Loads the full set of raw order records to serve as the authoritative source for reconciliation, auditing, trend analysis and downstream reporting.",
+        "comment" : "Brings in the full set of raw order records as the starting point for sales and order reporting.",
         "autoUpdateComment" : true
       },
       "properties" : {

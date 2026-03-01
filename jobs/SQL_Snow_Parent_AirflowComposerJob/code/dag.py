@@ -7,11 +7,11 @@ from airflow import DAG
 from airflow.models.param import Param
 from airflow.decorators import task
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-from staging_abhisheks_e2etests_sql_parentsnowflake_sql_snow_parent_airflowcomposerjob.tasks import Model_0
+from staging_abhisheks_e2etests_sql_parentsnowflake_sanity_sql_snow_parent_airflowcomposerjob.tasks import Model_0
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
 
 with DAG(
-    dag_id = "staging_abhisheks_e2etests_SQL_ParentSnowflake_SQL_Snow_Parent_AirflowComposerJob", 
+    dag_id = "staging_abhisheks_e2etests_SQL_ParentSnowflake_Sanity_SQL_Snow_Parent_AirflowComposerJob", 
     schedule_interval = "0 0 1 1 *", 
     default_args = {"owner" : "Prophecy", "retries" : 0, "ignore_first_depends_on_past" : True, "do_xcom_push" : True}, 
     start_date = pendulum.today('UTC'), 

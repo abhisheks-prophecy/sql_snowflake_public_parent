@@ -1,10 +1,10 @@
 {
   "metainfo" : {
     "type" : "MWAA",
-    "fabricId" : "25",
+    "fabricId" : "12041",
     "jobId" : "jobs/SQL_Snow_Parent_AirflowMWAAJob",
     "name" : "SQL_Snow_Parent_AirflowMWAAJob",
-    "dagName" : "staging_abhisheks_e2etests_SQL_ParentSnowflake_SQL_Snow_Parent_AirflowMWAAJob",
+    "dagName" : "staging_abhisheks_e2etests_SQL_ParentSnowflake_Sanity_SQL_Snow_Parent_AirflowMWAAJob",
     "schedule" : "0 0 1 1 *",
     "enabled" : false,
     "alerting" : {
@@ -108,7 +108,7 @@
         "noVersionCheck" : null,
         "noWriteJson" : null,
         "printerWidth" : null,
-        "sqlFabricId" : "6",
+        "sqlFabricId" : "12045",
         "gitEntityValue" : "dev_staging",
         "logFormat" : null,
         "runModelWithChildren" : false,

@@ -1,0 +1,208 @@
+{
+  "id" : "model_with_only_seed_base",
+  "metainfo" : {
+    "label" : "model_with_only_seed_base",
+    "autoLayout" : false,
+    "staleState" : "file",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "model_with_only_seed_base##eoJfsIWK" : {
+      "id" : "model_with_only_seed_base##eoJfsIWK",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "model_with_only_seed_base",
+        "x" : 260,
+        "y" : 40,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Flags up to 100 records where a service label doesn't match the country code to pinpoint mapping errors that can distort reporting and analytics; correcting these mismatches improves data accuracy, reduces compliance and billing risks, and ensures services are attributed to the right country for pricing and planning.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : false,
+        "customQuery" : true,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT \n  Join_1.country_code,\n  Join_1.country_label,\n  Join_1.code_1,\n  Join_1.service_label_1,\n  Join_1.c_macro2\n\nFROM Join_1, service_classification\n\nWHERE service_classification.service_label_1 != Join_1.country_code\n\nLIMIT 100\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nZCcieMp",
+          "slug" : "Join_1"
+        }, {
+          "id" : "lSFn8t85e-UmfdkSALm3E$$KsXejJOaLRnUGLB5ZyPbA",
+          "slug" : "service_classification"
+        } ],
+        "outputs" : [ {
+          "id" : "CyZS8vBJ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6ZSZw14VTdgKlc4-MFlvc" : {
+      "id" : "6ZSZw14VTdgKlc4-MFlvc",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "country_classification",
+        "slug" : "country_classification",
+        "x" : -700,
+        "y" : -140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "country_classification",
+          "sourceType" : "Seed",
+          "sourceName" : "",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "GSFvaxdOBjepBylyEpQgV",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "EZvB6CHcRuDc-tO31lygS" : {
+      "id" : "EZvB6CHcRuDc-tO31lygS",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "service_classification",
+        "slug" : "service_classification",
+        "x" : -700,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "service_classification",
+          "sourceType" : "Seed",
+          "sourceName" : "",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "qE2BtsmC3B4CIdu-E6evs",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "JGIOPK2ZuDqa_1G1T-H-H$$bBH-DWb-LbPpeID4WYr1t" : {
+      "id" : "JGIOPK2ZuDqa_1G1T-H-H$$bBH-DWb-LbPpeID4WYr1t",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : -100,
+        "y" : -120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Builds a list of country and service pairings (excluding cases where the codes match) and creates a combined identifier to support cross-country service mapping and reporting.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.country_code != in1.code_1"
+          },
+          "joinType" : "inner"
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.country_code"
+          },
+          "alias" : "country_code",
+          "_row_id" : "567252819"
+        }, {
+          "expression" : {
+            "expression" : "in0.country_label"
+          },
+          "alias" : "country_label",
+          "_row_id" : "1145546478"
+        }, {
+          "expression" : {
+            "expression" : "in1.code_1"
+          },
+          "alias" : "code_1",
+          "_row_id" : "366901244"
+        }, {
+          "expression" : {
+            "expression" : "in1.service_label_1"
+          },
+          "alias" : "service_label_1",
+          "_row_id" : "366338843"
+        }, {
+          "expression" : {
+            "expression" : "concat(in1.code_1, in0.country_code)"
+          },
+          "alias" : "c_macro2",
+          "_row_id" : "kXVt_7oWOi"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "Pa79TePudsz6iE55-h9ca$$YT3l8hlXRweF1IDOmzKsP##country_code", "F20c8IgHU-vQjm4JBtxUk$$-d1ql0s7qUuT2quQY8zl6##code_1", "Pa79TePudsz6iE55-h9ca$$YT3l8hlXRweF1IDOmzKsP##country_code", "Pa79TePudsz6iE55-h9ca$$YT3l8hlXRweF1IDOmzKsP##country_label", "F20c8IgHU-vQjm4JBtxUk$$-d1ql0s7qUuT2quQY8zl6##code_1", "F20c8IgHU-vQjm4JBtxUk$$-d1ql0s7qUuT2quQY8zl6##service_label_1" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Pa79TePudsz6iE55-h9ca$$YT3l8hlXRweF1IDOmzKsP",
+          "slug" : "in0"
+        }, {
+          "id" : "F20c8IgHU-vQjm4JBtxUk$$-d1ql0s7qUuT2quQY8zl6",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "RG2CI27eVjJXDd7Xh5UVQ$$zezZkcZtI1EOSo2wOF2Z0",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "OewnzwzBK9nwnFyEQbJIi$$3LGBTFvzNWj5KiSOCY8IY",
+    "source" : "6ZSZw14VTdgKlc4-MFlvc",
+    "sourcePort" : "GSFvaxdOBjepBylyEpQgV",
+    "target" : "JGIOPK2ZuDqa_1G1T-H-H$$bBH-DWb-LbPpeID4WYr1t",
+    "targetPort" : "Pa79TePudsz6iE55-h9ca$$YT3l8hlXRweF1IDOmzKsP"
+  }, {
+    "id" : "62plCazfoPLnyHY_nTuQH$$4UWWzEDGqlepQjC-Gbn22",
+    "source" : "EZvB6CHcRuDc-tO31lygS",
+    "sourcePort" : "qE2BtsmC3B4CIdu-E6evs",
+    "target" : "JGIOPK2ZuDqa_1G1T-H-H$$bBH-DWb-LbPpeID4WYr1t",
+    "targetPort" : "F20c8IgHU-vQjm4JBtxUk$$-d1ql0s7qUuT2quQY8zl6"
+  }, {
+    "id" : "bPGBi1NFtAH3wI46FR0eq$$6MwzRForQGX-TAffO-a14",
+    "source" : "JGIOPK2ZuDqa_1G1T-H-H$$bBH-DWb-LbPpeID4WYr1t",
+    "sourcePort" : "RG2CI27eVjJXDd7Xh5UVQ$$zezZkcZtI1EOSo2wOF2Z0",
+    "target" : "model_with_only_seed_base##eoJfsIWK",
+    "targetPort" : "nZCcieMp"
+  }, {
+    "id" : "jO4E7npqXS_D73ZeX97y5",
+    "source" : "EZvB6CHcRuDc-tO31lygS",
+    "sourcePort" : "qE2BtsmC3B4CIdu-E6evs",
+    "target" : "model_with_only_seed_base##eoJfsIWK",
+    "targetPort" : "lSFn8t85e-UmfdkSALm3E$$KsXejJOaLRnUGLB5ZyPbA"
+  } ],
+  "component" : "Model"
+}

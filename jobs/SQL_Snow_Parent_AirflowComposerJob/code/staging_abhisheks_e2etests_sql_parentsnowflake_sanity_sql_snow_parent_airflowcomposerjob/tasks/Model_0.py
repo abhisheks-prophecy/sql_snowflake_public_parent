@@ -1,4 +1,4 @@
-from staging_abhisheks_e2etests_sql_parentsnowflake_sql_snow_parent_airflowcomposerjob.utils import *
+from staging_abhisheks_e2etests_sql_parentsnowflake_sanity_sql_snow_parent_airflowcomposerjob.utils import *
 
 def Model_0():
     from airflow.operators.python import PythonOperator
@@ -30,7 +30,8 @@ def Model_0():
           "threads": "",
           "exclude": "",
           "run_props": " --profile run_profile_snowflake",
-          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
+          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
+          "project_config": None
         },
         retries = 0
     )
