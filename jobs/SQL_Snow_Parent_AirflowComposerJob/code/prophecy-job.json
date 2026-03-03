@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "Composer",
-    "fabricId" : "2393",
+    "fabricId" : "12073",
     "jobId" : "jobs/SQL_Snow_Parent_AirflowComposerJob",
     "name" : "SQL_Snow_Parent_AirflowComposerJob",
     "dagName" : "staging_abhisheks_e2etests_SQL_ParentSnowflake_Sanity_SQL_Snow_Parent_AirflowComposerJob",
