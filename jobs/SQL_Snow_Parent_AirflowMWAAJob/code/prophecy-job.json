@@ -64,7 +64,7 @@
         "retries" : 1
       },
       "properties" : {
-        "entityId" : "67/.prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_1",
+        "entityId" : null,
         "cacheSelectedOnly" : null,
         "gitSubPath" : null,
         "runModelWithParents" : false,
@@ -99,7 +99,7 @@
         "select" : null,
         "recordTimingInfo" : null,
         "fullRefresh" : null,
-        "entityName" : "env_uitesting_main_model_snow_1",
+        "entityName" : null,
         "noCacheSelectedOnly" : null,
         "noFavorState" : null,
         "snapshot" : null,

@@ -20,18 +20,17 @@ def Model_0():
           "run_tests": True,
           "run_mode": "project",
           "entity_kind": "model",
-          "entity_name": "env_uitesting_main_model_snow_1",
+          "entity_name": None,
           "project_id": "67",
           "git_entity": "branch",
           "git_entity_value": "dev_staging",
-          "git_ssh_url": "https://github.com/abhisheks-prophecy/sql_snowflake_public_parent",
+          "git_ssh_url": "",
           "git_sub_path": "",
           "select": "",
           "threads": "",
           "exclude": "",
-          "run_props": " --profile run_profile_snowflake",
-          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
-          "project_config": None
+          "run_props": "",
+          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy"}
         },
         retries = 0
     )
