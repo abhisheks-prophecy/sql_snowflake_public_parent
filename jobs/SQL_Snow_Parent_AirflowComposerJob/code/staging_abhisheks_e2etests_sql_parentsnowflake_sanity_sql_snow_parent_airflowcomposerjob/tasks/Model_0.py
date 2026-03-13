@@ -29,8 +29,9 @@ def Model_0():
           "select": "",
           "threads": "",
           "exclude": "",
-          "run_props": "",
-          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy"}
+          "run_props": " --profile run_profile_snowflake",
+          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
+          "project_config": None
         },
         retries = 0
     )

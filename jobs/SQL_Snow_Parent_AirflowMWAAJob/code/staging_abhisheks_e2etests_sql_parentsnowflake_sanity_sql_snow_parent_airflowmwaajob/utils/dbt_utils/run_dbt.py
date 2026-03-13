@@ -1,7 +1,7 @@
 import shlex
 import subprocess
 import zipfile
-from typing import Optional
+from typing import Any, Dict, List, Optional, Set, Tuple
 import json
 import logging
 import sys
@@ -16,6 +16,82 @@ import shutil
 # setup logging
 logging.basicConfig()
 LOG = logging.getLogger('shell')
+
+
+def _convert_project_config_to_vars(project_config: Any) -> Dict[str, Any]:
+    """
+    Convert project configurations to dbt vars format.
+
+    Supports multiple input formats:
+    1. Dict format: {"k1": "v1", "k2": "v2"}
+    2. List of dicts format: [{"name": "k1", "value": "v1"}, {"name": "k2", "value": "v2"}]
+    3. Schema fields format: [{"name": "k1", "kind": {"type": "string", "value": "'v1'"}}]
+
+    Args:
+        project_config: Project configuration in any supported format
+
+    Returns:
+        Dict of variable name to value for dbt --vars
+    """
+    if not project_config:
+        return {}
+
+    vars_dict = {}
+
+    # Handle dict format directly
+    if isinstance(project_config, dict):
+        # Check if it's already a simple key-value dict
+        if all(isinstance(v, (str, int, float, bool)) for v in project_config.values()):
+            vars_dict = {k: _clean_var_value(v) for k, v in project_config.items()}
+        else:
+            # Might be nested structure, try to extract values
+            for key, value in project_config.items():
+                if isinstance(value, dict):
+                    # Handle {"k1": {"value": "v1"}} format
+                    if 'value' in value:
+                        vars_dict[key] = _clean_var_value(value['value'])
+                    elif 'kind' in value and isinstance(value['kind'], dict):
+                        # Handle schema field format
+                        vars_dict[key] = _clean_var_value(value['kind'].get('value', ''))
+                else:
+                    vars_dict[key] = value
+
+    # Handle list format
+    elif isinstance(project_config, list):
+        for item in project_config:
+            if isinstance(item, dict):
+                name = item.get('name')
+                if name:
+                    # Handle {"name": "k1", "value": "v1"} format
+                    if 'value' in item:
+                        vars_dict[name] = _clean_var_value(item['value'])
+                    # Handle schema fields format {"name": "k1", "kind": {"type": "string", "value": "'v1'"}}
+                    elif 'kind' in item and isinstance(item['kind'], dict):
+                        vars_dict[name] = _clean_var_value(item['kind'].get('value', ''))
+
+    LOG.info(f"Converted project_config to vars: {vars_dict}")
+    return vars_dict
+
+
+def _clean_var_value(value: Any) -> Any:
+    """
+    Clean variable value by removing surrounding quotes if present.
+
+    Args:
+        value: The value to clean
+
+    Returns:
+        Cleaned value
+    """
+    if isinstance(value, str):
+        # Remove surrounding single or double quotes
+        if len(value) >= 4 and ((value.startswith("\\'") and value.endswith("\\'")) or \
+                (value.startswith("\\\"") and value.endswith("\\\""))):
+            return value[2:-2]
+        if len(value) >= 2 and ((value.startswith("'") and value.endswith("'")) or \
+                (value.startswith('"') and value.endswith('"'))):
+            return value[1:-1]
+    return value
 
 ## dbt commands
 runner = dbtRunner()
@@ -138,16 +214,16 @@ def dbt_find_child_for_node(project_folder: str, entityName: str, dbt_props_cmd:
 
 
 def get_parents(run_parents: bool, project_folder: str, entityKind: str, entityName: str, dbt_props_cmd: str, dbt_threads_option: str,
-                exclude_nodes=[]):
+                dbt_vars_option: str, exclude_nodes=[]):
     parents = []
     if run_parents:
         nodes = dbt_dependency_extractor(project_folder, entityKind, entityName, dbt_props_cmd)
         LOG.info(f"run_parents {run_parents} nodes {nodes}")
         for node in nodes:
             if node.resource_type() == "model":
-                parents.append(f"dbt run -m {node.node_name()} {dbt_props_cmd} {dbt_threads_option}")
+                parents.append(f"dbt run -m {node.node_name()} {dbt_props_cmd} {dbt_threads_option} {dbt_vars_option}")
             elif node.resource_type() == "snapshot":
-                parents.append(f"dbt snapshot -s {node.node_name()} {dbt_props_cmd} {dbt_threads_option}")
+                parents.append(f"dbt snapshot -s {node.node_name()} {dbt_props_cmd} {dbt_threads_option} {dbt_vars_option}")
         LOG.info(f"all parents {parents[:-1]}")
     all_parents = parents[:-1]  # removing the last element as it is the entity itself.
     parents_after_removing_exclude = [parent for parent in all_parents if
@@ -157,7 +233,7 @@ def get_parents(run_parents: bool, project_folder: str, entityKind: str, entityN
 
 
 def get_children(run_children: bool, project_folder: str, entityName: str, dbt_props_cmd: str, dbt_threads_option: str,
-                 exclude_nodes=[]):
+                 dbt_vars_option: str, exclude_nodes=[]):
     children = []
 
     if run_children:
@@ -165,9 +241,9 @@ def get_children(run_children: bool, project_folder: str, entityName: str, dbt_p
         LOG.info(f"run children {run_children} nodes {nodes}")
         for node in nodes:
             if node.resource_type() == "model":
-                children.append(f"dbt run -m {node.node_name()} {dbt_props_cmd} {dbt_threads_option}")
+                children.append(f"dbt run -m {node.node_name()} {dbt_props_cmd} {dbt_threads_option} {dbt_vars_option}")
             elif node.resource_type() == "snapshot":
-                children.append(f"dbt snapshot -s {node.node_name()} {dbt_props_cmd} {dbt_threads_option}")
+                children.append(f"dbt snapshot -s {node.node_name()} {dbt_props_cmd} {dbt_threads_option} {dbt_vars_option}")
 
     children_after_removing_exclude = [child for child in children if all(node not in child for node in exclude_nodes)]
     LOG.info(f"Children after removing exclude {children_after_removing_exclude} before exclude {children}")
@@ -217,30 +293,33 @@ def command_runner(cmd_list=[]):
 def run_command(props: str, project_folder: str, dep: bool, seeds: bool, run_mode: str,
                 entity_kind: str, entity_name: str, run_parents: bool, run_children: bool,
                 run_test: bool, threads: Optional[str], cmd_list=[],
-                select: Optional[str] = "", exclude=[]):
+                select: Optional[str] = "", exclude=[], vars: Optional[str] = ""):
     props = f" {props} --project-dir {project_folder}"
     threads_option = ""
     if threads:
         threads_option = f" --threads {threads}"
+    vars_option = ""
+    if vars:
+        vars_option = f" --vars {vars}"
     select_suffix = f" -s {select}" if select else ""
     if dep:
         command_runner([f"dbt deps {props}"])
     if seeds:
-        cmd_list = cmd_list + [f"dbt seed {props} {threads_option}"]
+        cmd_list = cmd_list + [f"dbt seed {props} {threads_option} {vars_option}"]
     if run_mode == "project":
-        cmd_list = cmd_list + [f"dbt run {props} {threads_option} {select_suffix}"]
+        cmd_list = cmd_list + [f"dbt run {props} {select_suffix} {threads_option}"]
     else:
         cmd_list = cmd_list + get_parents(run_parents, project_folder, entity_kind, entity_name, props, threads_option,
-                                          exclude)
+                                          vars_option, exclude)
         LOG.info(cmd_list)
         if entity_kind == "model":
-            cmd_list = cmd_list + [f"dbt run --model {entity_name} {select_suffix} {props} {threads_option}"]
+            cmd_list = cmd_list + [f"dbt run --model {entity_name} {select_suffix} {props} {threads_option} {vars_option}"]
         else:
-            cmd_list = cmd_list + [f"dbt snapshot -s {entity_name} {select_suffix} {props} {threads_option}"]
+            cmd_list = cmd_list + [f"dbt snapshot -s {entity_name} {select_suffix} {props} {threads_option} {vars_option}"]
         cmd_list = cmd_list + get_children(run_children, project_folder, entity_name, props, threads_option,
-                                           exclude)
+                                           vars_option, exclude)
     if run_test:
-        cmd_list = cmd_list + [f"dbt test {props} {threads_option}"]
+        cmd_list = cmd_list + [f"dbt test {props} {threads_option} {vars_option}"]
 
     LOG.info(f"Running command in one time run {cmd_list}")
     command_runner(cmd_list)
@@ -252,7 +331,7 @@ def run_command(props: str, project_folder: str, dep: bool, seeds: bool, run_mod
 def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
                       run_seeds, run_props, run_parents, run_children, run_tests,
                       select, exclude, git_ssh_url, git_entity, git_entity_value, git_sub_path, envs, threads,
-                      **kwargs):
+                      project_config: Any, **kwargs):
     for key, value in envs.items():
         os.environ[key] = value
 
@@ -284,6 +363,13 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
                 if (possible_project_folder / "pbt_project.yml").is_file():
                     project_folder = str(possible_project_folder)
 
+        # When running from Composer, project may be under GCS (read-only). Copy to writable dir so dbt deps can create dbt_packages.
+        if project_folder and os.path.isdir(project_folder) and "gcs/dags" in project_folder:
+            writable_project = os.path.join(temp_folder, "dbt_project")
+            shutil.copytree(project_folder, writable_project)
+            project_folder = writable_project
+            LOG.info(f"Copied project to writable dir: {project_folder}")
+
         LOG.info(f"project_folder: {project_folder} + flag:{(os.path.isdir(project_folder))} zip_path:{zip_path}")
         cmd_list = []
         if not (os.path.isdir(project_folder)):
@@ -306,6 +392,16 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
             command_runner(cmd_list)
             cmd_list = []
 
+        # Build vars option from project_config
+        vars = ""
+        if project_config:
+            vars_dict = _convert_project_config_to_vars(project_config)
+            if vars_dict:
+                # Convert to JSON string for dbt --vars; escape single quotes for shell (same as run_sql_pipeline)
+                vars_json = json.dumps(vars_dict).replace("'", "'\\''")
+                vars = f"'{vars_json}'"
+                LOG.info(f"Project configs converted to dbt vars: {vars}")
+
         run_command(props=run_props,
                     project_folder=project_folder,
                     dep=run_deps,
@@ -319,7 +415,8 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
                     threads=threads,
                     cmd_list=cmd_list,
                     select=select,
-                    exclude=exclude)
+                    exclude=exclude,
+                    vars=vars)
     finally:
         LOG.info(f"Cleaning up temp folder {temp_folder}")
         remove_files_and_folders(temp_folder)
