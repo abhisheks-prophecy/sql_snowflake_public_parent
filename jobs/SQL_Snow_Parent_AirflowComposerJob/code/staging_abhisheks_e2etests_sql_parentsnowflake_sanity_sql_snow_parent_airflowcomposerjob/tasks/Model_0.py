@@ -24,13 +24,14 @@ def Model_0():
           "project_id": "67",
           "git_entity": "branch",
           "git_entity_value": "dev_staging",
-          "git_ssh_url": "",
+          "git_ssh_url": "https://github.com/abhisheks-prophecy/sql_snowflake_public_parent",
           "git_sub_path": "",
           "select": "",
           "threads": "",
           "exclude": "",
-          "run_props": "",
-          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy"}
+          "run_props": " --profile run_profile_snowflake",
+          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
+          "project_config": None
         },
         retries = 0
     )
