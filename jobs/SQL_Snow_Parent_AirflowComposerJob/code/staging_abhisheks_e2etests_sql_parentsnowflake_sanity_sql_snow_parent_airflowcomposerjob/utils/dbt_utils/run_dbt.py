@@ -42,7 +42,7 @@ def _convert_project_config_to_vars(project_config: Any) -> Dict[str, Any]:
     if isinstance(project_config, dict):
         # Check if it's already a simple key-value dict
         if all(isinstance(v, (str, int, float, bool)) for v in project_config.values()):
-            vars_dict = project_config
+            vars_dict = {k: _clean_var_value(v) for k, v in project_config.items()}
         else:
             # Might be nested structure, try to extract values
             for key, value in project_config.items():
@@ -85,8 +85,11 @@ def _clean_var_value(value: Any) -> Any:
     """
     if isinstance(value, str):
         # Remove surrounding single or double quotes
-        if (value.startswith("'") and value.endswith("'")) or \
-                (value.startswith('"') and value.endswith('"')):
+        if len(value) >= 4 and ((value.startswith("\\'") and value.endswith("\\'")) or \
+                (value.startswith("\\\"") and value.endswith("\\\""))):
+            return value[2:-2]
+        if len(value) >= 2 and ((value.startswith("'") and value.endswith("'")) or \
+                (value.startswith('"') and value.endswith('"'))):
             return value[1:-1]
     return value
 
@@ -360,6 +363,13 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
                 if (possible_project_folder / "pbt_project.yml").is_file():
                     project_folder = str(possible_project_folder)
 
+        # When running from Composer, project may be under GCS (read-only). Copy to writable dir so dbt deps can create dbt_packages.
+        if project_folder and os.path.isdir(project_folder) and "gcs/dags" in project_folder:
+            writable_project = os.path.join(temp_folder, "dbt_project")
+            shutil.copytree(project_folder, writable_project)
+            project_folder = writable_project
+            LOG.info(f"Copied project to writable dir: {project_folder}")
+
         LOG.info(f"project_folder: {project_folder} + flag:{(os.path.isdir(project_folder))} zip_path:{zip_path}")
         cmd_list = []
         if not (os.path.isdir(project_folder)):
@@ -387,8 +397,8 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
         if project_config:
             vars_dict = _convert_project_config_to_vars(project_config)
             if vars_dict:
-                # Convert to JSON string for dbt --vars
-                vars_json = json.dumps(vars_dict)
+                # Convert to JSON string for dbt --vars; escape single quotes for shell (same as run_sql_pipeline)
+                vars_json = json.dumps(vars_dict).replace("'", "'\\''")
                 vars = f"'{vars_json}'"
                 LOG.info(f"Project configs converted to dbt vars: {vars}")
 
