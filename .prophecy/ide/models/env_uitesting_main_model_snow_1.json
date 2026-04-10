@@ -3,7 +3,7 @@
   "metainfo" : {
     "label" : "env_uitesting_main_model_snow_1",
     "autoLayout" : false,
-    "staleState" : "file",
+    "staleState" : "none",
     "sourceSuggestions" : {
       "sources" : [ ]
     },
@@ -1668,22 +1668,22 @@
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_1",
+                  "name" : "COL_FOR_1",
                   "dataType" : {
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_2",
+                  "name" : "COL_FOR_2",
                   "dataType" : {
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_3",
+                  "name" : "COL_FOR_3",
                   "dataType" : {
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_4",
+                  "name" : "COL_FOR_4",
                   "dataType" : {
                     "type" : "String"
                   }
@@ -2943,22 +2943,22 @@
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_1",
+                  "name" : "COL_FOR_1",
                   "dataType" : {
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_2",
+                  "name" : "COL_FOR_2",
                   "dataType" : {
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_3",
+                  "name" : "COL_FOR_3",
                   "dataType" : {
                     "type" : "String"
                   }
                 }, {
-                  "name" : "col_for_4",
+                  "name" : "COL_FOR_4",
                   "dataType" : {
                     "type" : "String"
                   }
