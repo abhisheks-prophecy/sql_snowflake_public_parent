@@ -717,7 +717,7 @@ sqlSeeds:
       - name: ORDER_DATE
         dataType:
           type: Date
-      - name: status
+      - name: STATUS
         dataType:
           type: String
     description: null
@@ -731,16 +731,16 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: id
+      - name: ID
         dataType:
           type: Number
-      - name: order_id
+      - name: ORDER_ID
         dataType:
           type: Number
-      - name: payment_method
+      - name: PAYMENT_METHOD
         dataType:
           type: String
-      - name: amount
+      - name: AMOUNT
         dataType:
           type: Number
     description: null
@@ -754,34 +754,34 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: Year_1
+      - name: YEAR_1
         dataType:
           type: Number
-      - name: Industry_aggregation_NZSIOC
+      - name: INDUSTRY_AGGREGATION_NZSIOC
         dataType:
           type: String
-      - name: Industry_code_NZSIOC
+      - name: INDUSTRY_CODE_NZSIOC
         dataType:
           type: Number
-      - name: Industry_name_NZSIOC
+      - name: INDUSTRY_NAME_NZSIOC
         dataType:
           type: String
-      - name: Units_1
+      - name: UNITS_1
         dataType:
           type: String
-      - name: Variable_code_1
+      - name: VARIABLE_CODE_1
         dataType:
           type: String
-      - name: Variable_name_1
+      - name: VARIABLE_NAME_1
         dataType:
           type: String
-      - name: Variable_category_1
+      - name: VARIABLE_CATEGORY_1
         dataType:
           type: String
-      - name: Value_1
+      - name: VALUE_1
         dataType:
           type: String
-      - name: Industry_code_ANZSIC06
+      - name: INDUSTRY_CODE_ANZSIC06
         dataType:
           type: String
     description: null
@@ -795,46 +795,46 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: Series_reference
+      - name: SERIES_REFERENCE
         dataType:
           type: String
-      - name: Period1
+      - name: PERIOD1
         dataType:
-          type: Float
-      - name: Data_value
+          type: Number
+      - name: DATA_VALUE
         dataType:
-          type: Float
-      - name: Suppressed1
+          type: Number
+      - name: SUPPRESSED1
         dataType:
           type: String
       - name: STATUS1
         dataType:
-          type: String
+          type: Boolean
       - name: UNITS1
         dataType:
           type: String
-      - name: Magnitude_1
+      - name: MAGNITUDE_1
         dataType:
           type: Number
-      - name: Subject_1
+      - name: SUBJECT_1
         dataType:
           type: String
-      - name: Group_1
+      - name: GROUP_1
         dataType:
           type: String
-      - name: Series_title_1
+      - name: SERIES_TITLE_1
         dataType:
           type: String
-      - name: Series_title_2
+      - name: SERIES_TITLE_2
         dataType:
           type: String
-      - name: Series_title_3
+      - name: SERIES_TITLE_3
         dataType:
           type: String
-      - name: Series_title_4
+      - name: SERIES_TITLE_4
         dataType:
           type: String
-      - name: Series_title_5
+      - name: SERIES_TITLE_5
         dataType:
           type: String
     description: null
@@ -848,10 +848,10 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: country_code
+      - name: COUNTRY_CODE
         dataType:
           type: String
-      - name: country_label
+      - name: COUNTRY_LABEL
         dataType:
           type: String
     description: null
@@ -865,46 +865,46 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: Series_reference
+      - name: SERIES_REFERENCE
         dataType:
           type: String
-      - name: Period_1
+      - name: PERIOD_1
         dataType:
-          type: Float
-      - name: Data_value_1
+          type: Number
+      - name: DATA_VALUE_1
         dataType:
-          type: Float
-      - name: Suppressed_1
+          type: Number
+      - name: SUPPRESSED_1
         dataType:
           type: String
       - name: STATUS_1
         dataType:
-          type: String
+          type: Boolean
       - name: UNITS_1
         dataType:
           type: String
-      - name: Magnitude_1
+      - name: MAGNITUDE_1
         dataType:
           type: Number
-      - name: Subject_1
+      - name: SUBJECT_1
         dataType:
           type: String
-      - name: Group_1
+      - name: GROUP_1
         dataType:
           type: String
-      - name: Series_title_1
+      - name: SERIES_TITLE_1
         dataType:
           type: String
-      - name: Series_title_2
+      - name: SERIES_TITLE_2
         dataType:
           type: String
-      - name: Series_title_3
+      - name: SERIES_TITLE_3
         dataType:
           type: String
-      - name: Series_title_4
+      - name: SERIES_TITLE_4
         dataType:
           type: String
-      - name: Series_title_5
+      - name: SERIES_TITLE_5
         dataType:
           type: String
     description: null
@@ -918,16 +918,16 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: Div_1
+      - name: DIV_1
         dataType:
           type: String
-      - name: Date_1
+      - name: DATE_1
         dataType:
           type: String
-      - name: HomeTeam_1
+      - name: HOMETEAM_1
         dataType:
           type: String
-      - name: AwayTeam_1
+      - name: AWAYTEAM_1
         dataType:
           type: String
       - name: FTHG_1
@@ -948,7 +948,7 @@ sqlSeeds:
       - name: HTR_1
         dataType:
           type: String
-      - name: Referee_1
+      - name: REFEREE_1
         dataType:
           type: String
       - name: HS_1
@@ -983,127 +983,127 @@ sqlSeeds:
           type: Number
       - name: HR_1
         dataType:
-          type: Number
+          type: Boolean
       - name: AR_1
         dataType:
-          type: Number
+          type: Boolean
       - name: B365H_1
         dataType:
-          type: Float
+          type: Number
       - name: B365D_1
         dataType:
-          type: Float
+          type: Number
       - name: B365A_1
         dataType:
-          type: Float
+          type: Number
       - name: BWH_1
         dataType:
-          type: Float
+          type: Number
       - name: BWD_1
         dataType:
-          type: Float
+          type: Number
       - name: BWA_1
         dataType:
-          type: Float
+          type: Number
       - name: IWH_1
         dataType:
-          type: Float
+          type: Number
       - name: IWD_1
         dataType:
-          type: Float
+          type: Number
       - name: IWA_1
         dataType:
-          type: Float
+          type: Number
       - name: PSH_1
         dataType:
-          type: Float
+          type: Number
       - name: PSD_1
         dataType:
-          type: Float
+          type: Number
       - name: PSA_1
         dataType:
-          type: Float
+          type: Number
       - name: WHH_1
         dataType:
-          type: Float
+          type: Number
       - name: WHD_1
         dataType:
-          type: Float
+          type: Number
       - name: WHA_1
         dataType:
-          type: Float
+          type: Number
       - name: VCH_1
         dataType:
-          type: Float
+          type: Number
       - name: VCD_1
         dataType:
-          type: Float
+          type: Number
       - name: VCA_1
         dataType:
-          type: Float
-      - name: Bb1X2_1
+          type: Number
+      - name: BB1X2_1
         dataType:
           type: Number
-      - name: BbMxH_1
-        dataType:
-          type: Float
-      - name: BbAvH_1
-        dataType:
-          type: Float
-      - name: BbMxD_1
-        dataType:
-          type: Float
-      - name: BbAvD_1
-        dataType:
-          type: Float
-      - name: BbMxA_1
-        dataType:
-          type: Float
-      - name: BbAvA_1
-        dataType:
-          type: Float
-      - name: BbOU_1
+      - name: BBMXH_1
         dataType:
           type: Number
-      - name: BbMx_2_5
-        dataType:
-          type: Float
-      - name: BbAv_2_5
-        dataType:
-          type: Float
-      - name: BbMx_2_5
-        dataType:
-          type: Float
-      - name: BbAv_2_5
-        dataType:
-          type: Float
-      - name: BbAH_1
+      - name: BBAVH_1
         dataType:
           type: Number
-      - name: BbAHh_1
+      - name: BBMXD_1
         dataType:
-          type: Float
-      - name: BbMxAHH_1
+          type: Number
+      - name: BBAVD_1
         dataType:
-          type: Float
-      - name: BbAvAHH_1
+          type: Number
+      - name: BBMXA_1
         dataType:
-          type: Float
-      - name: BbMxAHA_1
+          type: Number
+      - name: BBAVA_1
         dataType:
-          type: Float
-      - name: BbAvAHA_1
+          type: Number
+      - name: BBOU_1
         dataType:
-          type: Float
+          type: Number
+      - name: BBMX_2_5
+        dataType:
+          type: Number
+      - name: BBAV_2_5
+        dataType:
+          type: Number
+      - name: BBMX_2_5
+        dataType:
+          type: Number
+      - name: BBAV_2_5
+        dataType:
+          type: Number
+      - name: BBAH_1
+        dataType:
+          type: Number
+      - name: BBAHH_1
+        dataType:
+          type: Number
+      - name: BBMXAHH_1
+        dataType:
+          type: Number
+      - name: BBAVAHH_1
+        dataType:
+          type: Number
+      - name: BBMXAHA_1
+        dataType:
+          type: Number
+      - name: BBAVAHA_1
+        dataType:
+          type: Number
       - name: PSCH_1
         dataType:
-          type: Float
+          type: Number
       - name: PSCD_1
         dataType:
-          type: Float
+          type: Number
       - name: PSCA_1
         dataType:
-          type: Float
+          type: Number
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -1115,10 +1115,10 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: code_1
+      - name: CODE_1
         dataType:
           type: String
-      - name: service_label_1
+      - name: SERVICE_LABEL_1
         dataType:
           type: String
     description: null
@@ -1132,46 +1132,46 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: Series_reference
+      - name: SERIES_REFERENCE
         dataType:
           type: String
-      - name: Period_1
+      - name: PERIOD_1
         dataType:
-          type: Float
-      - name: Data_value
+          type: Number
+      - name: DATA_VALUE
         dataType:
-          type: Float
-      - name: Suppressed_1
+          type: Number
+      - name: SUPPRESSED_1
         dataType:
           type: String
       - name: STATUS_1
         dataType:
-          type: String
+          type: Boolean
       - name: UNITS_1
         dataType:
           type: String
-      - name: Magnitude_1
+      - name: MAGNITUDE_1
         dataType:
           type: Number
-      - name: Subject_1
+      - name: SUBJECT_1
         dataType:
           type: String
-      - name: Group_1
+      - name: GROUP_1
         dataType:
           type: String
-      - name: Series_title_1
+      - name: SERIES_TITLE_1
         dataType:
           type: String
-      - name: Series_title_2
+      - name: SERIES_TITLE_2
         dataType:
           type: String
-      - name: Series_title_3
+      - name: SERIES_TITLE_3
         dataType:
           type: String
-      - name: Series_title_4
+      - name: SERIES_TITLE_4
         dataType:
           type: String
-      - name: Series_title_5
+      - name: SERIES_TITLE_5
         dataType:
           type: String
     description: null
@@ -1185,19 +1185,19 @@ sqlSeeds:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: NZHSC_Level_2_Code_HS4
+      - name: NZHSC_LEVEL_2_CODE_HS4
         dataType:
           type: Number
-      - name: NZHSC_Level_1_Code_HS2
+      - name: NZHSC_LEVEL_1_CODE_HS2
         dataType:
           type: Number
-      - name: NZHSC_Level_2
+      - name: NZHSC_LEVEL_2
         dataType:
           type: String
-      - name: NZHSC_Level_1
+      - name: NZHSC_LEVEL_1
         dataType:
           type: String
-      - name: Status_HS4
+      - name: STATUS_HS4
         dataType:
           type: String
     description: null
