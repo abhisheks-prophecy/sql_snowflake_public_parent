@@ -983,10 +983,10 @@ sqlSeeds:
           type: Number
       - name: HR_1
         dataType:
-          type: Boolean
+          type: Number
       - name: AR_1
         dataType:
-          type: Boolean
+          type: Number
       - name: B365H_1
         dataType:
           type: Number
