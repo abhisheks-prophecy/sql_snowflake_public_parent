@@ -76,100 +76,7 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_1:
     name: env_uitesting_main_model_snow_1
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: C_NUM
-        dataType:
-          type: Number
-      - name: C_NUM10
-        dataType:
-          type: Number
-      - name: C_DEC
-        dataType:
-          type: Number
-      - name: C_NUMERIC
-        dataType:
-          type: Number
-      - name: C_INT
-        dataType:
-          type: Number
-      - name: C_INTEGER
-        dataType:
-          type: Number
-      - name: C_DOUBLE
-        dataType:
-          type: Float
-      - name: C_FLOAT
-        dataType:
-          type: Float
-      - name: C_COUBLE_PRECISION
-        dataType:
-          type: Float
-      - name: C_REAL
-        dataType:
-          type: Float
-      - name: C_VARCHAR
-        dataType:
-          type: String
-      - name: C_VARCHAR50
-        dataType:
-          type: String
-      - name: C_CHAR
-        dataType:
-          type: String
-      - name: C_CHAR10
-        dataType:
-          type: String
-      - name: C_STRING
-        dataType:
-          type: String
-      - name: C_STRING20
-        dataType:
-          type: String
-      - name: C_TEXT
-        dataType:
-          type: String
-      - name: C_TEXT30
-        dataType:
-          type: String
-      - name: C_BINARY
-        dataType:
-          type: Binary
-      - name: C_BINARY100
-        dataType:
-          type: Binary
-      - name: C_VARBINARY
-        dataType:
-          type: Binary
-      - name: C_BOOL
-        dataType:
-          type: Boolean
-      - name: C_TIMESTAMP
-        dataType:
-          type: Timestamp
-      - name: C_DATE
-        dataType:
-          type: Date
-      - name: C_DATETIME
-        dataType:
-          type: Timestamp
-      - name: C_TIME
-        dataType:
-          type: Time
-      - name: C_ARRAY
-        dataType:
-          type: Array
-      - name: C_OBJECT
-        dataType:
-          type: Object
-      - name: C_GEOGRAPHY
-        dataType:
-          type: Geography
-      - name: C_MACROS_DEP
-        dataType:
-          type: String
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -185,106 +92,7 @@ sqlModels:
     createdAt: '2023-04-12 13:57:52'
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_snow_2:
     name: env_uitesting_main_model_snow_2
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: C_NUM
-        dataType:
-          type: Number
-      - name: C_NUM10
-        dataType:
-          type: Number
-      - name: C_DEC
-        dataType:
-          type: Number
-      - name: C_NUMERIC
-        dataType:
-          type: Number
-      - name: C_INT
-        dataType:
-          type: Number
-      - name: C_INTEGER
-        dataType:
-          type: Number
-      - name: C_DOUBLE
-        dataType:
-          type: Float
-      - name: C_FLOAT
-        dataType:
-          type: Float
-      - name: C_COUBLE_PRECISION
-        dataType:
-          type: Float
-      - name: C_REAL
-        dataType:
-          type: Float
-      - name: C_VARCHAR
-        dataType:
-          type: String
-      - name: C_VARCHAR50
-        dataType:
-          type: String
-      - name: C_CHAR
-        dataType:
-          type: String
-      - name: C_CHAR10
-        dataType:
-          type: String
-      - name: C_STRING
-        dataType:
-          type: String
-      - name: C_STRING20
-        dataType:
-          type: String
-      - name: C_TEXT
-        dataType:
-          type: String
-      - name: C_TEXT30
-        dataType:
-          type: String
-      - name: C_BINARY
-        dataType:
-          type: Binary
-      - name: C_BINARY100
-        dataType:
-          type: Binary
-      - name: C_VARBINARY
-        dataType:
-          type: Binary
-      - name: C_BOOL
-        dataType:
-          type: Boolean
-      - name: C_TIMESTAMP
-        dataType:
-          type: Timestamp
-      - name: C_DATE
-        dataType:
-          type: Date
-      - name: C_DATETIME
-        dataType:
-          type: Timestamp
-      - name: C_TIME
-        dataType:
-          type: Time
-      - name: C_TIMESTAMPLTZ
-        dataType:
-          type: Timestamp
-      - name: C_TIMESTAMP_NTZ
-        dataType:
-          type: Timestamp
-      - name: C_VARIANT
-        dataType:
-          type: Variant
-      - name: C_ARRAY
-        dataType:
-          type: Array
-      - name: C_OBJECT
-        dataType:
-          type: Object
-      - name: C_GEOGRAPHY
-        dataType:
-          type: Geography
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -300,25 +108,7 @@ sqlModels:
     createdAt: '2024-07-31 11:40:52'
   .prophecy/metadata/sqlmodels/model_with_only_seed_base:
     name: model_with_only_seed_base
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: COUNTRY_CODE
-        dataType:
-          type: String
-      - name: COUNTRY_LABEL
-        dataType:
-          type: String
-      - name: CODE_1
-        dataType:
-          type: String
-      - name: SERVICE_LABEL_1
-        dataType:
-          type: String
-      - name: C_MACRO2
-        dataType:
-          type: String
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -334,112 +124,7 @@ sqlModels:
 sqlSnapshots:
   .prophecy/metadata/sqlsnapshots/snapshot_parent_main:
     name: snapshot_parent_main
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: C_NUM
-        dataType:
-          type: Number
-      - name: C_NUM10
-        dataType:
-          type: Number
-      - name: C_DEC
-        dataType:
-          type: Number
-      - name: C_NUMERIC
-        dataType:
-          type: Number
-      - name: C_INT
-        dataType:
-          type: Number
-      - name: C_INTEGER
-        dataType:
-          type: Number
-      - name: C_DOUBLE
-        dataType:
-          type: Float
-      - name: C_FLOAT
-        dataType:
-          type: Float
-      - name: C_COUBLE_PRECISION
-        dataType:
-          type: Float
-      - name: C_REAL
-        dataType:
-          type: Float
-      - name: C_VARCHAR
-        dataType:
-          type: String
-      - name: C_VARCHAR50
-        dataType:
-          type: String
-      - name: C_CHAR
-        dataType:
-          type: String
-      - name: C_CHAR10
-        dataType:
-          type: String
-      - name: C_STRING
-        dataType:
-          type: String
-      - name: C_STRING20
-        dataType:
-          type: String
-      - name: C_TEXT
-        dataType:
-          type: String
-      - name: C_TEXT30
-        dataType:
-          type: String
-      - name: C_BINARY
-        dataType:
-          type: Binary
-      - name: C_BINARY100
-        dataType:
-          type: Binary
-      - name: C_VARBINARY
-        dataType:
-          type: Binary
-      - name: C_BOOL
-        dataType:
-          type: Boolean
-      - name: C_TIMESTAMP
-        dataType:
-          type: Timestamp
-      - name: C_DATE
-        dataType:
-          type: Date
-      - name: C_DATETIME
-        dataType:
-          type: Timestamp
-      - name: C_TIME
-        dataType:
-          type: Time
-      - name: C_ARRAY
-        dataType:
-          type: Array
-      - name: C_OBJECT
-        dataType:
-          type: Object
-      - name: C_GEOGRAPHY
-        dataType:
-          type: Geography
-      - name: C_MACROS_DEP
-        dataType:
-          type: String
-      - name: DBT_SCD_ID
-        dataType:
-          type: String
-      - name: DBT_UPDATED_AT
-        dataType:
-          type: Date
-      - name: DBT_VALID_FROM
-        dataType:
-          type: Date
-      - name: DBT_VALID_TO
-        dataType:
-          type: Date
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -1227,103 +912,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-08-09 06:14:57'
@@ -1339,10 +928,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: A
-          dataType:
-            type: Number
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-08-09 06:14:57'
@@ -1358,16 +944,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: TITLE
-          dataType:
-            type: String
-        - name: EMPLOYEE_ID
-          dataType:
-            type: Number
-        - name: MANAGER_ID
-          dataType:
-            type: Number
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-08-09 06:14:57'
@@ -1383,103 +960,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-08-09 06:14:57'
@@ -1487,13 +968,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_STRING
-          dataType:
-            type: String
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-08-09 06:14:57'
@@ -1501,16 +976,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: TITLE
-          dataType:
-            type: String
-        - name: EMPLOYEE_ID
-          dataType:
-            type: Number
-        - name: MANAGER_ID
-          dataType:
-            type: Number
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-08-09 06:14:57'
@@ -1526,103 +992,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-06-19 14:03:50'
@@ -1638,13 +1008,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: new col
-          dataType:
-            type: Object
-        - name: test2
-          dataType:
-            type: String
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-05-03 11:55:41'
@@ -1660,94 +1024,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-14 05:41:23'
@@ -1755,22 +1032,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_BIGNUMERIC
-          dataType:
-            type: Number
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_FLOAT64
-          dataType:
-            type: Float
-        - name: C_BOOL
-          dataType:
-            type: Boolean
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-14 05:41:23'
@@ -1778,43 +1040,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_ARRAY_INT
-          dataType:
-            type: Array
-        - name: C_ARRAY_FLOAT
-          dataType:
-            type: Array
-        - name: C_ARRAY_STRING
-          dataType:
-            type: Array
-        - name: C_ARRAY_OBJECT
-          dataType:
-            type: Array
-        - name: C_ARRAY_ARRAY
-          dataType:
-            type: Array
-        - name: C_ARRAY_VARIANT
-          dataType:
-            type: Array
-        - name: C_OBJECT_1
-          dataType:
-            type: Object
-        - name: C_OBJECT_2
-          dataType:
-            type: Object
-        - name: C_OBJECT_3
-          dataType:
-            type: Object
-        - name: C_OBJECT_4
-          dataType:
-            type: Object
-        - name: C_OBJECT_5
-          dataType:
-            type: Object
-        - name: C_VARIANT_1
-          dataType:
-            type: Variant
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-14 05:41:23'
@@ -1822,55 +1048,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_ARRAY_INT
-          dataType:
-            type: Array
-        - name: C_ARRAY_FLOAT
-          dataType:
-            type: Array
-        - name: C_ARRAY_STRING
-          dataType:
-            type: Array
-        - name: C_ARRAY_OBJECT
-          dataType:
-            type: Array
-        - name: C_ARRAY_ARRAY
-          dataType:
-            type: Array
-        - name: C_ARRAY_VARIANT
-          dataType:
-            type: Array
-        - name: C_OBJECT_1
-          dataType:
-            type: Object
-        - name: C_OBJECT_2
-          dataType:
-            type: Object
-        - name: C_OBJECT_3
-          dataType:
-            type: Object
-        - name: C_OBJECT_4
-          dataType:
-            type: Object
-        - name: C_OBJECT_5
-          dataType:
-            type: Object
-        - name: C_VARIANT_1
-          dataType:
-            type: Variant
-        - name: C_VARIANT_2
-          dataType:
-            type: Variant
-        - name: C_VARIANT_3
-          dataType:
-            type: Variant
-        - name: C_VARIANT_4
-          dataType:
-            type: Variant
-        - name: C_VARIANT_5
-          dataType:
-            type: Variant
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-06-22 14:01:14'
@@ -1878,10 +1056,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: ORGANISATIONS
-          dataType:
-            type: Variant
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-10-20 07:50:43'
@@ -1889,55 +1064,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_ARRAY_INT
-          dataType:
-            type: Array
-        - name: C_ARRAY_FLOAT
-          dataType:
-            type: Array
-        - name: C_ARRAY_STRING
-          dataType:
-            type: Array
-        - name: C_ARRAY_OBJECT
-          dataType:
-            type: Array
-        - name: C_ARRAY_ARRAY
-          dataType:
-            type: Array
-        - name: C_ARRAY_VARIANT
-          dataType:
-            type: Array
-        - name: C_OBJECT_1
-          dataType:
-            type: Object
-        - name: C_OBJECT_2
-          dataType:
-            type: Object
-        - name: C_OBJECT_3
-          dataType:
-            type: Object
-        - name: C_OBJECT_4
-          dataType:
-            type: Object
-        - name: C_OBJECT_5
-          dataType:
-            type: Object
-        - name: C_VARIANT_1
-          dataType:
-            type: Variant
-        - name: C_VARIANT_2
-          dataType:
-            type: Variant
-        - name: C_VARIANT_3
-          dataType:
-            type: Variant
-        - name: C_VARIANT_4
-          dataType:
-            type: Variant
-        - name: C_VARIANT_5
-          dataType:
-            type: Variant
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-10-20 07:50:45'
@@ -1945,103 +1072,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-10-20 07:50:51'
@@ -2057,103 +1088,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_TIMESTAMPLTZ
-          dataType:
-            type: Timestamp
-        - name: C_TIMESTAMP_NTZ
-          dataType:
-            type: Timestamp
-        - name: C_VARIANT
-          dataType:
-            type: Variant
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-14 05:41:23'
@@ -2161,100 +1096,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: snowflake
-        fields:
-        - name: CC_CALL_CENTER_SK
-          dataType:
-            type: Number
-        - name: CC_CALL_CENTER_ID
-          dataType:
-            type: String
-        - name: CC_REC_START_DATE
-          dataType:
-            type: Date
-        - name: CC_REC_END_DATE
-          dataType:
-            type: Date
-        - name: CC_CLOSED_DATE_SK
-          dataType:
-            type: Number
-        - name: CC_OPEN_DATE_SK
-          dataType:
-            type: Number
-        - name: CC_NAME
-          dataType:
-            type: String
-        - name: CC_CLASS
-          dataType:
-            type: String
-        - name: CC_EMPLOYEES
-          dataType:
-            type: Number
-        - name: CC_SQ_FT
-          dataType:
-            type: Number
-        - name: CC_HOURS
-          dataType:
-            type: String
-        - name: CC_MANAGER
-          dataType:
-            type: String
-        - name: CC_MKT_ID
-          dataType:
-            type: Number
-        - name: CC_MKT_CLASS
-          dataType:
-            type: String
-        - name: CC_MKT_DESC
-          dataType:
-            type: String
-        - name: CC_MARKET_MANAGER
-          dataType:
-            type: String
-        - name: CC_DIVISION
-          dataType:
-            type: Number
-        - name: CC_DIVISION_NAME
-          dataType:
-            type: String
-        - name: CC_COMPANY
-          dataType:
-            type: Number
-        - name: CC_COMPANY_NAME
-          dataType:
-            type: String
-        - name: CC_STREET_NUMBER
-          dataType:
-            type: String
-        - name: CC_STREET_NAME
-          dataType:
-            type: String
-        - name: CC_STREET_TYPE
-          dataType:
-            type: String
-        - name: CC_SUITE_NUMBER
-          dataType:
-            type: String
-        - name: CC_CITY
-          dataType:
-            type: String
-        - name: CC_COUNTY
-          dataType:
-            type: String
-        - name: CC_STATE
-          dataType:
-            type: String
-        - name: CC_ZIP
-          dataType:
-            type: String
-        - name: CC_COUNTRY
-          dataType:
-            type: String
-        - name: CC_GMT_OFFSET
-          dataType:
-            type: Number
-        - name: CC_TAX_PERCENTAGE
-          dataType:
-            type: Number
+        fields: []
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2024-09-18 09:43:25'
