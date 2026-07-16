@@ -329,6 +329,10 @@
       "https://github.com/prophecy-io/snowflake-sql-basics" : "22364"
     }
   },
-  "entitiesToSync" : [ ],
+  "entitiesToSync" : [ {
+    "name" : "model_with_only_seed_base",
+    "type" : "Model",
+    "syncedOnce" : false
+  } ],
   "frontEndLanguage" : "sql"
 }
