@@ -6,7 +6,7 @@
     "name" : "SQL_Snow_Parent_AirflowComposerJob",
     "dagName" : "staging_abhisheks_e2etests_SQL_ParentSnowflake_Sanity_SQL_Snow_Parent_AirflowComposerJob",
     "schedule" : "0 0 1 1 *",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,
