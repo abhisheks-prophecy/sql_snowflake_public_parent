@@ -1,6 +1,6 @@
 name: SQL_SnoflakeMainProject
 description: ''
-version: v4.2.10-new
+version: releases/v4.2.10-test6
 author: null
 language: sql
 buildSystem: ''
