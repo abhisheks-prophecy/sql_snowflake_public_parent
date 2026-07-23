@@ -326,7 +326,12 @@
   "dependenciesContainer" : {
     "dependencies" : { },
     "prophecyProjectDependencies" : {
-      "https://github.com/prophecy-io/snowflake-sql-basics" : "22364"
+      "https://github.com/prophecy-io/prophecy-basics" : "64560"
+    },
+    "dependenciesMetadata" : {
+      "https://github.com/prophecy-io/prophecy-basics" : {
+        "autoUpgrade" : true
+      }
     }
   },
   "entitiesToSync" : [ {

@@ -88,19 +88,12 @@ Join_2 AS (
 
 ),
 
-deduplicated_employee_titles AS (
-
-  {#Removes duplicate employee titles to ensure accurate reporting.#}
-  {{ SQL_SnoflakeMainProject.parent_transform_deduplicate('Join_2', 'TITLE', 'EMPLOYEE_ID') }}
-
-),
-
 Limit_1 AS (
 
   {#Restricts the output to the first 29 records from the combined user accounts and usage logs.#}
   SELECT * 
   
-  FROM deduplicated_employee_titles AS in0
+  FROM Join_2 AS in0
   
   LIMIT 10
 
@@ -938,51 +931,33 @@ qa_all_not_null_1 AS (
 
 Transpose_1 AS (
 
+  {#Transforms employee records into standardized name/value pairs to simplify reporting, comparison, and integration across systems.#}
   {{
-    SnowflakeSqlBasics.Transpose(
-      'Limit_1', 
-      ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT'], 
-      ['C_NUMERIC', 'C_STRING', 'C_REAL', 'C_VARCHAR'], 
-      'Name', 
-      'Value', 
-      ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT', 'C_STRING', 'C_NUMERIC', 'C_REAL', 'C_VARCHAR']
+    prophecy_basics.Transpose(
+      ['Limit_1'], 
+      ['TITLE', 'EMPLOYEE_ID'], 
+      ['EMPLOYEE_ID', 'MANAGER_ID'], 
+      'NAME', 
+      'VALUE', 
+      ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT', 'C_STRING', 'C_NUMERIC', 'C_REAL', 'C_VARCHAR'], 
+      true
     )
   }}
 
 ),
 
-DynamicSelect_1 AS (
+MultiColumnEdit_1 AS (
 
+  {#Standardizes key fields by adding a consistent prefix and formatting so records link reliably, reducing mismatches and improving reporting accuracy and downstream decision-making.#}
   {{
-    SnowflakeSqlBasics.DynamicSelect(
-      'Transpose_1', 
-      [
-        { "name": "TITLE", "dataType": "String" }, 
-        { "name": "EMPLOYEE_ID", "dataType": "Number" }, 
-        { "name": "MANAGER_ID", "dataType": "Number" }, 
-        { "name": "C_INT", "dataType": "Number" }, 
-        { "name": "NAME", "dataType": "String" }, 
-        { "name": "VALUE", "dataType": "String" }
-      ], 
-      ["Boolean", "String", "Integer", "Long", "Float", "Date", "Timestamp", "Struct"], 
-      'SELECT_FIELD_TYPES', 
-      ""
-    )
-  }}
-
-),
-
-MultiColumnRename_1 AS (
-
-  {{
-    SnowflakeSqlBasics.MultiColumnRename(
-      'DynamicSelect_1', 
-      ['TITLE', 'NAME', 'VALUE'], 
-      'editPrefixSuffix', 
-      ['TITLE', 'NAME', 'VALUE'], 
-      'Suffix', 
-      '_suffix', 
-      ""
+    prophecy_basics.MultiColumnEdit(
+      ['Transpose_1'], 
+      "concat(column_value, column_name)", 
+      ['TITLE', 'EMPLOYEE_ID', 'NAME', 'VALUE'], 
+      ['TITLE', 'NAME'], 
+      false, 
+      'Prefix', 
+      ''
     )
   }}
 
@@ -990,6 +965,7 @@ MultiColumnRename_1 AS (
 
 SQLStatement_2 AS (
 
+  {#Flags records whose recorded count does not match the expected edits, highlighting data inconsistencies that require review to prevent reporting errors and improve data quality.#}
   SELECT *
   
   FROM qa_all_not_null_1
@@ -997,7 +973,7 @@ SQLStatement_2 AS (
   WHERE c_int != (
           (SELECT count(*)
           
-          FROM MultiColumnRename_1)
+          FROM MultiColumnEdit_1)
          )
 
 )
