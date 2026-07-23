@@ -937,10 +937,10 @@ Transpose_1 AS (
       ['Limit_1'], 
       ['TITLE', 'EMPLOYEE_ID'], 
       ['EMPLOYEE_ID', 'MANAGER_ID'], 
-      'NAME', 
-      'VALUE', 
+      'Name', 
+      'Value', 
       ['TITLE', 'EMPLOYEE_ID', 'MANAGER_ID', 'C_INT', 'C_STRING', 'C_NUMERIC', 'C_REAL', 'C_VARCHAR'], 
-      true
+      false
     )
   }}
 
@@ -953,7 +953,7 @@ MultiColumnEdit_1 AS (
     prophecy_basics.MultiColumnEdit(
       ['Transpose_1'], 
       "concat(column_value, column_name)", 
-      ['TITLE', 'EMPLOYEE_ID', 'NAME', 'VALUE'], 
+      ['TITLE', 'EMPLOYEE_ID', 'Name', 'Value'], 
       ['TITLE', 'NAME'], 
       false, 
       'Prefix', 

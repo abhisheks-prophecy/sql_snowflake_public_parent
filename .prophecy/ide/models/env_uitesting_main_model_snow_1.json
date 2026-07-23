@@ -3,7 +3,7 @@
   "metainfo" : {
     "label" : "env_uitesting_main_model_snow_1",
     "autoLayout" : false,
-    "staleState" : "none",
+    "staleState" : "file",
     "sourceSuggestions" : {
       "sources" : [ ]
     },
@@ -90,10 +90,10 @@
             "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"MANAGER_ID\", \"dataType\": \"Number\"}, {\"name\": \"C_INT\", \"dataType\": \"Number\"}, {\"name\": \"C_STRING\", \"dataType\": \"String\"}, {\"name\": \"C_NUMERIC\", \"dataType\": \"Number\"}, {\"name\": \"C_REAL\", \"dataType\": \"Float\"}, {\"name\": \"C_VARCHAR\", \"dataType\": \"String\"}]"
           }, {
             "name" : "nameColumn",
-            "value" : "NAME"
+            "value" : "Name"
           }, {
             "name" : "valueColumn",
-            "value" : "VALUE"
+            "value" : "Value"
           }, {
             "name" : "keyColumns",
             "value" : "[\"TITLE\", \"EMPLOYEE_ID\"]"
@@ -102,15 +102,15 @@
             "value" : "[\"EMPLOYEE_ID\", \"MANAGER_ID\"]"
           }, {
             "name" : "customNames",
-            "value" : "true"
+            "value" : "false"
           } ]
         },
         "dataColumns" : [ "EMPLOYEE_ID", "MANAGER_ID" ],
-        "customNames" : true,
+        "customNames" : false,
         "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"MANAGER_ID\", \"dataType\": \"Number\"}, {\"name\": \"C_INT\", \"dataType\": \"Number\"}, {\"name\": \"C_STRING\", \"dataType\": \"String\"}, {\"name\": \"C_NUMERIC\", \"dataType\": \"Number\"}, {\"name\": \"C_REAL\", \"dataType\": \"Float\"}, {\"name\": \"C_VARCHAR\", \"dataType\": \"String\"}]",
-        "valueColumn" : "VALUE",
+        "valueColumn" : "Value",
         "keyColumns" : [ "TITLE", "EMPLOYEE_ID" ],
-        "nameColumn" : "NAME"
+        "nameColumn" : "Name"
       },
       "ports" : {
         "inputs" : [ {
@@ -470,7 +470,7 @@
       "metadata" : {
         "label" : "MultiColumnEdit_1",
         "slug" : "MultiColumnEdit_1",
-        "x" : 880,
+        "x" : 1020,
         "y" : 660,
         "phase" : 0,
         "macroDependencies" : [ ],
@@ -479,7 +479,7 @@
       "properties" : {
         "changeOutputFieldName" : false,
         "relation_name" : [ "Transpose_1" ],
-        "columnNames" : [ "TITLE", "NAME" ],
+        "columnNames" : [ "TITLE", "Name" ],
         "_oldMacroProperties" : {
           "macroName" : "MultiColumnEdit",
           "projectName" : "prophecy_basics",
@@ -488,10 +488,10 @@
             "value" : "[\"Transpose_1\"]"
           }, {
             "name" : "schema",
-            "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"NAME\", \"dataType\": \"String\"}, {\"name\": \"VALUE\", \"dataType\": \"String\"}]"
+            "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"Name\", \"dataType\": \"String\"}, {\"name\": \"Value\", \"dataType\": \"String\"}]"
           }, {
             "name" : "columnNames",
-            "value" : "[\"TITLE\", \"NAME\"]"
+            "value" : "[\"TITLE\", \"Name\"]"
           }, {
             "name" : "expressionToBeApplied",
             "value" : "concat(column_value, column_name)"
@@ -506,7 +506,7 @@
             "value" : ""
           } ]
         },
-        "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"NAME\", \"dataType\": \"String\"}, {\"name\": \"VALUE\", \"dataType\": \"String\"}]",
+        "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"Name\", \"dataType\": \"String\"}, {\"name\": \"Value\", \"dataType\": \"String\"}]",
         "expressionToBeApplied" : "concat(column_value, column_name)",
         "prefixSuffixToBeAdded" : "",
         "prefixSuffixOption" : "Prefix"
@@ -953,7 +953,7 @@
       "metadata" : {
         "label" : "all_type_table",
         "slug" : "all_type_table",
-        "x" : 100,
+        "x" : 80,
         "y" : 580,
         "phase" : 0
       },
@@ -1163,7 +1163,7 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 220,
+        "x" : 180,
         "y" : 480,
         "phase" : 0,
         "macroDependencies" : [ ]
