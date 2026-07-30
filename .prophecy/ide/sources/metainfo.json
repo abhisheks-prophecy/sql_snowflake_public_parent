@@ -326,7 +326,8 @@
   "dependenciesContainer" : {
     "dependencies" : { },
     "prophecyProjectDependencies" : {
-      "https://github.com/prophecy-io/prophecy-basics" : "64560"
+      "https://github.com/prophecy-io/prophecy-basics" : "64560",
+      "https://github.com/prophecy-io/prophecy-spatial" : "78643"
     },
     "dependenciesMetadata" : {
       "https://github.com/prophecy-io/prophecy-basics" : {
