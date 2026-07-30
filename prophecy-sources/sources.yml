@@ -8,9 +8,6 @@ sources:
     enabled: true
   tables:
   - name: "\"all_type_table\""
-    config:
-      tags:
-      - "pipeline:Error_Check"
     columns:
     - name: "C_NUM"
       dataType:
@@ -314,9 +311,6 @@ sources:
     enabled: true
   tables:
   - name: "\"all_type_table\""
-    config:
-      tags:
-      - "pipeline:Error_Check"
     columns:
     - name: "C_NUM"
       dataType:
@@ -527,9 +521,6 @@ sources:
       dataType:
         type: "String"
   - name: "\"Employees_qa_SCHEMA\""
-    config:
-      tags:
-      - "pipeline:Error_Check"
     columns:
     - name: "TITLE"
       dataType:

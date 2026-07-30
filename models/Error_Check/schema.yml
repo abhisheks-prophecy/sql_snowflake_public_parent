@@ -1,6 +1,0 @@
----
-version: 2
-models:
-- name: "Error_Check__MultiColumnEdit_1"
-  tags:
-  - "prophecy_temp"

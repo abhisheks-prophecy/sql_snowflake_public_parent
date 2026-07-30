@@ -71,8 +71,8 @@
       "metadata" : {
         "label" : "Transpose_1",
         "slug" : "Transpose_1",
-        "x" : 720,
-        "y" : 640,
+        "x" : 680,
+        "y" : 780,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Transforms employee records into standardized name/value pairs to simplify reporting, comparison, and integration across systems."
@@ -90,10 +90,10 @@
             "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"MANAGER_ID\", \"dataType\": \"Number\"}, {\"name\": \"C_INT\", \"dataType\": \"Number\"}, {\"name\": \"C_STRING\", \"dataType\": \"String\"}, {\"name\": \"C_NUMERIC\", \"dataType\": \"Number\"}, {\"name\": \"C_REAL\", \"dataType\": \"Float\"}, {\"name\": \"C_VARCHAR\", \"dataType\": \"String\"}]"
           }, {
             "name" : "nameColumn",
-            "value" : "Name"
+            "value" : "NAME"
           }, {
             "name" : "valueColumn",
-            "value" : "Value"
+            "value" : "VALUE"
           }, {
             "name" : "keyColumns",
             "value" : "[\"TITLE\", \"EMPLOYEE_ID\"]"
@@ -102,15 +102,15 @@
             "value" : "[\"EMPLOYEE_ID\", \"MANAGER_ID\"]"
           }, {
             "name" : "customNames",
-            "value" : "false"
+            "value" : "true"
           } ]
         },
         "dataColumns" : [ "EMPLOYEE_ID", "MANAGER_ID" ],
-        "customNames" : false,
+        "customNames" : true,
         "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"MANAGER_ID\", \"dataType\": \"Number\"}, {\"name\": \"C_INT\", \"dataType\": \"Number\"}, {\"name\": \"C_STRING\", \"dataType\": \"String\"}, {\"name\": \"C_NUMERIC\", \"dataType\": \"Number\"}, {\"name\": \"C_REAL\", \"dataType\": \"Float\"}, {\"name\": \"C_VARCHAR\", \"dataType\": \"String\"}]",
-        "valueColumn" : "Value",
+        "valueColumn" : "VALUE",
         "keyColumns" : [ "TITLE", "EMPLOYEE_ID" ],
-        "nameColumn" : "Name"
+        "nameColumn" : "NAME"
       },
       "ports" : {
         "inputs" : [ {
@@ -442,8 +442,8 @@
       "metadata" : {
         "label" : "Employees_qa_SCHEMA",
         "slug" : "Employees_qa_SCHEMA",
-        "x" : -120,
-        "y" : 820,
+        "x" : -200,
+        "y" : 1000,
         "phase" : 0
       },
       "properties" : {
@@ -470,8 +470,8 @@
       "metadata" : {
         "label" : "MultiColumnEdit_1",
         "slug" : "MultiColumnEdit_1",
-        "x" : 1020,
-        "y" : 660,
+        "x" : 940,
+        "y" : 780,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Standardizes key fields by adding a consistent prefix and formatting so records link reliably, reducing mismatches and improving reporting accuracy and downstream decision-making."
@@ -488,7 +488,7 @@
             "value" : "[\"Transpose_1\"]"
           }, {
             "name" : "schema",
-            "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"Name\", \"dataType\": \"String\"}, {\"name\": \"Value\", \"dataType\": \"String\"}]"
+            "value" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"NAME\", \"dataType\": \"String\"}, {\"name\": \"VALUE\", \"dataType\": \"String\"}]"
           }, {
             "name" : "columnNames",
             "value" : "[\"TITLE\", \"Name\"]"
@@ -506,7 +506,7 @@
             "value" : ""
           } ]
         },
-        "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"Name\", \"dataType\": \"String\"}, {\"name\": \"Value\", \"dataType\": \"String\"}]",
+        "schema" : "[{\"name\": \"TITLE\", \"dataType\": \"String\"}, {\"name\": \"EMPLOYEE_ID\", \"dataType\": \"Number\"}, {\"name\": \"NAME\", \"dataType\": \"String\"}, {\"name\": \"VALUE\", \"dataType\": \"String\"}]",
         "expressionToBeApplied" : "concat(column_value, column_name)",
         "prefixSuffixToBeAdded" : "",
         "prefixSuffixOption" : "Prefix"
@@ -953,8 +953,8 @@
       "metadata" : {
         "label" : "all_type_table",
         "slug" : "all_type_table",
-        "x" : 80,
-        "y" : 580,
+        "x" : -200,
+        "y" : 720,
         "phase" : 0
       },
       "properties" : {
@@ -1011,8 +1011,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_table_3",
-        "x" : -220,
-        "y" : 540,
+        "x" : -200,
+        "y" : 580,
         "phase" : 0
       },
       "properties" : {
@@ -1037,8 +1037,8 @@
       "component" : "Limit",
       "metadata" : {
         "label" : "Limit_1",
-        "x" : 520,
-        "y" : 560,
+        "x" : 420,
+        "y" : 780,
         "phase" : 0,
         "comment" : "Restricts the output to the first 29 records from the combined user accounts and usage logs.",
         "autoUpdateComment" : true
@@ -1069,8 +1069,8 @@
       "metadata" : {
         "label" : "all_type_table_1",
         "slug" : "all_type_table_1",
-        "x" : -160,
-        "y" : 680,
+        "x" : -200,
+        "y" : 860,
         "phase" : 0
       },
       "properties" : {
