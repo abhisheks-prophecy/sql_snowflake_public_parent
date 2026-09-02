@@ -1,0 +1,100 @@
+{
+  "id" : "Error_Check__DataEncoderDecoder_1",
+  "metainfo" : {
+    "label" : "Error_Check__DataEncoderDecoder_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"QA_DATABASE\"",
+        "schema" : "\"QA_SCHEMA\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "DataEncoderDecoder_1_mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx" : {
+      "id" : "DataEncoderDecoder_1_mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "DataEncoderDecoder_1"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM DataEncoderDecoder_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_4",
+          "slug" : "input_port_4"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_4",
+          "slug" : "output_port_4"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "fiiAQyijufLWZ-vPANgaP$$kpM6hTh453NGHCFBVb5t1" : {
+      "id" : "fiiAQyijufLWZ-vPANgaP$$kpM6hTh453NGHCFBVb5t1",
+      "component" : "DataEncoderDecoder",
+      "metadata" : {
+        "label" : "DataEncoderDecoder_1",
+        "x" : -140,
+        "y" : -140,
+        "phase" : 0
+      },
+      "properties" : {
+        "prefix_suffix_option" : "Prefix",
+        "enc_dec_charSet" : "UTF-8",
+        "aes_enc_dec_secretKey_key" : "",
+        "aes_enc_dec_secretScope_aad" : "",
+        "aes_enc_dec_secretKey_aad" : "",
+        "aes_enc_dec_secretScope_iv" : "",
+        "relation_name" : [ ],
+        "new_column_add_method" : "inplace_substitute",
+        "enc_dec_method" : "",
+        "aes_enc_dec_secretScope_key" : "",
+        "aes_enc_dec_secretKey_iv" : "",
+        "schema" : "",
+        "column_names" : [ ],
+        "aes_enc_dec_mode" : "GCM",
+        "prefix_suffix_added" : "new_"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NLfzrXLNf-qlZ48G3kBp8$$4VOwUzLyK-K3O1qK6cxgr",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_fiiAQyijufLWZ-vPANgaP$$kpM6hTh453NGHCFBVb5t1_mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx_DataEncoderDecoder_1_mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx",
+    "source" : "fiiAQyijufLWZ-vPANgaP$$kpM6hTh453NGHCFBVb5t1",
+    "sourcePort" : "mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx",
+    "target" : "DataEncoderDecoder_1_mNs__517tEMwztX7lMDoe$$93zLvjXAjafi7T0G30tZx",
+    "targetPort" : "input_port_4",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}
